@@ -73,12 +73,37 @@ public class MyAegisub extends Application {
 browser.addEventFilter(KeyEvent.KEY_PRESSED, 
                     new EventHandler<KeyEvent>() {
                         public void handle(KeyEvent event) { 
-        System.out.println("Filtering out event " + event.getEventType()); 
+//        System.out.println("Filtering out event " + event.getEventType()); 
         String s=event.getText();
         for(int i=0;i<s.length();i++)
         {
             int j=(int)s.charAt(i);
-            System.out.println(j); 
+            switch(j)
+            {
+                //space
+                case 13://play
+                    System.out.println("enter");
+                    break;
+                case 32://pause
+                    System.out.println("space");
+                    break;
+                case 44://slow down
+                    System.out.println("<");
+                    break;
+                case 46://speed up
+                    System.out.println(">");
+                    break;
+                default:
+                    System.out.println(j);
+                    /*
+                    reset=
+                        114
+                        101
+                        115
+                        101
+                        116
+                    */
+            }
         }
         event.consume();                            
                         };
@@ -102,5 +127,18 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
      */
     public static void main(String[] args) {
         launch(args);
+    }
+    
+    private void play()
+    {
+    }
+    private void pause()
+    {
+    }
+    private void speedUp()
+    {
+    }
+    private void slowDown()
+    {
     }
 }
