@@ -88,12 +88,14 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
         File imagefile=new File("bananaman.jpg");
         String backgroundstring="<html><body background=\""+imagefile.toURI()+"\"><font size=10>";
 //        String backgroundstring="<html><body>";
-        System.out.println(backgroundstring);
-//        webEngine.loadContent(AssParser.parse("3.ass"));
+//        System.out.println(backgroundstring);
+        webEngine.loadContent(AssParser.parse("Xiang zan.ass"));
 //        webEngine.loadContent(backgroundstring+AssParser.parse("3.ass"));
 
-        AssParser.parseSong("song0.txt");
-        AssParser.parseSong("song1.txt");
+        //insert song to database
+//        AssParser.parseSong("song0.txt");
+//        AssParser.parseSong("song1.txt");
+//        AssParser.parseSong("song11.txt");
     }
 
     /**
