@@ -93,8 +93,8 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
 //        webEngine.loadContent(backgroundstring+AssParser.parse("3.ass"));
 
         //insert song to database
-//        AssParser.parseSong("song0.txt");
-//        AssParser.parseSong("song1.txt");
+        AssParser.parseSong("song00.txt");
+//        AssParser.parseSong("song01.txt");
 //        AssParser.parseSong("song11.txt");
     }
 
