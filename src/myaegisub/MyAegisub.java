@@ -17,6 +17,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import utils.fileaccess.FileReader;
 
 /**
  *
@@ -114,7 +115,8 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
         primaryStage.show();
 //        webEngine.load("http://www.google.com");   
 
-        webEngine.loadContent("<b>asdf</b>");
+        ;
+        webEngine.loadContent(FileReader.read("3.ass"));
     }
 
     /**
