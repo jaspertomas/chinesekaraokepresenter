@@ -6,12 +6,13 @@ package myaegisub;
 
 import java.io.File;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -22,21 +23,24 @@ import utils.AssParser;
  * @author jaspertomas
  */
 public class MyAegisub extends Application {
-    WebEngine webEngine;
+    WebView browser = new WebView();
+    WebEngine webEngine = browser.getEngine();;
+    Label label = new Label();
     @Override
     public void start(Stage primaryStage) {
 
-        WebView browser = new WebView();
-        webEngine = browser.getEngine();
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(browser);
-
         browser.requestFocus();
-//        File cssfile=new File("background.css");
+        GridPane grid = new GridPane();
+        grid.setAlignment(Pos.CENTER);
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(25, 25, 25, 25));        
+
+        grid.add(browser, 0, 0);        
+
+        grid.add(label, 0, 1);        
         
-//        browser.setStyle("body {background-color: yellow;}");
-        Scene scene = new Scene(root, 500, 500);
+        Scene scene = new Scene(grid, 500, 500);
 // scene.getStylesheets().add(cssfile.toURI().toString());        
         
 //--as
@@ -53,16 +57,20 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
             {
                 //space
                 case 13://play
-                    System.out.println("enter");
+//                    System.out.println("enter");
+                    play();
                     break;
                 case 32://pause
-                    System.out.println("space");
+//                    System.out.println("space");
+                    pause();
                     break;
                 case 44://slow down
-                    System.out.println("<");
+//                    System.out.println("<");
+                    slowDown();
                     break;
                 case 46://speed up
-                    System.out.println(">");
+//                    System.out.println(">");
+                    speedUp();
                     break;
                 default:
                     System.out.println(j);
@@ -80,7 +88,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
                         };
                     });
 
-        primaryStage.setTitle("Hello World!");
+//        primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
 //        webEngine.load("http://www.google.com");   
@@ -93,7 +101,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
 //        webEngine.loadContent(backgroundstring+AssParser.parse("3.ass"));
 
         //insert song to database
-        AssParser.parseSong("song00.txt");
+//        AssParser.parseSong("song00.txt");
 //        AssParser.parseSong("song01.txt");
 //        AssParser.parseSong("song11.txt");
     }
@@ -112,15 +120,40 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
     
     private void play()
     {
+        label.setText("Play");
     }
     private void pause()
     {
+        label.setText("Pause");
     }
+    Integer speed=100;
     private void speedUp()
     {
+        switch(speed)
+        {
+            case 90:speed=95;break;
+            case 95:speed=98;break;
+            case 98:speed=100;break;
+            case 100:speed=102;break;
+            case 102:speed=105;break;
+            case 105:speed=110;break;
+            case 110:speed=110;break;
+        }
+        label.setText("Speed: "+speed);
     }
     private void slowDown()
     {
+        switch(speed)
+        {
+            case 90:speed=90;break;
+            case 95:speed=90;break;
+            case 98:speed=95;break;
+            case 100:speed=98;break;
+            case 102:speed=100;break;
+            case 105:speed=102;break;
+            case 110:speed=105;break;
+        }
+        label.setText("Speed: "+speed);
     }
 }
 //
