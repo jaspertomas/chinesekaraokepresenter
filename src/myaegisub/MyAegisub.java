@@ -17,6 +17,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import utils.AssParser;
 import utils.fileaccess.FileReader;
 
 /**
@@ -115,8 +116,8 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
         primaryStage.show();
 //        webEngine.load("http://www.google.com");   
 
-        ;
-        webEngine.loadContent(FileReader.read("3.ass"));
+//        webEngine.loadContent(FileReader.read("Xiang zan.ass"));
+        AssParser.parse("3.ass");
     }
 
     /**
