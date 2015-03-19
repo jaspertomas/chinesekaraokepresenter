@@ -119,7 +119,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
 //        SongParser.parse("song01.txt");
 //        SongParser.parse("song13.txt");
 //        AssTimeParser.parse("4final.ass","song13");
-        
+        play();
     }
 
     /**

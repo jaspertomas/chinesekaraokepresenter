@@ -73,15 +73,15 @@ public class PlayerController {
 //            System.out.println(wordsperline[i]);
 //        }
         
-        String fontopenred="<font size=4 color=red>";
-        String fontopenblack="<font size=4 >";
+        String fontopenred="<font size=5 color=red>";
+        String fontopenblack="<font size=5 >";
         String fontopenbigred="<font size=7 color=red>";
         String fontopenbigblack="<font size=7>";
         String fontopen;
         String fontclose="</font>";
         
         //formulate html
-        output+="<table>";
+        output+="<table width=100%>";
         //for each line...
         Integer wordcounter1=0,wordcounter2=0,wordcounter3=0;
         for(int i=0;i<AssReconciler.linesperpage;i++)
@@ -94,7 +94,7 @@ public class PlayerController {
                 else if(DbMan1.lines.get(wordcounter1)>lineno)fontopen=fontopenblack;
                 else if(DbMan1.ids.get(wordcounter1)<=DbMan1.wordid)fontopen=fontopenred;
                 else fontopen=fontopenblack;
-                output+="<td>"+fontopen+DbMan1.characters.get(wordcounter1)+fontclose+"</td>";
+                output+="<td align=center>"+fontopen+DbMan1.characters.get(wordcounter1)+fontclose+"</td>";
                 wordcounter1++;
             }
             output+="</tr><tr>";
@@ -104,7 +104,7 @@ public class PlayerController {
                 else if(DbMan1.lines.get(wordcounter2)>lineno)fontopen=fontopenblack;
                 else if(DbMan1.ids.get(wordcounter2)<=DbMan1.wordid)fontopen=fontopenred;
                 else fontopen=fontopenblack;
-                output+="<td>"+fontopen+DbMan1.sounds.get(wordcounter2)+fontclose+"</td>";
+                output+="<td align=center>"+fontopen+DbMan1.sounds.get(wordcounter2)+fontclose+"</td>";
                 wordcounter2++;
             }
             output+="</tr><tr>";
@@ -114,10 +114,10 @@ public class PlayerController {
                 else if(DbMan1.lines.get(wordcounter3)>lineno)fontopen=fontopenbigblack;
                 else if(DbMan1.ids.get(wordcounter3)<=DbMan1.wordid)fontopen=fontopenbigred;
                 else fontopen=fontopenbigblack;
-                output+="<td>"+fontopen+DbMan1.englishes.get(wordcounter3)+fontclose+"</td>";
+                output+="<td align=center>"+fontopen+DbMan1.englishes.get(wordcounter3)+fontclose+"</td>";
                 wordcounter3++;
             }
-            output+="</tr><tr><td>&nbsp;</td>";
+            output+="</tr><tr><td><font size=2>&nbsp;</font></td>";
             output+="</tr>";
         }
         output+="</table>";
