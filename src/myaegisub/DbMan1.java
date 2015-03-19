@@ -118,6 +118,8 @@ public class DbMan1 {
                     + " sound            VARCHAR(5), "
                     + " english        VARCHAR(5), "
                     + " syllables         VARCHAR(50)"
+                    + " ,line         integer default 0"
+                    + " ,page         integer default 0"
                     + " ,centiseconds         integer"
                     + " ,time         integer default 0"
                     + ")";
@@ -132,14 +134,14 @@ public class DbMan1 {
     }
     
     
-  public boolean insert(String song,String character,String sound,String english,String syllables)
+  public boolean insert(String song,String character,String sound,String english,String syllables, Integer line)
   {
     try {
       c.setAutoCommit(false);
 
       stmt = c.createStatement();
-      String sql = "INSERT INTO words (song,character,sound,english,syllables,centiseconds) " +
-                   "VALUES ('"+song+"','"+character+"', '"+sound+"', '"+english+"', '"+syllables+"',0 );"; 
+      String sql = "INSERT INTO words (song,character,sound,english,syllables,centiseconds,line) " +
+                   "VALUES ('"+song+"','"+character+"', '"+sound+"', '"+english+"', '"+syllables+"',0, '"+line+"' );"; 
       System.out.println(sql);
       stmt.executeUpdate(sql);
 

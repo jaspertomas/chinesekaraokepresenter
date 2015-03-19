@@ -28,6 +28,8 @@ import utils.SongParser;
 public class AssReconciler extends Application {
     String songname="song13";
     String assfilename="4final.ass";
+//    Integer[] forremoval13={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
+    Integer[] forremoval={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
 
     WebView browser = new WebView();
     WebEngine webEngine = browser.getEngine();;
@@ -137,7 +139,7 @@ public class AssReconciler extends Application {
 
         //step 1
         //insert song to database
-//        SongParser.parse(songname+".txt");
+        SongParser.parse(songname+".txt");
         
         //step 2
         //this is for adjustment mode:
@@ -224,7 +226,6 @@ public class AssReconciler extends Application {
     }    
     private void adjust()
     {
-        Integer[] forremoval={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
         for(int i:forremoval)
         {
             AssTimeParser.words.remove(i);
@@ -238,7 +239,6 @@ public class AssReconciler extends Application {
         Integer timeprevious,timeremoved;
         
         //prepare karaoke data - merge some nodes to match database data
-        Integer[] forremoval={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
         for(int i:forremoval)
         {
             if(i>0)

@@ -33,20 +33,26 @@ public class SongParser {
         String input=FileReader.read(filename);
         
         //sections[1] is [Events]
-        ArrayList<String> line1=new ArrayList<String>();
-        ArrayList<String> line2=new ArrayList<String>();
-        ArrayList<String> line3=new ArrayList<String>();
+        ArrayList<String> pinyinlist=new ArrayList<String>();
+        ArrayList<String> kokinlist=new ArrayList<String>();
+        ArrayList<String> characterlist=new ArrayList<String>();
         ArrayList<String> linearrays[]=new ArrayList[3];
-        linearrays[0]=line1;
-        linearrays[1]=line2;
-        linearrays[2]=line3;
+        linearrays[0]=pinyinlist;
+        linearrays[1]=kokinlist;
+        linearrays[2]=characterlist;
+        ArrayList<Integer> linelist=new ArrayList<Integer>();
+        Integer linemarker=0;
         Integer linecounter=0;
         String[] lines=input.split("\n");
         String[] segments;
         for(String line:lines)
         {
-            linecounter++;
-            if(linecounter>4)linecounter=1;
+            linemarker++;
+            if(linemarker>4)
+            {
+                linemarker=1;
+                linecounter++;        
+            }
             segments=line.split("\t");
             for(String segment:segments)
             {
@@ -59,13 +65,14 @@ public class SongParser {
 //                    output.concat(" "+segment);
 //                    output+=" "+segment;
 //                    jdbc.insert();
-                    linearrays[linecounter-1].add(segment);
+                    linearrays[linemarker-1].add(segment);
+                    if(linemarker-1==0)linelist.add(linecounter);
                 }
             }
         }
-        for(int i=0;i<line1.size();i++)
+        for(int i=0;i<pinyinlist.size();i++)
         {
-            jdbc.insert(filename.replace(".txt", ""),line1.get(i),line2.get(i),line3.get(i),"");
+            jdbc.insert(filename.replace(".txt", ""),pinyinlist.get(i),kokinlist.get(i),characterlist.get(i),"",linelist.get(i));
         }
         jdbc.close();
     }    
