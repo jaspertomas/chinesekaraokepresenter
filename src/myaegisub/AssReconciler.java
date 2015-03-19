@@ -5,7 +5,6 @@
 package myaegisub;
 
 import java.io.File;
-import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -20,6 +19,7 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import utils.AssTimeParser;
+import utils.SongParser;
 
 /**
  *
@@ -27,6 +27,7 @@ import utils.AssTimeParser;
  */
 public class AssReconciler extends Application {
     String songname="song13";
+    String assfilename="4final.ass";
 
     WebView browser = new WebView();
     WebEngine webEngine = browser.getEngine();;
@@ -74,11 +75,8 @@ public class AssReconciler extends Application {
         label5.setText("Karaoke counter: "+karaokecounter.toString());
         
         Scene scene = new Scene(grid, 500, 500);
-// scene.getStylesheets().add(cssfile.toURI().toString());        
-        
-//--as
 
-btn.addEventFilter(KeyEvent.KEY_PRESSED, 
+        btn.addEventFilter(KeyEvent.KEY_PRESSED, 
                     new EventHandler<KeyEvent>() {
                         public void handle(KeyEvent event) { 
 //        System.out.println("Filtering out event " + event.getEventType()); 
@@ -127,10 +125,8 @@ btn.addEventFilter(KeyEvent.KEY_PRESSED,
                         };
                     });
 
-//        primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
-//        webEngine.load("http://www.google.com");   
 
         File imagefile=new File("bananaman.jpg");
         String backgroundstring="<html><body background=\""+imagefile.toURI()+"\"><font size=10>";
@@ -139,35 +135,20 @@ btn.addEventFilter(KeyEvent.KEY_PRESSED,
 //        webEngine.loadContent(AssParser.parse("Xiang zan.ass"));
 //        webEngine.loadContent(backgroundstring+AssParser.parse("3.ass"));
 
+        //step 1
         //insert song to database
-//        SongParser.parse("song00.txt");
-//        SongParser.parse("song01.txt");
-//        SongParser.parse("song13.txt");
-        AssTimeParser.parse("4final.ass","song13");
-        Integer timeprevious,timeremoved;
+//        SongParser.parse(songname+".txt");
         
-        Integer[] forremoval={0,13,17,26,36,39,48,56,65,72,75,78,87,95,104,111,114,117,126,133,142,149,158,163,163,164,164,164,164};
-        for(int i:forremoval)
-        {
-            if(i>0)
-            {
-                timeprevious=Integer.parseInt(AssTimeParser.times.get(i-1));
-                timeremoved=Integer.parseInt(AssTimeParser.times.get(i));
-                AssTimeParser.times.set(i-1,String.valueOf(timeremoved+timeprevious));
-            }
-            AssTimeParser.words.remove(i);
-        }
-        /*
-        26
-        36
-        39
-        48
-        56
-        65
-        72
-        */
-                
-//        play();
+        //step 2
+        //this is for adjustment mode:
+        //load .ass file
+//        AssTimeParser.parse(assfilename,songname);
+        //edit ids of karaoke nodes to merge
+//        adjust();
+        
+        //step 3
+        //this is to write adjustments to database
+        AssTimeParser.parse(assfilename,songname);
         update();
         
     }
@@ -207,8 +188,8 @@ btn.addEventFilter(KeyEvent.KEY_PRESSED,
             output+="<td>"+DbMan1.centiseconds.get(i)+"</td>";
             output+="<td>"+DbMan1.syllables.get(i)+"</td>";
             output+="<td>"+DbMan1.times.get(i)+"</td>";
-            output+="<td><font size=7>"+(AssTimeParser.words.size()>=i?AssTimeParser.words.get(i):"")+"</font></td>";
-            output+="<td>"+(AssTimeParser.times.size()>=i?AssTimeParser.times.get(i):"")+"</td>";
+            output+="<td><font size=7>"+(AssTimeParser.words.size()>i?AssTimeParser.words.get(i):"")+"</font></td>";
+            output+="<td>"+(AssTimeParser.times.size()>i?AssTimeParser.times.get(i):"")+"</td>";
 
             output+="</tr>";
         }
@@ -241,8 +222,35 @@ btn.addEventFilter(KeyEvent.KEY_PRESSED,
         linecounter--;
         label4.setText("Line counter: "+String.valueOf(linecounter));
     }    
+    private void adjust()
+    {
+        Integer[] forremoval={0,13,17,26,36,39,48,56,65,72,75,78,87,95,104,111,114,117,126,133,142,149,158,163,163,164,164,164,164};
+        for(int i:forremoval)
+        {
+            AssTimeParser.words.remove(i);
+            AssTimeParser.times.remove(i);
+        }
+        
+        play();
+    }
     private void update()
     {
+        Integer timeprevious,timeremoved;
+        
+        //prepare karaoke data - merge some nodes to match database data
+        Integer[] forremoval={0,13,17,26,36,39,48,56,65,72,75,78,87,95,104,111,114,117,126,133,142,149,158,163,163,164,164,164,164};
+        for(int i:forremoval)
+        {
+            if(i>0)
+            {
+                timeprevious=Integer.parseInt(AssTimeParser.times.get(i-1));
+                timeremoved=Integer.parseInt(AssTimeParser.times.get(i));
+                AssTimeParser.times.set(i-1,String.valueOf(timeremoved+timeprevious));
+            }
+            AssTimeParser.words.remove(i);
+        }
+        
+        //update database
         DbMan1 jdbc = new DbMan1();
         if (jdbc.connect("database.db")) {
 //            System.out.println("Opened database successfully");
