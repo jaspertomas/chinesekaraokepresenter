@@ -95,7 +95,7 @@ public class DbMan1 {
                     + " timestart            integer, "
                     + " timeend        integer "
                     + ")";
-            stmt = c.createStatement();
+            stmt.executeUpdate(sql);
             sql = "CREATE TABLE pages "
                     + "(ID INTEGER PRIMARY KEY     NOT NULL,"
                     + " page           integer    NOT NULL, "
@@ -103,15 +103,15 @@ public class DbMan1 {
                     + " timeend        integer "
                     + ")";
             stmt.executeUpdate(sql);
-            sql = "CREATE TABLE WORDS "
+            sql = "CREATE TABLE words "
                     + "(ID INTEGER PRIMARY KEY     NOT NULL,"
                     + " song           VARCHAR(10)    NOT NULL, "
                     + " character           VARCHAR(5)    NOT NULL, "
                     + " sound            VARCHAR(5), "
                     + " english        VARCHAR(5), "
                     + " syllables         VARCHAR(50)"
-                    + " ,centiseconds         integer,"
-                    + " ,time         integer,"
+                    + " ,centiseconds         integer"
+                    + " ,time         integer default 0"
                     + ")";
             stmt.executeUpdate(sql);
             stmt.close();
@@ -130,7 +130,7 @@ public class DbMan1 {
       c.setAutoCommit(false);
 
       stmt = c.createStatement();
-      String sql = "INSERT INTO WORDS (song,character,sound,english,syllables,centiseconds) " +
+      String sql = "INSERT INTO words (song,character,sound,english,syllables,centiseconds) " +
                    "VALUES ('"+song+"','"+character+"', '"+sound+"', '"+english+"', '"+syllables+"',0 );"; 
       System.out.println(sql);
       stmt.executeUpdate(sql);
