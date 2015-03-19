@@ -139,7 +139,7 @@ public class AssReconciler extends Application {
 
         //step 1
         //insert song to database
-        SongParser.parse(songname+".txt");
+//        SongParser.parse(songname+".txt");
         
         //step 2
         //this is for adjustment mode:
@@ -150,9 +150,12 @@ public class AssReconciler extends Application {
         
         //step 3
         //this is to write adjustments to database
-        AssTimeParser.parse(assfilename,songname);
-        update();
+//        AssTimeParser.parse(assfilename,songname);
+//        update();
         
+        //step 4
+        //set pagination
+        setPages();
     }
 
     /**
@@ -268,4 +271,38 @@ public class AssReconciler extends Application {
         }
         jdbc.close();
     }    
+    private void setPages()
+    {
+        Integer timeprevious,timeremoved;
+        
+        //prepare karaoke data - merge some nodes to match database data
+        for(int i:forremoval)
+        {
+            if(i>0)
+            {
+                timeprevious=Integer.parseInt(AssTimeParser.times.get(i-1));
+                timeremoved=Integer.parseInt(AssTimeParser.times.get(i));
+                AssTimeParser.times.set(i-1,String.valueOf(timeremoved+timeprevious));
+            }
+            AssTimeParser.words.remove(i);
+        }
+        
+        //update database
+        DbMan1 jdbc = new DbMan1();
+        if (jdbc.connect("database.db")) {
+//            System.out.println("Opened database successfully");
+        }else{
+            System.out.println("Error opening database");
+            return;
+        }
+        jdbc.select(songname);
+        
+//        label.setText("Play");
+        //display 
+        for(Integer i=0;i<DbMan1.characters.size();i++)
+        {
+            jdbc.update(DbMan1.ids.get(i), AssTimeParser.times.get(i).toString());
+        }
+        jdbc.close();
+    }
 }

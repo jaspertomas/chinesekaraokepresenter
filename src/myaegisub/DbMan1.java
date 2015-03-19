@@ -91,6 +91,8 @@ public class DbMan1 {
       public static ArrayList<String> syllables=new ArrayList<String>();
       public static ArrayList<Integer> centiseconds=new ArrayList<Integer>();
       public static ArrayList<Integer> times=new ArrayList<Integer>();
+      public static ArrayList<Integer> lines=new ArrayList<Integer>();
+      public static ArrayList<Integer> pages=new ArrayList<Integer>();
 
     public boolean createTable() {
         try {
@@ -171,6 +173,8 @@ public class DbMan1 {
       times.clear();
       centiseconds.clear();
       syllables.clear();
+      lines.clear();
+      pages.clear();
       while ( rs.next() ) {
           ids.add(rs.getInt("id"));
           characters.add(rs.getString("character"));
@@ -180,6 +184,8 @@ public class DbMan1 {
           times.add(rs.getInt("time"));
           songs.add(rs.getString("song"));
           sounds.add(rs.getString("sound"));
+          lines.add(rs.getInt("line"));
+          pages.add(rs.getInt("page"));
 //         int id = rs.getInt("id");
 //         String  name = rs.getString("name");
 //         int age  = rs.getInt("age");
