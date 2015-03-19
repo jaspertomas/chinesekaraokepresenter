@@ -26,6 +26,8 @@ import utils.SongParser;
  * @author jaspertomas
  */
 public class AssReconciler extends Application {
+    Integer linesperpage=4;
+
     String songname="song13";
     String assfilename="4final.ass";
 //    Integer[] forremoval13={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
@@ -275,18 +277,6 @@ public class AssReconciler extends Application {
     {
         Integer timeprevious,timeremoved;
         
-        //prepare karaoke data - merge some nodes to match database data
-        for(int i:forremoval)
-        {
-            if(i>0)
-            {
-                timeprevious=Integer.parseInt(AssTimeParser.times.get(i-1));
-                timeremoved=Integer.parseInt(AssTimeParser.times.get(i));
-                AssTimeParser.times.set(i-1,String.valueOf(timeremoved+timeprevious));
-            }
-            AssTimeParser.words.remove(i);
-        }
-        
         //update database
         DbMan1 jdbc = new DbMan1();
         if (jdbc.connect("database.db")) {
@@ -299,9 +289,12 @@ public class AssReconciler extends Application {
         
 //        label.setText("Play");
         //display 
+        Integer page;
         for(Integer i=0;i<DbMan1.characters.size();i++)
         {
-            jdbc.update(DbMan1.ids.get(i), AssTimeParser.times.get(i).toString());
+            page=Double.valueOf(Math.floor((DbMan1.lines.get(i)+3d)/linesperpage)).intValue();
+            System.out.println(page);
+            jdbc.updatePage(DbMan1.ids.get(i), page);
         }
         jdbc.close();
     }

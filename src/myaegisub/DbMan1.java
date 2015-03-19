@@ -225,7 +225,23 @@ public class DbMan1 {
       return false;
     }
   }  
-  
+
+  public boolean updatePage(Integer id,Integer page)
+  {
+    try {
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      String sql = "UPDATE words set page = "+page+" where ID="+id.toString()+";";
+      stmt.executeUpdate(sql);
+      c.commit();
+      stmt.close();
+      return true;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return false;
+    }
+  }    
 //
 //  public boolean delete()
 //  {
