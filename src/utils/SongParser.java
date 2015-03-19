@@ -42,7 +42,7 @@ public class SongParser {
         linearrays[2]=characterlist;
         ArrayList<Integer> linelist=new ArrayList<Integer>();
         Integer linemarker=0;
-        Integer linecounter=0;
+        Integer linecounter=1;
         String[] lines=input.split("\n");
         String[] segments;
         for(String line:lines)

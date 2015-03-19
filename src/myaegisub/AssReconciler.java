@@ -27,7 +27,7 @@ import utils.SongParser;
  */
 public class AssReconciler extends Application {
     public static final Integer linesperpage=4;
-    public static final Integer zeropageadjustment=3;
+    public static final Integer zeropageadjustment=4;
 
     String songname="song13";
     String assfilename="4final.ass";
@@ -166,8 +166,8 @@ public class AssReconciler extends Application {
         
         //step 6
         //create page and line records
-//        insertLines();
-//        insertPages();
+        insertLines();
+        insertPages();
     }
 
     /**
@@ -345,7 +345,7 @@ public class AssReconciler extends Application {
         
         Integer starttime=0;
         Integer endtime=0;
-        Integer pageno=0;
+        Integer pageno=1;
         jdbc.select("where page = "+pageno.toString()+"");
         while(!DbMan1.ids.isEmpty())
         {
@@ -378,8 +378,8 @@ public class AssReconciler extends Application {
         
         Integer starttime=0;
         Integer endtime=0;
-        Integer lineno=0;
-        Integer pageno=0;
+        Integer lineno=1;
+        Integer pageno=1;
         jdbc.select("where line = "+lineno.toString()+"");
         while(!DbMan1.ids.isEmpty())
         {
