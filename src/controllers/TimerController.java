@@ -16,7 +16,7 @@ public class TimerController implements Runnable {
    private Thread t;
 //   private Boolean stopped=false;
    private Integer status=0;
-   private Integer speed=10;
+   private Integer speed=100;
    public static Integer time=0;
    
    PlayerController playerController;
@@ -37,7 +37,7 @@ public class TimerController implements Runnable {
               else if(status==PLAYING)
               {
                   playerController.play();
-                  time+=speed*10;
+                  time+=speed;
               }
               else if(status==STOPPED)
               {
