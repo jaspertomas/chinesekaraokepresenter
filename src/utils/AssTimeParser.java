@@ -5,16 +5,16 @@
  */
 package utils;
 
+import java.util.ArrayList;
 import utils.fileaccess.FileReader;
 
 /**
  *
  * @author jaspertomas
  */
-public class AssParser {
+public class AssTimeParser {
     public static String parse(String filename)
     {
-        String output="";
         String input=FileReader.read(filename).replace("\\N", "");
         String[] sections=input.split("\\[Events\\]");
         if(sections.length<2)return "";
@@ -23,6 +23,9 @@ public class AssParser {
         String[] lines=sections[1].split("\n");
         String[] segments;
         String[] columns;
+        ArrayList<String> times=new ArrayList<String>();
+        ArrayList<String> words=new ArrayList<String>();
+        
         for(String line:lines)
         {
             //ignore lines not starting with "Dialogue: "
@@ -34,15 +37,20 @@ public class AssParser {
             {
                 //possible values for segment: "","\k195","zhòng "
                 if(segment.trim().isEmpty());//do nothing
-                else if(segment.contains("\\k"));//do nothing
+                else if(segment.contains("\\k"))
+                {
+                    times.add(segment.replace("\\k", ""));
+                }
                 else
                 {
 //                    System.out.println(segment);
 //                    output.concat(" "+segment);
-                    output+=" "+segment;
+                    words.add(segment);
                 }
             }
         }
-        return output;
+        for(String s:times)System.out.println(s);
+        for(String s:words)System.out.println(s);
+        return "";
     }
 }

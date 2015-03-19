@@ -17,6 +17,7 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import utils.AssParser;
+import utils.AssTimeParser;
 
 /**
  *
@@ -101,9 +102,10 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
 //        webEngine.loadContent(backgroundstring+AssParser.parse("3.ass"));
 
         //insert song to database
-//        SongParser.parseSong("song00.txt");
-//        SongParser.parseSong("song01.txt");
-//        SongParser.parseSong("song13.txt");
+//        SongParser.parse("song00.txt");
+//        SongParser.parse("song01.txt");
+//        SongParser.parse("song13.txt");
+        AssTimeParser.parse("4final.ass");
     }
 
     /**
