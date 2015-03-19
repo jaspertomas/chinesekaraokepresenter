@@ -59,10 +59,40 @@ public class PlayerController {
         {
             wordsperline[(line+AssReconciler.zeropageadjustment)%4]++;
         }
-        for(int i=0;i<wordsperline.length;i++)
+//        for(int i=0;i<wordsperline.length;i++)
+//        {
+//            System.out.println(wordsperline[i]);
+//        }
+        
+        //formulate html
+        output+="<table>";
+        //for each line...
+        Integer wordcounter1=0,wordcounter2=0,wordcounter3=0;
+        for(int i=0;i<AssReconciler.linesperpage;i++)
         {
-            System.out.println(wordsperline[i]);
+            //
+            output+="<tr>";
+            for(int j=0;j<wordsperline[i];j++)
+            {
+                output+="<td>"+DbMan1.characters.get(wordcounter1)+"</td>";
+                wordcounter1++;
+            }
+            output+="</tr><tr>";
+            for(int j=0;j<wordsperline[i];j++)
+            {
+                output+="<td>"+DbMan1.sounds.get(wordcounter2)+"</td>";
+                wordcounter2++;
+            }
+            output+="</tr><tr>";
+            for(int j=0;j<wordsperline[i];j++)
+            {
+                output+="<td>"+DbMan1.englishes.get(wordcounter3)+"</td>";
+                wordcounter3++;
+            }
+            output+="</tr><tr><td>&nbsp;</td>";
+            output+="</tr>";
         }
+        output+="</table>";
         
 //        
         
@@ -88,7 +118,7 @@ public class PlayerController {
 //        
 //        
         jdbc.close();
-        return "";
+        return output;
     }
 
 
