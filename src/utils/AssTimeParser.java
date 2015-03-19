@@ -6,6 +6,7 @@
 package utils;
 
 import java.util.ArrayList;
+import myaegisub.DbMan1;
 import utils.fileaccess.FileReader;
 
 /**
@@ -13,11 +14,21 @@ import utils.fileaccess.FileReader;
  * @author jaspertomas
  */
 public class AssTimeParser {
-    public static String parse(String filename)
+    public static void parse(String filename,String songname)
     {
+        DbMan1 jdbc = new DbMan1();
+        if (jdbc.connect("database.db")) {
+            System.out.println("Opened database successfully");
+        }else{
+            System.out.println("Error opening database");
+            return;
+        }
+        
+        ArrayList<Integer> ids=jdbc.select(songname);
+        
         String input=FileReader.read(filename).replace("\\N", "");
         String[] sections=input.split("\\[Events\\]");
-        if(sections.length<2)return "";
+        if(sections.length<2)return;
         
         //sections[1] is [Events]
         String[] lines=sections[1].split("\n");
@@ -49,8 +60,11 @@ public class AssTimeParser {
                 }
             }
         }
-        for(String s:times)System.out.println(s);
-        for(String s:words)System.out.println(s);
-        return "";
+//        for(String s:times)System.out.println(s);
+//        for(String s:words)System.out.println(s);
+        for(int i=0;i<times.size();i++)
+        {
+            jdbc.update( ids.get(i), times.get(i));
+        }
     }
 }

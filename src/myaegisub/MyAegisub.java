@@ -105,7 +105,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
 //        SongParser.parse("song00.txt");
 //        SongParser.parse("song01.txt");
 //        SongParser.parse("song13.txt");
-        AssTimeParser.parse("4final.ass");
+        AssTimeParser.parse("4final.ass","song13");
     }
 
     /**

@@ -4,12 +4,12 @@
  */
 package myaegisub;
 
-import sqliteexample.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -145,15 +145,17 @@ public class DbMan1 {
     }
   }    
   
-//
-//  public boolean  select( )
-//  {
-//    try {
-//      c.setAutoCommit(false);
-//
-//      stmt = c.createStatement();
-//      ResultSet rs = stmt.executeQuery( "SELECT * FROM COMPANY;" );
-//      while ( rs.next() ) {
+
+  public ArrayList<Integer> select(String song)
+  {
+      ArrayList<Integer> ids=new ArrayList<Integer>();
+    try {
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      ResultSet rs = stmt.executeQuery( "SELECT * FROM words where song="+song+";" );
+      while ( rs.next() ) {
+          ids.add(rs.getInt("id"));
 //         int id = rs.getInt("id");
 //         String  name = rs.getString("name");
 //         int age  = rs.getInt("age");
@@ -165,50 +167,34 @@ public class DbMan1 {
 //         System.out.println( "ADDRESS = " + address );
 //         System.out.println( "SALARY = " + salary );
 //         System.out.println();
-//      }
-//      rs.close();
-//      stmt.close();
-//      
-//      return true;
-//    } catch ( Exception e ) {
-//      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-//      return false;
-//    }
-//  }  
+      }
+      rs.close();
+      stmt.close();
+      
+      return ids;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return null;
+    }
+  }  
   
-//
-//  public boolean update()
-//  {
-//    try {
-//      c.setAutoCommit(false);
-//
-//      stmt = c.createStatement();
-//      String sql = "UPDATE COMPANY set SALARY = 25000.00 where ID=1;";
-//      stmt.executeUpdate(sql);
-//      c.commit();
-//
-//      ResultSet rs = stmt.executeQuery( "SELECT * FROM COMPANY;" );
-//      while ( rs.next() ) {
-//         int id = rs.getInt("id");
-//         String  name = rs.getString("name");
-//         int age  = rs.getInt("age");
-//         String  address = rs.getString("address");
-//         float salary = rs.getFloat("salary");
-//         System.out.println( "ID = " + id );
-//         System.out.println( "NAME = " + name );
-//         System.out.println( "AGE = " + age );
-//         System.out.println( "ADDRESS = " + address );
-//         System.out.println( "SALARY = " + salary );
-//         System.out.println();
-//      }
-//      rs.close();
-//      stmt.close();
-//      return true;
-//    } catch ( Exception e ) {
-//      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-//      return false;
-//    }
-//  }  
+
+  public boolean update(Integer id,String centiseconds)
+  {
+    try {
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      String sql = "UPDATE words set centiseconds = "+centiseconds+"0 where ID="+id.toString()+";";
+      stmt.executeUpdate(sql);
+      c.commit();
+      stmt.close();
+      return true;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return false;
+    }
+  }  
   
 //
 //  public boolean delete()
