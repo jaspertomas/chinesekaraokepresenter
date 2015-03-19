@@ -4,6 +4,7 @@
  */
 package myaegisub;
 
+import controllers.PlayerController;
 import java.io.File;
 import javafx.application.Application;
 import javafx.event.EventHandler;
@@ -16,8 +17,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-import utils.AssParser;
-import utils.AssTimeParser;
 
 /**
  *
@@ -98,14 +97,17 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
         String backgroundstring="<html><body background=\""+imagefile.toURI()+"\"><font size=10>";
 //        String backgroundstring="<html><body>";
 //        System.out.println(backgroundstring);
-        webEngine.loadContent(AssParser.parse("Xiang zan.ass"));
+//        webEngine.loadContent(AssParser.parse("Xiang zan.ass"));
 //        webEngine.loadContent(backgroundstring+AssParser.parse("3.ass"));
 
         //insert song to database
 //        SongParser.parse("song00.txt");
 //        SongParser.parse("song01.txt");
 //        SongParser.parse("song13.txt");
-        AssTimeParser.parse("4final.ass","song13");
+//        AssTimeParser.parse("4final.ass","song13");
+        
+        PlayerController playerController=new PlayerController(webEngine);
+        playerController.play(50000);
     }
 
     /**

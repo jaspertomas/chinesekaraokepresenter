@@ -408,4 +408,77 @@ public class DbMan1 {
                     + ")";
 */
 
+  public ArrayList<Integer> selectLine(Integer lineno)
+  {
+    try {
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      ResultSet rs = stmt.executeQuery("SELECT * FROM pages where page = "+lineno+";" );
+      while ( rs.next() ) {
+          lineno=rs.getInt("line");
+          linepageno=rs.getInt("page");
+          linetimestart=rs.getInt("timestart");
+          linetimeend=rs.getInt("timeend");
+      }
+      rs.close();
+      stmt.close();
+      
+      return ids;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return null;
+    }
+  }  
+  
+  public ArrayList<Integer> selectPage(Integer time)
+  {
+    try {
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      ResultSet rs = stmt.executeQuery( "SELECT * FROM pages where timestart<="+time+" and timeend>="+time+"" );
+      while ( rs.next() ) {
+          pageno=rs.getInt("page");
+          pagetimestart=rs.getInt("timestart");
+          pagetimeend=rs.getInt("timeend");
+      }
+      rs.close();
+      stmt.close();
+      
+      return ids;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return null;
+    }
+  }  
+  
+//  public ArrayList<Integer> selectPage(Integer pageno)
+//  {
+//    try {
+//      c.setAutoCommit(false);
+//
+//      stmt = c.createStatement();
+//      ResultSet rs = stmt.executeQuery( "SELECT * FROM pages where page = "+pageno+";" );
+//      while ( rs.next() ) {
+//          pageno=rs.getInt("page");
+//          pagetimestart=rs.getInt("timestart");
+//          pagetimeend=rs.getInt("timeend");
+//      }
+//      rs.close();
+//      stmt.close();
+//      
+//      return ids;
+//    } catch ( Exception e ) {
+//      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+//      return null;
+//    }
+//  }  
+      public static Integer lineno=0;
+      public static Integer linepageno=0;
+      public static Integer linetimestart=0;
+      public static Integer linetimeend=0;
+      public static Integer pageno=0;
+      public static Integer pagetimestart=0;
+      public static Integer pagetimeend=0;
 }
