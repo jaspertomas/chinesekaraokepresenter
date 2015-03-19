@@ -8,7 +8,7 @@ import java.io.File;
 import javafx.scene.web.WebEngine;
 import utils.AssParser;
 
-class TimerController implements Runnable {
+public class TimerController implements Runnable {
    public final Integer PAUSED=0;
    public final Integer PLAYING=1;
     
@@ -16,26 +16,29 @@ class TimerController implements Runnable {
 //   private Boolean stopped=false;
    private Integer status=0;
    private Integer speed=10;
-   private Integer time=0;
+   public static Integer time=0;
    
    PlayerController playerController;
-   TimerController(PlayerController playerController){
+   public TimerController(PlayerController playerController){
        this.playerController=playerController;
+       start();
    }
    public void run() {
       try 
       {
           while(true)
           {
+              System.out.println(status);
               if(status==PAUSED)
               {
                   //do nothing
               }
               else if(status==PLAYING)
               {
-                  playerController.play(speed);
-                  time+=speed;
+                  playerController.play();
+                  time+=speed*10;
               }
+              System.out.println(time);
               Thread.sleep(100);
           }
       } catch (InterruptedException e) {}
@@ -46,8 +49,8 @@ class TimerController implements Runnable {
       if (t == null)
       {
          t = new Thread (this);
-         t.start ();
       }
+      t.start ();
    }
 //   public void stop ()
 //   {

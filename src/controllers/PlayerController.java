@@ -5,11 +5,10 @@
  */
 package controllers;
 
-import java.util.ArrayList;
+import javafx.application.Platform;
 import javafx.scene.web.WebEngine;
 import myaegisub.AssReconciler;
 import myaegisub.DbMan1;
-import static myaegisub.DbMan1.lines;
 
 /**
  *
@@ -21,12 +20,14 @@ public class PlayerController {
    public PlayerController(WebEngine webEngine){
        this.webEngine=webEngine;
    }
-    public void play(Integer time)
+    public void play()
     {
-        webEngine.loadContent(gen(time));
-        
-        
-        
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                webEngine.loadContent(gen(TimerController.time));
+            }
+        });        
     }
     private String gen(Integer time)
     {

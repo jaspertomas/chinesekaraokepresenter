@@ -5,6 +5,7 @@
 package myaegisub;
 
 import controllers.PlayerController;
+import controllers.TimerController;
 import java.io.File;
 import javafx.application.Application;
 import javafx.event.EventHandler;
@@ -25,6 +26,8 @@ import javafx.stage.Stage;
 public class MyAegisub extends Application {
     WebView browser = new WebView();
     WebEngine webEngine = browser.getEngine();;
+    PlayerController playerController=new PlayerController(webEngine);
+    TimerController timerController=new TimerController(playerController);
     Label label = new Label();
     @Override
     public void start(Stage primaryStage) {
@@ -106,8 +109,6 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
 //        SongParser.parse("song13.txt");
 //        AssTimeParser.parse("4final.ass","song13");
         
-        PlayerController playerController=new PlayerController(webEngine);
-        playerController.play(50000);
     }
 
     /**
@@ -125,10 +126,12 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
     private void play()
     {
         label.setText("Play");
+        timerController.play();
     }
     private void pause()
     {
         label.setText("Pause");
+        timerController.pause();
     }
     Integer speed=100;
     private void speedUp()
