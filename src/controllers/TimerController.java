@@ -27,16 +27,16 @@ class TimerController implements Runnable {
       {
           while(true)
           {
-              Thread.sleep(10);
               if(status==PAUSED)
               {
                   //do nothing
               }
               else if(status==PLAYING)
               {
-                  time+=speed;
                   playerController.play(speed);
+                  time+=speed;
               }
+              Thread.sleep(100);
           }
       } catch (InterruptedException e) {}
    }
@@ -61,21 +61,25 @@ class TimerController implements Runnable {
    {
        status=PLAYING;
    }
-   public void slowDown ()
+//   public void slowDown ()
+//   {
+//       switch(speed)
+//       {
+//           case 9:break;//if already at lowest setting, do nothing;
+//           default: speed--;
+//       }
+//   }
+//   Integer topspeed=11;
+//   public void speedUp ()
+//   {
+//       switch(speed)
+//       {
+//           case 11:break;//if already at lowest setting, do nothing;
+//           default: speed--;
+//       }
+//   }
+   public void setSpeed (Integer speed)
    {
-       switch(speed)
-       {
-           case 9:break;//if already at lowest setting, do nothing;
-           default: speed--;
-       }
-   }
-   Integer topspeed=11;
-   public void speedUp ()
-   {
-       switch(speed)
-       {
-           case 11:break;//if already at lowest setting, do nothing;
-           default: speed--;
-       }
+       this.speed=speed;
    }
 }

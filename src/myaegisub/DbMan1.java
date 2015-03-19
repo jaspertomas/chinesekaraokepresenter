@@ -86,16 +86,32 @@ public class DbMan1 {
 
     public boolean createTable() {
         try {
-
+            String sql;
             stmt = c.createStatement();
-            String sql = "CREATE TABLE WORDS "
+            sql = "CREATE TABLE lines "
+                    + "(ID INTEGER PRIMARY KEY     NOT NULL,"
+                    + " line           integer    NOT NULL, "
+                    + " page           integer    NOT NULL, "
+                    + " timestart            integer, "
+                    + " timeend        integer "
+                    + ")";
+            stmt = c.createStatement();
+            sql = "CREATE TABLE pages "
+                    + "(ID INTEGER PRIMARY KEY     NOT NULL,"
+                    + " page           integer    NOT NULL, "
+                    + " timestart            integer, "
+                    + " timeend        integer "
+                    + ")";
+            stmt.executeUpdate(sql);
+            sql = "CREATE TABLE WORDS "
                     + "(ID INTEGER PRIMARY KEY     NOT NULL,"
                     + " song           VARCHAR(10)    NOT NULL, "
                     + " character           VARCHAR(5)    NOT NULL, "
                     + " sound            VARCHAR(5), "
                     + " english        VARCHAR(5), "
                     + " syllables         VARCHAR(50)"
-                    + " ,centiseconds         integer"
+                    + " ,centiseconds         integer,"
+                    + " ,time         integer,"
                     + ")";
             stmt.executeUpdate(sql);
             stmt.close();
