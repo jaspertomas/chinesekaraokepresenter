@@ -11,6 +11,7 @@ import utils.AssParser;
 public class TimerController implements Runnable {
    public final Integer PAUSED=0;
    public final Integer PLAYING=1;
+   public final Integer STOPPED=2;
     
    private Thread t;
 //   private Boolean stopped=false;
@@ -38,6 +39,10 @@ public class TimerController implements Runnable {
                   playerController.play();
                   time+=speed*10;
               }
+              else if(status==STOPPED)
+              {
+                  break;
+              }
               System.out.println(time);
               Thread.sleep(100);
           }
@@ -52,10 +57,10 @@ public class TimerController implements Runnable {
       }
       t.start ();
    }
-//   public void stop ()
-//   {
-//       status=STOPPED;
-//   }
+   public void stop ()
+   {
+       status=STOPPED;
+   }
    public void pause ()
    {
        status=PAUSED;
@@ -64,23 +69,6 @@ public class TimerController implements Runnable {
    {
        status=PLAYING;
    }
-//   public void slowDown ()
-//   {
-//       switch(speed)
-//       {
-//           case 9:break;//if already at lowest setting, do nothing;
-//           default: speed--;
-//       }
-//   }
-//   Integer topspeed=11;
-//   public void speedUp ()
-//   {
-//       switch(speed)
-//       {
-//           case 11:break;//if already at lowest setting, do nothing;
-//           default: speed--;
-//       }
-//   }
    public void setSpeed (Integer speed)
    {
        this.speed=speed;

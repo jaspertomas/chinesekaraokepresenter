@@ -8,6 +8,7 @@ import controllers.PlayerController;
 import controllers.TimerController;
 import java.io.File;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -18,6 +19,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 /**
  *
@@ -32,6 +34,15 @@ public class MyAegisub extends Application {
     @Override
     public void start(Stage primaryStage) {
 
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                timerController.stop();
+//                com.sun.javafx.application.PlatformImpl.tkExit();
+                Platform.exit();
+            }
+        });        
+        
         browser.requestFocus();
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
@@ -145,6 +156,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
             case 102:speed=105;break;
             case 105:speed=110;break;
             case 110:speed=110;break;
+            default:speed+=5;
         }
         label.setText("Speed: "+speed);
     }
@@ -159,6 +171,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
             case 102:speed=100;break;
             case 105:speed=102;break;
             case 110:speed=105;break;
+            default:speed-=5;
         }
         label.setText("Speed: "+speed);
     }
@@ -190,4 +203,4 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
 //        stage.setScene(scene);
 //        stage.show();
 //    }
-// 
+// com.sun.javafx.application.PlatformImpl.tkExit()
