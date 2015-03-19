@@ -29,7 +29,7 @@ public class TimerController implements Runnable {
       {
           while(true)
           {
-              System.out.println(status);
+//              System.out.println(status);
               if(status==PAUSED)
               {
                   //do nothing
@@ -43,7 +43,7 @@ public class TimerController implements Runnable {
               {
                   break;
               }
-              System.out.println(time);
+//              System.out.println(time);
               Thread.sleep(100);
           }
       } catch (InterruptedException e) {}

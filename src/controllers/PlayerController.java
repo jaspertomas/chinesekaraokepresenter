@@ -44,15 +44,15 @@ public class PlayerController {
 
         jdbc.selectWord(time);
         Integer wordid=DbMan1.wordid;
-        System.out.println("word:"+wordid.toString());
+//        System.out.println("word:"+wordid.toString());
 
         jdbc.selectPage(time);
         Integer pageno=DbMan1.pageno;
-        System.out.println("page:"+pageno.toString());
+//        System.out.println("page:"+pageno.toString());
 
         jdbc.selectLine(time);
         Integer lineno=DbMan1.lineno;
-        System.out.println("line:"+lineno.toString());
+//        System.out.println("line:"+lineno.toString());
         
         //select words that belong to this page 
         jdbc.select(" where page = "+pageno.toString());

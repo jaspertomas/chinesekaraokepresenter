@@ -156,7 +156,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
             case 102:speed=105;break;
             case 105:speed=110;break;
             case 110:speed=110;break;
-            default:speed+=5;
+            default:speed=speed+5;
         }
         label.setText("Speed: "+speed);
     }
@@ -171,7 +171,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
             case 102:speed=100;break;
             case 105:speed=102;break;
             case 110:speed=105;break;
-            default:speed-=5;
+            default:speed=speed-5;
         }
         label.setText("Speed: "+speed);
     }
