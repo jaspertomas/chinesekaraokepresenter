@@ -155,16 +155,17 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
             case 100:speed=102;break;
             case 102:speed=105;break;
             case 105:speed=110;break;
-            case 110:speed=110;break;
+//            case 110:speed=110;break;
             default:speed=speed+5;
         }
+        timerController.setSpeed(speed);
         label.setText("Speed: "+speed);
     }
     private void slowDown()
     {
         switch(speed)
         {
-            case 90:speed=90;break;
+//            case 90:speed=90;break;
             case 95:speed=90;break;
             case 98:speed=95;break;
             case 100:speed=98;break;
@@ -173,6 +174,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
             case 110:speed=105;break;
             default:speed=speed-5;
         }
+        timerController.setSpeed(speed);
         label.setText("Speed: "+speed);
     }
 }
