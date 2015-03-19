@@ -18,6 +18,7 @@ public class AssTimeParser {
     public static ArrayList<String> words=new ArrayList<String>();
     public static void parse(String filename,String songname)
     {
+        System.out.println("AssTimeParser:parsing");
 //        DbMan1 jdbc = new DbMan1();
 //        if (jdbc.connect("database.db")) {
 //            System.out.println("Opened database successfully");
@@ -74,8 +75,8 @@ public class AssTimeParser {
 //                }
             }
         }
-        for(String s:times)System.out.println(s);
-        for(String s:words)System.out.println(s);
+//        for(String s:times)System.out.println(s);
+//        for(String s:words)System.out.println(s);
 //        for(int i=0;i<times.size();i++)
 //        {
 //            jdbc.update( ids.get(i), times.get(i));

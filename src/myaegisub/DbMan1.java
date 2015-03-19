@@ -83,6 +83,14 @@ public class DbMan1 {
 //
 //
 //    }
+      public static ArrayList<Integer> ids=new ArrayList<Integer>();
+      public static ArrayList<String> songs=new ArrayList<String>();
+      public static ArrayList<String> characters=new ArrayList<String>();
+      public static ArrayList<String> sounds=new ArrayList<String>();
+      public static ArrayList<String> englishes=new ArrayList<String>();
+      public static ArrayList<String> syllables=new ArrayList<String>();
+      public static ArrayList<Integer> centiseconds=new ArrayList<Integer>();
+      public static ArrayList<Integer> times=new ArrayList<Integer>();
 
     public boolean createTable() {
         try {
@@ -148,14 +156,28 @@ public class DbMan1 {
 
   public ArrayList<Integer> select(String song)
   {
-      ArrayList<Integer> ids=new ArrayList<Integer>();
     try {
       c.setAutoCommit(false);
 
       stmt = c.createStatement();
       ResultSet rs = stmt.executeQuery( "SELECT * FROM words where song=\""+song+"\";" );
+      ids.clear();
+      characters.clear();
+      sounds.clear();
+      songs.clear();
+      englishes.clear();
+      times.clear();
+      centiseconds.clear();
+      syllables.clear();
       while ( rs.next() ) {
           ids.add(rs.getInt("id"));
+          characters.add(rs.getString("character"));
+          englishes.add(rs.getString("english"));
+          syllables.add(rs.getString("syllables"));
+          centiseconds.add(rs.getInt("centiseconds"));
+          times.add(rs.getInt("time"));
+          songs.add(rs.getString("song"));
+          sounds.add(rs.getString("sound"));
 //         int id = rs.getInt("id");
 //         String  name = rs.getString("name");
 //         int age  = rs.getInt("age");
