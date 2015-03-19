@@ -153,7 +153,7 @@ public class DbMan1 {
       c.setAutoCommit(false);
 
       stmt = c.createStatement();
-      ResultSet rs = stmt.executeQuery( "SELECT * FROM words where song="+song+";" );
+      ResultSet rs = stmt.executeQuery( "SELECT * FROM words where song=\""+song+"\";" );
       while ( rs.next() ) {
           ids.add(rs.getInt("id"));
 //         int id = rs.getInt("id");
