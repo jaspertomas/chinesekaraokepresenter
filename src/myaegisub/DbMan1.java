@@ -63,8 +63,8 @@ public class DbMan1 {
 //        }
 //        
 //        if (jdbc.c!=null 
-//                && jdbc.select()) {
-//            System.out.println("select successful");
+//                && jdbc.selectBySongname()) {
+//            System.out.println("selectBySongname successful");
 //        }
 //        
 //        if (jdbc.c!=null 
@@ -89,7 +89,7 @@ public class DbMan1 {
       public static ArrayList<String> sounds=new ArrayList<String>();
       public static ArrayList<String> englishes=new ArrayList<String>();
       public static ArrayList<String> syllables=new ArrayList<String>();
-      public static ArrayList<Integer> centiseconds=new ArrayList<Integer>();
+      public static ArrayList<Integer> milliseconds=new ArrayList<Integer>();
       public static ArrayList<Integer> times=new ArrayList<Integer>();
       public static ArrayList<Integer> lines=new ArrayList<Integer>();
       public static ArrayList<Integer> pages=new ArrayList<Integer>();
@@ -122,7 +122,7 @@ public class DbMan1 {
                     + " syllables         VARCHAR(50)"
                     + " ,line         integer default 0"
                     + " ,page         integer default 0"
-                    + " ,centiseconds         integer"
+                    + " ,milliseconds         integer"
                     + " ,time         integer default 0"
                     + ")";
             stmt.executeUpdate(sql);
@@ -142,9 +142,9 @@ public class DbMan1 {
       c.setAutoCommit(false);
 
       stmt = c.createStatement();
-      String sql = "INSERT INTO words (song,character,sound,english,syllables,centiseconds,line) " +
+      String sql = "INSERT INTO words (song,character,sound,english,syllables,milliseconds,line) " +
                    "VALUES ('"+song+"','"+character+"', '"+sound+"', '"+english+"', '"+syllables+"',0, '"+line+"' );"; 
-      System.out.println(sql);
+//      System.out.println(sql);
       stmt.executeUpdate(sql);
 
       stmt.close();
@@ -158,7 +158,7 @@ public class DbMan1 {
   }    
   
 
-  public ArrayList<Integer> select(String song)
+  public ArrayList<Integer> selectBySongname(String song)
   {
     try {
       c.setAutoCommit(false);
@@ -171,7 +171,7 @@ public class DbMan1 {
       songs.clear();
       englishes.clear();
       times.clear();
-      centiseconds.clear();
+      milliseconds.clear();
       syllables.clear();
       lines.clear();
       pages.clear();
@@ -180,7 +180,7 @@ public class DbMan1 {
           characters.add(rs.getString("character"));
           englishes.add(rs.getString("english"));
           syllables.add(rs.getString("syllables"));
-          centiseconds.add(rs.getInt("centiseconds"));
+          milliseconds.add(rs.getInt("milliseconds"));
           times.add(rs.getInt("time"));
           songs.add(rs.getString("song"));
           sounds.add(rs.getString("sound"));
@@ -208,14 +208,63 @@ public class DbMan1 {
     }
   }  
   
-
-  public boolean update(Integer id,String centiseconds)
+  public ArrayList<Integer> select(String criteria)
   {
     try {
       c.setAutoCommit(false);
 
       stmt = c.createStatement();
-      String sql = "UPDATE words set centiseconds = "+centiseconds+"0 where ID="+id.toString()+";";
+      ResultSet rs = stmt.executeQuery( "SELECT * FROM words "+criteria+";" );
+      ids.clear();
+      characters.clear();
+      sounds.clear();
+      songs.clear();
+      englishes.clear();
+      times.clear();
+      milliseconds.clear();
+      syllables.clear();
+      lines.clear();
+      pages.clear();
+      while ( rs.next() ) {
+          ids.add(rs.getInt("id"));
+          characters.add(rs.getString("character"));
+          englishes.add(rs.getString("english"));
+          syllables.add(rs.getString("syllables"));
+          milliseconds.add(rs.getInt("milliseconds"));
+          times.add(rs.getInt("time"));
+          songs.add(rs.getString("song"));
+          sounds.add(rs.getString("sound"));
+          lines.add(rs.getInt("line"));
+          pages.add(rs.getInt("page"));
+//         int id = rs.getInt("id");
+//         String  name = rs.getString("name");
+//         int age  = rs.getInt("age");
+//         String  address = rs.getString("address");
+//         float salary = rs.getFloat("salary");
+//         System.out.println( "ID = " + id );
+//         System.out.println( "NAME = " + name );
+//         System.out.println( "AGE = " + age );
+//         System.out.println( "ADDRESS = " + address );
+//         System.out.println( "SALARY = " + salary );
+//         System.out.println();
+      }
+      rs.close();
+      stmt.close();
+      
+      return ids;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return null;
+    }
+  }  
+
+  public boolean update(Integer id,String milliseconds)
+  {
+    try {
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      String sql = "UPDATE words set milliseconds = "+milliseconds+"0 where ID="+id.toString()+";";
       stmt.executeUpdate(sql);
       c.commit();
       stmt.close();
@@ -226,6 +275,22 @@ public class DbMan1 {
     }
   }  
 
+  public boolean updateTime(Integer id,Integer time)
+  {
+    try {
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      String sql = "UPDATE words set time = "+time+" where ID="+id.toString()+";";
+      stmt.executeUpdate(sql);
+      c.commit();
+      stmt.close();
+      return true;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return false;
+    }
+  }   
   public boolean updatePage(Integer id,Integer page)
   {
     try {
@@ -241,7 +306,7 @@ public class DbMan1 {
       System.err.println( e.getClass().getName() + ": " + e.getMessage() );
       return false;
     }
-  }    
+  }     
 //
 //  public boolean delete()
 //  {
@@ -276,4 +341,71 @@ public class DbMan1 {
 //    }
 //  }  
   
+//---------
+  public boolean insertPage(Integer page,Integer timestart, Integer timeend)
+  {
+    try {
+/*            sql = "CREATE TABLE pages "
+                    + "(ID INTEGER PRIMARY KEY     NOT NULL,"
+                    + " page           integer    NOT NULL, "
+                    + " timestart            integer, "
+                    + " timeend        integer "
+                    + ")";
+  
+  */  
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      String sql = "INSERT INTO pages (page,timestart,timeend) " +
+                   "VALUES ('"+page+"','"+timestart+"', '"+timeend+"');"; 
+//      System.out.println(sql);
+      stmt.executeUpdate(sql);
+
+      stmt.close();
+      c.commit();
+      
+      return true;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return false;
+    }
+  }    
+  public boolean insertLine(Integer line,Integer page,Integer timestart, Integer timeend)
+  {
+    try {
+/*            sql = "CREATE TABLE pages "
+                    + "(ID INTEGER PRIMARY KEY     NOT NULL,"
+                    + " page           integer    NOT NULL, "
+                    + " timestart            integer, "
+                    + " timeend        integer "
+                    + ")";
+  
+  */  
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      String sql = "INSERT INTO lines (line,page,timestart,timeend) " +
+                   "VALUES ('"+line+"','"+page+"','"+timestart+"', '"+timeend+"');"; 
+//      System.out.println(sql);
+      stmt.executeUpdate(sql);
+
+      stmt.close();
+      c.commit();
+      
+      return true;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return false;
+    }
+  }      
+/*
+            sql = "CREATE TABLE lines "
+                    + "(ID INTEGER PRIMARY KEY     NOT NULL,"
+                    + " line           integer    NOT NULL, "
+                    + " page           integer    NOT NULL, "
+                    + " timestart            integer, "
+                    + " timeend        integer "
+                    + ")";
+*/
+
 }

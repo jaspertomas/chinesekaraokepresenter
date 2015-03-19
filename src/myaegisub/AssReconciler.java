@@ -157,7 +157,16 @@ public class AssReconciler extends Application {
         
         //step 4
         //set pagination
-        setPages();
+//        setPages();
+        
+        //step 5
+        //calculate time
+//        setTimes();
+        
+        //step 6
+        //create page and line records
+//        insertLines();
+//        insertPages();
     }
 
     /**
@@ -181,7 +190,7 @@ public class AssReconciler extends Application {
             System.out.println("Error opening database");
             return;
         }
-        jdbc.select(songname);
+        jdbc.selectBySongname(songname);
         
 //        label.setText("Play");
         //display 
@@ -192,7 +201,7 @@ public class AssReconciler extends Application {
             output+="<td>"+i.toString()+"</td>";
             output+="<td><font size=7>"+DbMan1.characters.get(i)+"</font></td>";
             output+="<td>"+DbMan1.englishes.get(i)+"</td>";
-            output+="<td>"+DbMan1.centiseconds.get(i)+"</td>";
+            output+="<td>"+DbMan1.milliseconds.get(i)+"</td>";
             output+="<td>"+DbMan1.syllables.get(i)+"</td>";
             output+="<td>"+DbMan1.times.get(i)+"</td>";
             output+="<td><font size=7>"+(AssTimeParser.words.size()>i?AssTimeParser.words.get(i):"")+"</font></td>";
@@ -263,7 +272,7 @@ public class AssReconciler extends Application {
             System.out.println("Error opening database");
             return;
         }
-        jdbc.select(songname);
+        jdbc.selectBySongname(songname);
         
 //        label.setText("Play");
         //display 
@@ -275,7 +284,6 @@ public class AssReconciler extends Application {
     }    
     private void setPages()
     {
-        Integer timeprevious,timeremoved;
         
         //update database
         DbMan1 jdbc = new DbMan1();
@@ -285,7 +293,7 @@ public class AssReconciler extends Application {
             System.out.println("Error opening database");
             return;
         }
-        jdbc.select(songname);
+        jdbc.selectBySongname(songname);
         
 //        label.setText("Play");
         //display 
@@ -293,9 +301,100 @@ public class AssReconciler extends Application {
         for(Integer i=0;i<DbMan1.characters.size();i++)
         {
             page=Double.valueOf(Math.floor((DbMan1.lines.get(i)+3d)/linesperpage)).intValue();
-            System.out.println(page);
+//            System.out.println(page);
             jdbc.updatePage(DbMan1.ids.get(i), page);
         }
+        jdbc.close();
+    }
+    private void setTimes()
+    {
+        
+        //update database
+        DbMan1 jdbc = new DbMan1();
+        if (jdbc.connect("database.db")) {
+//            System.out.println("Opened database successfully");
+        }else{
+            System.out.println("Error opening database");
+            return;
+        }
+        jdbc.selectBySongname(songname);
+        
+//        label.setText("Play");
+        //display 
+        Integer time=0;
+        for(Integer i=0;i<DbMan1.characters.size();i++)
+        {
+            time+=DbMan1.milliseconds.get(i);
+//            System.out.println(time);
+            jdbc.updateTime(DbMan1.ids.get(i), time);
+        }
+        jdbc.close();
+    }
+    private void insertPages()
+    {
+        
+        //update database
+        DbMan1 jdbc = new DbMan1();
+        if (jdbc.connect("database.db")) {
+//            System.out.println("Opened database successfully");
+        }else{
+            System.out.println("Error opening database");
+            return;
+        }
+        
+        Integer starttime=0;
+        Integer endtime=0;
+        Integer pageno=0;
+        jdbc.select("where page = "+pageno.toString()+"");
+        while(!DbMan1.ids.isEmpty())
+        {
+            starttime=DbMan1.times.get(0);
+            endtime=DbMan1.times.get(DbMan1.ids.size()-1);
+            
+            jdbc.insertPage(pageno, starttime, endtime);
+            
+            //-next iteration------
+            pageno++;
+            jdbc.select("where page = "+pageno.toString()+"");
+        }
+        
+
+        
+        
+        jdbc.close();
+    }
+    private void insertLines()
+    {
+        
+        //update database
+        DbMan1 jdbc = new DbMan1();
+        if (jdbc.connect("database.db")) {
+//            System.out.println("Opened database successfully");
+        }else{
+            System.out.println("Error opening database");
+            return;
+        }
+        
+        Integer starttime=0;
+        Integer endtime=0;
+        Integer lineno=0;
+        Integer pageno=0;
+        jdbc.select("where line = "+lineno.toString()+"");
+        while(!DbMan1.ids.isEmpty())
+        {
+            starttime=DbMan1.times.get(0);
+            endtime=DbMan1.times.get(DbMan1.ids.size()-1);
+            pageno=DbMan1.pages.get(0);
+            jdbc.insertLine(lineno, pageno, starttime, endtime);
+            
+            //-next iteration------
+            lineno++;
+            jdbc.select("where line = "+lineno.toString()+"");
+        }
+        
+
+        
+        
         jdbc.close();
     }
 }
