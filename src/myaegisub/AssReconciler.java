@@ -142,8 +142,8 @@ public class AssReconciler extends Application {
         //step 2
         //this is for adjustment mode:
         //load .ass file
+        //then edit ids of karaoke nodes to merge
 //        AssTimeParser.parse(assfilename,songname);
-        //edit ids of karaoke nodes to merge
 //        adjust();
         
         //step 3
@@ -224,7 +224,7 @@ public class AssReconciler extends Application {
     }    
     private void adjust()
     {
-        Integer[] forremoval={0,13,17,26,36,39,48,56,65,72,75,78,87,95,104,111,114,117,126,133,142,149,158,163,163,164,164,164,164};
+        Integer[] forremoval={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
         for(int i:forremoval)
         {
             AssTimeParser.words.remove(i);
@@ -238,7 +238,7 @@ public class AssReconciler extends Application {
         Integer timeprevious,timeremoved;
         
         //prepare karaoke data - merge some nodes to match database data
-        Integer[] forremoval={0,13,17,26,36,39,48,56,65,72,75,78,87,95,104,111,114,117,126,133,142,149,158,163,163,164,164,164,164};
+        Integer[] forremoval={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
         for(int i:forremoval)
         {
             if(i>0)
