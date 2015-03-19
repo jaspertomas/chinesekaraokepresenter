@@ -408,13 +408,13 @@ public class DbMan1 {
                     + ")";
 */
 
-  public ArrayList<Integer> selectLine(Integer lineno)
+  public ArrayList<Integer> selectLine(Integer time)
   {
     try {
       c.setAutoCommit(false);
 
       stmt = c.createStatement();
-      ResultSet rs = stmt.executeQuery("SELECT * FROM pages where page = "+lineno+";" );
+      ResultSet rs = stmt.executeQuery( "SELECT * FROM lines where timestart<="+time+" and timeend>="+time+"" );
       while ( rs.next() ) {
           lineno=rs.getInt("line");
           linepageno=rs.getInt("page");
@@ -452,7 +452,25 @@ public class DbMan1 {
       return null;
     }
   }  
-  
+  public ArrayList<Integer> selectWord(Integer time)
+  {
+    try {
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      ResultSet rs = stmt.executeQuery( "SELECT * FROM words where time <= "+time.toString()+" order by id desc limit 1"  );
+      while ( rs.next() ) {
+          wordid=rs.getInt("id");
+      }
+      rs.close();
+      stmt.close();
+      
+      return ids;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return null;
+    }
+  }    
 //  public ArrayList<Integer> selectPage(Integer pageno)
 //  {
 //    try {
@@ -481,4 +499,5 @@ public class DbMan1 {
       public static Integer pageno=0;
       public static Integer pagetimestart=0;
       public static Integer pagetimeend=0;
+      public static Integer wordid=0;
 }

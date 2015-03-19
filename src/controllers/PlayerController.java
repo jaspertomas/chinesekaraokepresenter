@@ -41,9 +41,17 @@ public class PlayerController {
             return "";
         }
 
-            jdbc.selectPage(time);
+        jdbc.selectWord(time);
+        Integer wordid=DbMan1.wordid;
+        System.out.println("word:"+wordid.toString());
+
+        jdbc.selectPage(time);
         Integer pageno=DbMan1.pageno;
         System.out.println("page:"+pageno.toString());
+
+        jdbc.selectLine(time);
+        Integer lineno=DbMan1.lineno;
+        System.out.println("line:"+lineno.toString());
         
         //select words that belong to this page 
         jdbc.select(" where page = "+pageno.toString());
@@ -64,6 +72,11 @@ public class PlayerController {
 //            System.out.println(wordsperline[i]);
 //        }
         
+        String fontopenred="<font color=red>";
+        String fontopenblack="<font>";
+        String fontopen;
+        String fontclose="</font>";
+        
         //formulate html
         output+="<table>";
         //for each line...
@@ -74,19 +87,31 @@ public class PlayerController {
             output+="<tr>";
             for(int j=0;j<wordsperline[i];j++)
             {
-                output+="<td>"+DbMan1.characters.get(wordcounter1)+"</td>";
+                if(DbMan1.lines.get(wordcounter1)>lineno)fontopen=fontopenred;
+                else if(DbMan1.lines.get(wordcounter1)<lineno)fontopen=fontopenblack;
+                else if(DbMan1.ids.get(wordcounter1)<=DbMan1.wordid)fontopen=fontopenred;
+                else fontopen=fontopenblack;
+                output+="<td>"+fontopen+DbMan1.characters.get(wordcounter1)+fontclose+"</td>";
                 wordcounter1++;
             }
             output+="</tr><tr>";
             for(int j=0;j<wordsperline[i];j++)
             {
-                output+="<td>"+DbMan1.sounds.get(wordcounter2)+"</td>";
+                if(DbMan1.lines.get(wordcounter2)>lineno)fontopen=fontopenred;
+                else if(DbMan1.lines.get(wordcounter2)<lineno)fontopen=fontopenblack;
+                else if(DbMan1.ids.get(wordcounter2)<=DbMan1.wordid)fontopen=fontopenred;
+                else fontopen=fontopenblack;
+                output+="<td>"+fontopen+DbMan1.sounds.get(wordcounter2)+fontclose+"</td>";
                 wordcounter2++;
             }
             output+="</tr><tr>";
             for(int j=0;j<wordsperline[i];j++)
             {
-                output+="<td>"+DbMan1.englishes.get(wordcounter3)+"</td>";
+                if(DbMan1.lines.get(wordcounter3)>lineno)fontopen=fontopenred;
+                else if(DbMan1.lines.get(wordcounter3)<lineno)fontopen=fontopenblack;
+                else if(DbMan1.ids.get(wordcounter3)<=DbMan1.wordid)fontopen=fontopenred;
+                else fontopen=fontopenblack;
+                output+="<td>"+fontopen+DbMan1.englishes.get(wordcounter3)+fontclose+"</td>";
                 wordcounter3++;
             }
             output+="</tr><tr><td>&nbsp;</td>";
