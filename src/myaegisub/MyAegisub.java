@@ -143,9 +143,16 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
         
         if(index==DbMan1.ids.size()-1)//last character in page
         {
-            timerController.setTime(DbMan1.nextpagewordtime);
-            if(timerController.isPaused())
-                playerController.play(timerController.getTime());
+            if(DbMan1.nextpagewordtime==null)
+            {
+                //do nothing
+            }
+            else
+            {
+                timerController.setTime(DbMan1.nextpagewordtime);
+                if(timerController.isPaused())
+                    playerController.play(timerController.getTime());
+            }
         }
         else
         {
@@ -160,9 +167,16 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
         
         if(index==0)//first character in page
         {
-            timerController.setTime(DbMan1.previouspagewordtime);
-            if(timerController.isPaused())
-                playerController.play(timerController.getTime());
+            if(DbMan1.previouspagewordtime==null)
+            {
+                //do nothing
+            }
+            else
+            {
+                timerController.setTime(DbMan1.previouspagewordtime);
+                if(timerController.isPaused())
+                    playerController.play(timerController.getTime());
+            }
         }
         else
         {

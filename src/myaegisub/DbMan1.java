@@ -483,6 +483,7 @@ public class DbMan1 {
   }    
   public void getPreviousPageWordTime()
   {
+      previouspagewordtime=null;
     try {
       stmt = c.createStatement();
       ResultSet rs = stmt.executeQuery( "select * from words where page < "+pageno+" order by id desc limit 1");
@@ -497,6 +498,7 @@ public class DbMan1 {
   }    
   public void getNextPageWordTime()
   {
+      nextpagewordtime=null;
     try {
       stmt = c.createStatement();
       ResultSet rs = stmt.executeQuery( "select * from words where page > "+pageno+" limit 1");
