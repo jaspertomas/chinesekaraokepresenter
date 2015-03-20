@@ -307,39 +307,46 @@ public class DbMan1 {
       return false;
     }
   }     
-//
-//  public boolean delete()
-//  {
-//    try {
-//      c.setAutoCommit(false);
-//
-//      stmt = c.createStatement();
-//      String sql = "DELETE from COMPANY where ID=2;";
-//      stmt.executeUpdate(sql);
-//      c.commit();
-//
-//      ResultSet rs = stmt.executeQuery( "SELECT * FROM COMPANY;" );
-//      while ( rs.next() ) {
-//         int id = rs.getInt("id");
-//         String  name = rs.getString("name");
-//         int age  = rs.getInt("age");
-//         String  address = rs.getString("address");
-//         float salary = rs.getFloat("salary");
-//         System.out.println( "ID = " + id );
-//         System.out.println( "NAME = " + name );
-//         System.out.println( "AGE = " + age );
-//         System.out.println( "ADDRESS = " + address );
-//         System.out.println( "SALARY = " + salary );
-//         System.out.println();
-//      }
-//      rs.close();
-//      stmt.close();
-//      return true;
-//    } catch ( Exception e ) {
-//      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-//      return false;
-//    }
-//  }  
+
+  public boolean deletePages()
+  {
+    try {
+      stmt = c.createStatement();
+      String sql = "DELETE from pages;";
+      stmt.executeUpdate(sql);
+      stmt.close();
+      return true;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return false;
+    }
+  }  
+  public boolean deleteLines()
+  {
+    try {
+      stmt = c.createStatement();
+      String sql = "DELETE from lines;";
+      stmt.executeUpdate(sql);
+      stmt.close();
+      return true;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return false;
+    }
+  }  
+  public boolean deleteWords()
+  {
+    try {
+      stmt = c.createStatement();
+      String sql = "DELETE from words;";
+      stmt.executeUpdate(sql);
+      stmt.close();
+      return true;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return false;
+    }
+  }  
   
 //---------
   public boolean insertPage(Integer page,Integer timestart, Integer timeend)

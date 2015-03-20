@@ -29,10 +29,13 @@ public class AssReconciler extends Application {
     public static final Integer linesperpage=4;
     public static final Integer zeropageadjustment=4;
 
-    String songname="song13";
-    String assfilename="4final.ass";
-//    Integer[] forremoval13={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
-    Integer[] forremoval={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
+//    String songname="song13";
+//    String assfilename="4final.ass";
+//    Integer[] forremoval={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
+    String songname="song14";
+    String assfilename="5final.ass";
+    Integer[] forremoval={4,8,12,17,21,25,29,30,31,32,33};
+//    Integer[] forremoval={};
 
     WebView browser = new WebView();
     WebEngine webEngine = browser.getEngine();;
@@ -153,19 +156,11 @@ public class AssReconciler extends Application {
         
         //step 3
         //this is to write adjustments to database
-//        AssTimeParser.parse(assfilename,songname);
-//        update();
+        AssTimeParser.parse(assfilename,songname);
+        update();
         
-        //step 4
-        //set pagination
-//        setPages();
-        
-        //step 5
-        //calculate time
-//        setTimes();
-        
-        //step 6
-        //create page and line records
+        setPages();
+        setTimes();
         insertLines();
         insertPages();
     }
@@ -343,6 +338,8 @@ public class AssReconciler extends Application {
             return;
         }
         
+        jdbc.deletePages();
+        
         Integer starttime=0;
         Integer endtime=0;
         Integer pageno=1;
@@ -375,6 +372,8 @@ public class AssReconciler extends Application {
             System.out.println("Error opening database");
             return;
         }
+        
+        jdbc.deleteLines();
         
         Integer starttime=0;
         Integer endtime=0;
