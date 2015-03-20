@@ -156,8 +156,8 @@ public class AssReconciler extends Application {
         
         //step 3
         //this is to write adjustments to database
-        AssTimeParser.parse(assfilename,songname);
-        update();
+//        AssTimeParser.parse(assfilename,songname);
+//        update();
         
         setPages();
         setTimes();
@@ -320,9 +320,9 @@ public class AssReconciler extends Application {
         Integer time=0;
         for(Integer i=0;i<DbMan1.characters.size();i++)
         {
-            time+=DbMan1.milliseconds.get(i);
 //            System.out.println(time);
             jdbc.updateTime(DbMan1.ids.get(i), time);
+            time+=DbMan1.milliseconds.get(i);
         }
         jdbc.close();
     }

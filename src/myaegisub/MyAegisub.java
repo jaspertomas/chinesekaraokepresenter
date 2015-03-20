@@ -139,28 +139,37 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
     
     private void gotoNext()
     {
-        System.out.println("goto next");
-        Integer wordid=DbMan1.wordid;
-        System.out.println("word id="+wordid.toString());
         Integer index=DbMan1.ids.indexOf(DbMan1.wordid);
-        System.out.println("index="+index.toString());
-        Integer milliseconds=DbMan1.milliseconds.get(index);
-        System.out.println("milliseconds="+milliseconds.toString());
-        System.out.println("time="+timerController.getTime());
-//        playerController.play(20000);
-        timerController.setTime(timerController.getTime()+milliseconds);
-        if(timerController.isPaused())
-            playerController.play(timerController.getTime());
+        
+        if(index==DbMan1.ids.size()-1)//last character in page
+        {
+            timerController.setTime(DbMan1.nextpagewordtime);
+            if(timerController.isPaused())
+                playerController.play(timerController.getTime());
+        }
+        else
+        {
+            timerController.setTime(DbMan1.times.get(index+1));
+            if(timerController.isPaused())
+                playerController.play(timerController.getTime());
+        }
     }
     private void gotoPrevious()
     {
-        System.out.println("goto previous");
-//        playerController.play(10000);
         Integer index=DbMan1.ids.indexOf(DbMan1.wordid);
-        Integer milliseconds=DbMan1.milliseconds.get(index);
-        timerController.setTime(timerController.getTime()-milliseconds);
-        if(timerController.isPaused())
-            playerController.play(timerController.getTime());
+        
+        if(index==0)//first character in page
+        {
+            timerController.setTime(DbMan1.previouspagewordtime);
+            if(timerController.isPaused())
+                playerController.play(timerController.getTime());
+        }
+        else
+        {
+            timerController.setTime(DbMan1.times.get(index-1));
+            if(timerController.isPaused())
+                playerController.play(timerController.getTime());
+        }
     }
     private void play()
     {

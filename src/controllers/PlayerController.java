@@ -37,19 +37,21 @@ public class PlayerController {
             return "";
         }
 
-        jdbc.selectWord(time);
+        jdbc.selectWordByTime(time);
         Integer wordid=DbMan1.wordid;
 //        System.out.println("word:"+wordid.toString());
 
-        jdbc.selectPage(time);
+        jdbc.selectPageByTime(time);
         Integer pageno=DbMan1.pageno;
+        
 //        System.out.println("page:"+pageno.toString());
 
-        jdbc.selectLine(time);
+        jdbc.selectLineByTime(time);
         Integer lineno=DbMan1.lineno;
 //        System.out.println("line:"+lineno.toString());
         
         //select words that belong to this page 
+//        jdbc.select(" where page = "+pageno.toString()+" or page = "+Integer.valueOf(pageno-1).toString()+" or page = "+Integer.valueOf(pageno+1).toString()+" ");
         jdbc.select(" where page = "+pageno.toString());
         
         //determine number of words per line

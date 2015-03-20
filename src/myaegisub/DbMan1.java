@@ -415,7 +415,7 @@ public class DbMan1 {
                     + ")";
 */
 
-  public ArrayList<Integer> selectLine(Integer time)
+  public ArrayList<Integer> selectLineByTime(Integer time)
   {
     try {
       c.setAutoCommit(false);
@@ -438,7 +438,7 @@ public class DbMan1 {
     }
   }  
   
-  public ArrayList<Integer> selectPage(Integer time)
+  public ArrayList<Integer> selectPageByTime(Integer time)
   {
     try {
       c.setAutoCommit(false);
@@ -452,6 +452,9 @@ public class DbMan1 {
       }
       rs.close();
       stmt.close();
+
+        getNextPageWordTime();
+        getPreviousPageWordTime();
       
       return ids;
     } catch ( Exception e ) {
@@ -459,7 +462,7 @@ public class DbMan1 {
       return null;
     }
   }  
-  public ArrayList<Integer> selectWord(Integer time)
+  public Integer selectWordByTime(Integer time)
   {
     try {
       c.setAutoCommit(false);
@@ -472,13 +475,41 @@ public class DbMan1 {
       rs.close();
       stmt.close();
       
-      return ids;
+      return wordid;
     } catch ( Exception e ) {
       System.err.println( e.getClass().getName() + ": " + e.getMessage() );
       return null;
     }
   }    
-//  public ArrayList<Integer> selectPage(Integer pageno)
+  public void getPreviousPageWordTime()
+  {
+    try {
+      stmt = c.createStatement();
+      ResultSet rs = stmt.executeQuery( "select * from words where page < "+pageno+" order by id desc limit 1");
+      while ( rs.next() ) {
+          previouspagewordtime=rs.getInt("time");
+      }
+      rs.close();
+      stmt.close();
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+    }
+  }    
+  public void getNextPageWordTime()
+  {
+    try {
+      stmt = c.createStatement();
+      ResultSet rs = stmt.executeQuery( "select * from words where page > "+pageno+" limit 1");
+      while ( rs.next() ) {
+          nextpagewordtime=rs.getInt("time");
+      }
+      rs.close();
+      stmt.close();
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+    }
+  }    
+//  public ArrayList<Integer> selectPageByTime(Integer pageno)
 //  {
 //    try {
 //      c.setAutoCommit(false);
@@ -507,4 +538,6 @@ public class DbMan1 {
       public static Integer pagetimestart=0;
       public static Integer pagetimeend=0;
       public static Integer wordid=0;
+      public static Integer previouspagewordtime;
+      public static Integer nextpagewordtime;
 }
