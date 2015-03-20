@@ -87,6 +87,9 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
                 case 93://]
                     gotoNext();
                     break;
+                case 114://R
+                    reset();
+                    break;
                 default:
                     System.out.println(j);
                     /*
@@ -225,6 +228,11 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
         }
         timerController.setSpeed(speed);
         label.setText("Speed: "+speed);
+    }
+    private void reset()
+    {
+        timerController.setTime(0);
+        playerController.play(timerController.getTime());
     }
 }
 //
