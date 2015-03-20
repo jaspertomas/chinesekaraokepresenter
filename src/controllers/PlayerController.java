@@ -76,8 +76,6 @@ public class PlayerController {
         String fontopenbigblack="<font size=7>";
         String fontopen;
         String fontclose="</font>";
-        String colspan="";
-        String colspan4=" colspan=8 ";
         
         //formulate html
         output+="<table width=100%>";
@@ -85,39 +83,63 @@ public class PlayerController {
         Integer wordcounter1=0,wordcounter2=0,wordcounter3=0;
         for(int i=0;i<AssReconciler.linesperpage;i++)
         {
-            //
-            output+="<tr>";
-            for(int j=0;j<wordsperline[i];j++)
+            if(wordsperline[i]==1)
             {
-                if(DbMan1.lines.get(wordcounter1)<lineno)fontopen=fontopenred;
-                else if(DbMan1.lines.get(wordcounter1)>lineno)fontopen=fontopenblack;
-                else if(DbMan1.ids.get(wordcounter1)<=DbMan1.wordid)fontopen=fontopenred;
-                else fontopen=fontopenblack;
-                output+="<td align=center"+(wordsperline[i]==1?colspan4:"")+">"+fontopen+DbMan1.characters.get(wordcounter1)+fontclose+"</td>";
-                wordcounter1++;
+                //title row
+                //row 1
+                output+="<tr><td>&nbsp;</td></tr>";
+                //row 2
+                output+="<tr>";
+                for(int j=0;j<wordsperline[i];j++)
+                {
+                    output+="<td align=center colspan=8>"+fontopenblack+DbMan1.sounds.get(wordcounter2)+fontclose+"</td>";
+                    wordcounter1++;
+                    wordcounter2++;
+                    wordcounter3++;
+                }
+                //row 3
+                output+="<tr><td>&nbsp;</td></tr>";
+                //spacer
+                output+="<tr><td><font size=2>&nbsp;</font></td>";
+                output+="</tr>";
             }
-            output+="</tr><tr>";
-            for(int j=0;j<wordsperline[i];j++)
+            else
             {
-                if(DbMan1.lines.get(wordcounter2)<lineno)fontopen=fontopenred;
-                else if(DbMan1.lines.get(wordcounter2)>lineno)fontopen=fontopenblack;
-                else if(DbMan1.ids.get(wordcounter2)<=DbMan1.wordid)fontopen=fontopenred;
-                else fontopen=fontopenblack;
-                output+="<td align=center"+(wordsperline[i]==1?colspan4:"")+">"+fontopen+DbMan1.sounds.get(wordcounter2)+fontclose+"</td>";
-                wordcounter2++;
+                //lyrics
+                output+="<tr>";
+                for(int j=0;j<wordsperline[i];j++)
+                {
+                    if(DbMan1.lines.get(wordcounter1)<lineno)fontopen=fontopenred;
+                    else if(DbMan1.lines.get(wordcounter1)>lineno)fontopen=fontopenblack;
+                    else if(DbMan1.ids.get(wordcounter1)<=DbMan1.wordid)fontopen=fontopenred;
+                    else fontopen=fontopenblack;
+                    output+="<td align=center>"+fontopen+DbMan1.characters.get(wordcounter1)+fontclose+"</td>";
+                    wordcounter1++;
+                }
+                output+="</tr><tr>";
+                for(int j=0;j<wordsperline[i];j++)
+                {
+                    if(DbMan1.lines.get(wordcounter2)<lineno)fontopen=fontopenred;
+                    else if(DbMan1.lines.get(wordcounter2)>lineno)fontopen=fontopenblack;
+                    else if(DbMan1.ids.get(wordcounter2)<=DbMan1.wordid)fontopen=fontopenred;
+                    else fontopen=fontopenblack;
+                    output+="<td align=center>"+fontopen+DbMan1.sounds.get(wordcounter2)+fontclose+"</td>";
+                    wordcounter2++;
+                }
+                output+="</tr><tr>";
+                for(int j=0;j<wordsperline[i];j++)
+                {
+                    if(DbMan1.lines.get(wordcounter3)<lineno)fontopen=fontopenbigred;
+                    else if(DbMan1.lines.get(wordcounter3)>lineno)fontopen=fontopenbigblack;
+                    else if(DbMan1.ids.get(wordcounter3)<=DbMan1.wordid)fontopen=fontopenbigred;
+                    else fontopen=fontopenbigblack;
+                    output+="<td align=center>"+fontopen+DbMan1.englishes.get(wordcounter3)+fontclose+"</td>";
+                    wordcounter3++;
+                }
+                output+="</tr><tr><td><font size=2>&nbsp;</font></td>";
+                output+="</tr>";
             }
-            output+="</tr><tr>";
-            for(int j=0;j<wordsperline[i];j++)
-            {
-                if(DbMan1.lines.get(wordcounter3)<lineno)fontopen=fontopenbigred;
-                else if(DbMan1.lines.get(wordcounter3)>lineno)fontopen=fontopenbigblack;
-                else if(DbMan1.ids.get(wordcounter3)<=DbMan1.wordid)fontopen=fontopenbigred;
-                else fontopen=fontopenbigblack;
-                output+="<td align=center"+(wordsperline[i]==1?colspan4:"")+">"+fontopen+DbMan1.englishes.get(wordcounter3)+fontclose+"</td>";
-                wordcounter3++;
-            }
-            output+="</tr><tr><td><font size=2>&nbsp;</font></td>";
-            output+="</tr>";
+
         }
         output+="</table>";
         
