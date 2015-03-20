@@ -31,6 +31,9 @@ public class MyAegisub extends Application {
     PlayerController playerController=new PlayerController(webEngine);
     TimerController timerController=new TimerController(playerController);
     Label label = new Label();
+    
+    Integer resetmode=0;
+    
     @Override
     public void start(Stage primaryStage) {
 
@@ -62,11 +65,17 @@ public class MyAegisub extends Application {
 browser.addEventFilter(KeyEvent.KEY_PRESSED, 
                     new EventHandler<KeyEvent>() {
                         public void handle(KeyEvent event) { 
+                            
 //        System.out.println("Filtering out event " + event.getEventType()); 
         String s=event.getText();
         for(int i=0;i<s.length();i++)
         {
             int j=(int)s.charAt(i);
+
+            //bring reset mode back to 0
+            //if key pressed is not "R"
+            if(j!=114)resetmode=0;
+
             switch(j)
             {
                 case 13://enter
@@ -231,8 +240,15 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
     }
     private void reset()
     {
-        timerController.setTime(0);
-        playerController.play(timerController.getTime());
+        //press 'R' 3 times to activate reset
+        if(resetmode==2)
+        {
+            timerController.setTime(0);
+            playerController.play(timerController.getTime());
+            resetmode=0;
+        }
+        else 
+            resetmode++;
     }
 }
 //
