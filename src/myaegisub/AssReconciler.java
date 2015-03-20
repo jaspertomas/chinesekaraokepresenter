@@ -29,8 +29,9 @@ public class AssReconciler extends Application {
     public static final Integer linesperpage=4;
     public static final Integer zeropageadjustment=3;
 
+    String songname="song000";
 //    String songname="song00";
-    String songname="song01";
+//    String songname="song01";
 //    String songname="song02";
     String assfilename="ass00.ass";
     Integer[] forremoval={};
@@ -414,13 +415,30 @@ public class AssReconciler extends Application {
         
         jdbc.deleteLines();
         
+        //find out the maximum line number
+        jdbc.select(" order by line desc limit 1");
+        if(DbMan1.lines.isEmpty())
+                {
+                    System.err.println("AssReconciler:There are no lines");
+                    System.exit(1);
+                }
+        Integer maxline=DbMan1.lines.get(0);
+        System.out.println(maxline);
+        
         Integer starttime=0;
         Integer endtime=0;
         Integer lineno=1;
         Integer pageno=1;
         jdbc.select("where line = "+lineno.toString()+"");
-        while(!DbMan1.ids.isEmpty())
+        for(int i=1;i<=maxline;i++)
         {
+            if(DbMan1.ids.size()==0)
+            {
+                lineno++;
+                jdbc.select("where line = "+lineno.toString()+"");
+                continue;
+            }
+            
             starttime=DbMan1.times.get(0);
             endtime=DbMan1.times.get(DbMan1.ids.size()-1);
             pageno=DbMan1.pages.get(0);
