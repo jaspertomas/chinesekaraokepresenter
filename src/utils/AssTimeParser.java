@@ -44,7 +44,7 @@ public class AssTimeParser {
             if(!line.contains("Dialogue: "))continue;
             
             columns=line.split(",");
-            if(columns.length<9)continue;//if no data, do nothing
+//            if(columns.length<9)continue;//if no data, do nothing
             segments=columns[9].split("[{]");
             for(String segment:segments)
             {

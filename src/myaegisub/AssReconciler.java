@@ -161,9 +161,9 @@ public class AssReconciler extends Application {
         
         //step 3
         //this is to write adjustments to database
-//        AssTimeParser.parse(assfilename,songname);
-//        update();
-//        
+        AssTimeParser.parse(assfilename,songname);
+        update();
+        
         setPages();
         setTimes();
         insertLines();
