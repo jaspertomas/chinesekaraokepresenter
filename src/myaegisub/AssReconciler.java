@@ -29,7 +29,9 @@ public class AssReconciler extends Application {
     public static final Integer linesperpage=4;
     public static final Integer zeropageadjustment=3;
 
-    String songname="song00";
+//    String songname="song00";
+//    String songname="song01";
+    String songname="song02";
     String assfilename="ass00.ass";
     Integer[] forremoval={};
 
@@ -165,8 +167,9 @@ public class AssReconciler extends Application {
         
         //step 3
         //this is to write adjustments to database
-        AssTimeParser.parse(assfilename,songname);
-        update();
+//        AssTimeParser.parse(assfilename,songname);
+//        update();
+        dummyupdate();
         
         setPages();
         setTimes();
@@ -288,6 +291,26 @@ public class AssReconciler extends Application {
         }
         jdbc.close();
     }    
+    private void dummyupdate()
+    {
+        //update database
+        DbMan1 jdbc = new DbMan1();
+        if (jdbc.connect("database.db")) {
+//            System.out.println("Opened database successfully");
+        }else{
+            System.out.println("Error opening database");
+            return;
+        }
+        jdbc.selectBySongname(songname);
+        
+//        label.setText("Play");
+        //display 
+        for(Integer i=0;i<DbMan1.characters.size();i++)
+        {
+            jdbc.update(DbMan1.ids.get(i), "1000");
+        }
+        jdbc.close();
+    }        
     private void setPages()
     {
         
