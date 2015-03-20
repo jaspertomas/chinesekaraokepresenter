@@ -69,22 +69,23 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
             int j=(int)s.charAt(i);
             switch(j)
             {
-                //space
-                case 13://play
-//                    System.out.println("enter");
+                case 13://enter
                     play();
                     break;
-                case 32://pause
-//                    System.out.println("space");
+                case 32://space
                     pause();
                     break;
-                case 44://slow down
-//                    System.out.println("<");
+                case 44://<
                     slowDown();
                     break;
-                case 46://speed up
-//                    System.out.println(">");
+                case 46://>
                     speedUp();
+                    break;
+                case 91://[
+                    gotoPrevious();
+                    break;
+                case 93://]
+                    gotoNext();
                     break;
                 default:
                     System.out.println(j);
@@ -119,7 +120,9 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
 //        SongParser.parse("song01.txt");
 //        SongParser.parse("song13.txt");
 //        AssTimeParser.parse("4final.ass","song13");
-        play();
+
+
+//        play();
     }
 
     /**
@@ -134,6 +137,31 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
         launch(args);
     }
     
+    private void gotoNext()
+    {
+        System.out.println("goto next");
+        Integer wordid=DbMan1.wordid;
+        System.out.println("word id="+wordid.toString());
+        Integer index=DbMan1.ids.indexOf(DbMan1.wordid);
+        System.out.println("index="+index.toString());
+        Integer milliseconds=DbMan1.milliseconds.get(index);
+        System.out.println("milliseconds="+milliseconds.toString());
+        System.out.println("time="+timerController.getTime());
+//        playerController.play(20000);
+        timerController.setTime(timerController.getTime()+milliseconds);
+        if(timerController.isPaused())
+            playerController.play(timerController.getTime());
+    }
+    private void gotoPrevious()
+    {
+        System.out.println("goto previous");
+//        playerController.play(10000);
+        Integer index=DbMan1.ids.indexOf(DbMan1.wordid);
+        Integer milliseconds=DbMan1.milliseconds.get(index);
+        timerController.setTime(timerController.getTime()-milliseconds);
+        if(timerController.isPaused())
+            playerController.play(timerController.getTime());
+    }
     private void play()
     {
         label.setText("Play");

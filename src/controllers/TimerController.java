@@ -5,6 +5,7 @@
 package controllers;
 
 import java.io.File;
+import javafx.application.Platform;
 import javafx.scene.web.WebEngine;
 import utils.AssParser;
 
@@ -36,7 +37,12 @@ public class TimerController implements Runnable {
               }
               else if(status==PLAYING)
               {
-                  playerController.play();
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                          playerController.play(time);
+                    }
+                });        
                   time+=speed;
               }
               else if(status==STOPPED)
@@ -69,8 +75,28 @@ public class TimerController implements Runnable {
    {
        status=PLAYING;
    }
+   public Boolean isPlaying ()
+   {
+       return status==PLAYING;
+   }
+   public Boolean isPaused ()
+   {
+       return status==PAUSED;
+   }
+   public Boolean isStopped ()
+   {
+       return status==STOPPED;
+   }
    public void setSpeed (Integer speed)
    {
        this.speed=speed;
+   }
+   public void setTime (Integer time)
+   {
+       this.time=time;
+   }
+   public Integer getTime ()
+   {
+       return time;
    }
 }

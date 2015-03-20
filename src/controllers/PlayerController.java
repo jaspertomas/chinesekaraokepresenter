@@ -20,14 +20,9 @@ public class PlayerController {
    public PlayerController(WebEngine webEngine){
        this.webEngine=webEngine;
    }
-    public void play()
+    public void play(Integer time)
     {
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                webEngine.loadContent(gen(TimerController.time));
-            }
-        });        
+        webEngine.loadContent(gen(time));
     }
     private String gen(Integer time)
     {
