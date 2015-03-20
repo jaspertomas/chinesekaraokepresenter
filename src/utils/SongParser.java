@@ -59,6 +59,7 @@ public class SongParser {
                 //possible values for segment: "","\k195","zhòng "
                 if(segment.trim().isEmpty());//do nothing
                 else if(segment.contains("。"));//do nothing
+                else if(linemarker==4);//do nothing
                 else
                 {
 //                    System.out.println(segment.trim());

@@ -141,7 +141,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
     {
         Integer index=DbMan1.ids.indexOf(DbMan1.wordid);
         
-        if(index==DbMan1.ids.size()-1)//last character in page
+        if(index>=DbMan1.ids.size()-1)//last character in page
         {
             if(DbMan1.nextpagewordtime==null)
             {
@@ -165,7 +165,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
     {
         Integer index=DbMan1.ids.indexOf(DbMan1.wordid);
         
-        if(index==0)//first character in page
+        if(index<=0)//first character in page
         {
             if(DbMan1.previouspagewordtime==null)
             {
@@ -174,15 +174,13 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
             else
             {
                 timerController.setTime(DbMan1.previouspagewordtime);
-                if(timerController.isPaused())
-                    playerController.play(timerController.getTime());
+                playerController.play(timerController.getTime());
             }
         }
         else
         {
             timerController.setTime(DbMan1.times.get(index-1));
-            if(timerController.isPaused())
-                playerController.play(timerController.getTime());
+            playerController.play(timerController.getTime());
         }
     }
     private void play()
