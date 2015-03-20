@@ -30,8 +30,8 @@ public class AssReconciler extends Application {
     public static final Integer zeropageadjustment=3;
 
 //    String songname="song00";
-//    String songname="song01";
-    String songname="song02";
+    String songname="song01";
+//    String songname="song02";
     String assfilename="ass00.ass";
     Integer[] forremoval={};
 
@@ -127,6 +127,12 @@ public class AssReconciler extends Application {
                     break;
                 case 93://increment line counter
                     incrementLineCounter();
+                    break;
+                case 45://-
+                    previousSong();
+                    break;
+                case 61://=
+                    nextSong();
                     break;
                 default:
                     System.out.println(j);
@@ -307,7 +313,7 @@ public class AssReconciler extends Application {
         //display 
         for(Integer i=0;i<DbMan1.characters.size();i++)
         {
-            jdbc.update(DbMan1.ids.get(i), "1000");
+            jdbc.update(DbMan1.ids.get(i), "100");
         }
         jdbc.close();
     }        
@@ -429,5 +435,11 @@ public class AssReconciler extends Application {
         
         
         jdbc.close();
+    }
+    private void previousSong()
+    {
+    }
+    private void nextSong()
+    {
     }
 }
