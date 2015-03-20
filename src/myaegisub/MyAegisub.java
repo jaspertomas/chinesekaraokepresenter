@@ -121,7 +121,7 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
 //        SongParser.parse("song13.txt");
 //        AssTimeParser.parse("4final.ass","song13");
 
-
+        playerController.play(0);
 //        play();
     }
 
