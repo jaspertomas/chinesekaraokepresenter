@@ -27,15 +27,15 @@ import utils.SongParser;
  */
 public class AssReconciler extends Application {
     public static final Integer linesperpage=4;
-    public static final Integer zeropageadjustment=4;
+    public static final Integer zeropageadjustment=3;
 
-    String songname="song13";
-    String assfilename="4final.ass";
-    Integer[] forremoval={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
-//    String songname="song14";
-//    String assfilename="5final.ass";
+//    String songname="song13";
+//    String assfilename="4final.ass";
+//    Integer[] forremoval={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165};
+    String songname="song14";
+    String assfilename="5final.ass";
 //    Integer[] forremoval={4,8,12,17,21,25,29,30,31,32,33};
-//    Integer[] forremoval={};
+    Integer[] forremoval={5,9,13,18,22,26,30,31,32,33,34};
 
     WebView browser = new WebView();
     WebEngine webEngine = browser.getEngine();;
@@ -158,7 +158,7 @@ public class AssReconciler extends Application {
         //this is to write adjustments to database
 //        AssTimeParser.parse(assfilename,songname);
 //        update();
-        
+//        
         setPages();
         setTimes();
         insertLines();
