@@ -35,7 +35,7 @@ public class AssReconciler extends Application {
     String songname="song001";
     String assfilename="001.ass";
     Integer[] forremoval={14,18,27,37,40,49,57,66,73,76,79,88,96,105,112,115,118,127,134,143,150,159,164,164,165,165,165,165,171,175,179,184,188,192,196,197,198,199,200,202,202,202,203,204,204,205,206,206,206,207,208,208,208,208,208,208,209,209,209,209,209,209,209,210,210,210,210,211,211,211,212,212,212,213,213,213,213,213,213,213,214,214,214,215,215,215,215,216,216,216,216,216,216,216,216,216,216,216,217,218,218,218,218,218,218,219,219,219,219,220,220,220,221,221,222,222,222,222,223,223,223,224,224,224,225,225,227,228,229,229,229,230,231,231,231,231,231,232,233,233,233,233,233,233,234,234,234,235,235,235,236,236,237,238,238,238,240,241,241,241,241,242,242,242,243,243,243,244,244,244,246,247,248,248,248,249,249,249,250,250,250,250,250,250,250,250,251,254,254,254,255,255,255,255,255,255,255,255,255,255,255,256,256,256,256,256,257,258,259,260,261,262,263,263,263,264,264,265,266,266,268,269,269,269,269,270,270,270,271,271,271,271,271,271,271,271,272,272,272,272,272,272,272,273,273,274,275,276,276,276,277,277,277,277,277,277,277,277,277,277,278,278,278,279,280,281,281,281,281,281,281,281,282,282,282,283,283,283,283,283,283,283,283,284,284,284,284,284,284,284,285,285,285,285,285,286,286,286,286,286,286,286,287,287,287,287,288,289,290,290,290,290,290,290,290,291,291,291,292,292,292,292,292,292,292,292,293,293,293,293,293,293,293,294,294,294,294,294,295,295,295,295,295,295,295,296,296,296,297,298,299,299,299,299,299,299,299,299,300,300,300,301,301,301,301,301,301,301,301,302,302,302,302,302,302,302,303,303,303,303,303,303,303,303,303,304,304,304,304,304,304,304};
-    Integer[] forinsertion={2};
+    Integer[] forinsertion={22,41,63,82,104,123,140,157,192,225,246,267,290,306};
 
 //    String songname="song14a";
 //    String assfilename="5a.ass";
@@ -93,10 +93,18 @@ public class AssReconciler extends Application {
  
             @Override
             public void handle(ActionEvent event) {
-                AssTimeParser.words.add(linecounter,"");
-                AssTimeParser.times.add(linecounter,"");
-                play();
-                System.out.print(","+linecounter);
+//                AssTimeParser.words.add(linecounter,"");
+//                AssTimeParser.times.add(linecounter,"");
+//                play();
+//                System.out.print(","+linecounter);
+                
+                for(Integer i=linecounter;i<DbMan1.characters.size();i++)
+                {
+                    if(DbMan1.characters.get(i).contentEquals("x"))
+                    {
+                        System.out.print(","+i);
+                    }
+                }
             }
         });        
 
@@ -132,25 +140,24 @@ public class AssReconciler extends Application {
 
         //step 1
         //insert song to database
-        SongParser.parse(songname+".txt");
+//        SongParser.parse(songname+".txt");
         
         //step 2
         //this is for adjustment mode:
         //load .ass file
         //then edit ids of karaoke nodes to merge
-        AssTimeParser.parse(assfilename,songname);
-        adjust();
+//        AssTimeParser.parse(assfilename,songname);
+//        adjust();
         
         //step 3
         //this is to write adjustments to database
-//        AssTimeParser.parse(assfilename,songname);
-//        update();
 //        dummyupdate();
-        
-//        setPages();
-//        setTimes();
-//        insertLines();
-//        insertPages();
+        AssTimeParser.parse(assfilename,songname);
+        update();
+        setPages();
+        setTimes();
+        insertLines();
+        insertPages();
     }
 
     /**
@@ -222,6 +229,7 @@ public class AssReconciler extends Application {
         linecounter--;
         label4.setText("Line counter: "+String.valueOf(linecounter));
     }    
+    Integer timetoinsert=100;
     private void adjust()
     {
         for(int i:forremoval)
@@ -232,14 +240,14 @@ public class AssReconciler extends Application {
         for(int i:forinsertion)
         {
             AssTimeParser.words.add(i,"~");
-            AssTimeParser.times.add(i,"-1");
+            AssTimeParser.times.add(i,timetoinsert.toString());
         }
         
         play();
     }
     private void update()
     {
-        Integer timeprevious,timeremoved;
+        Integer timeprevious,timeremoved,timeinserted;
         
         //prepare karaoke data - merge some nodes to match database data
         for(int i:forremoval)
@@ -252,6 +260,17 @@ public class AssReconciler extends Application {
             }
             AssTimeParser.words.remove(i);
             AssTimeParser.times.remove(i);
+        }
+        for(int i:forinsertion)
+        {
+            if(i>0)
+            {
+                timeprevious=Integer.parseInt(AssTimeParser.times.get(i-1));
+                timeinserted=timetoinsert;
+                AssTimeParser.times.set(i-1,String.valueOf(timeprevious-timeinserted));
+            }
+            AssTimeParser.words.add(i,".");
+            AssTimeParser.times.add(i,timetoinsert.toString());
         }
         
         //update database
