@@ -5,22 +5,26 @@ Title: Default Aegisub file
 ScriptType: v4.00+
 WrapStyle: 0
 ScaledBorderAndShadow: yes
-YCbCr Matrix: None
-PlayResX: 480
-PlayResY: 360
+YCbCr Matrix: TV.601
+PlayResX: 240
+PlayResY: 180
 
 [Aegisub Project Garbage]
-Audio File: 6.wav
-Video File: ?dummy:23.976000:40000:640:480:0:0:0:c
+Export Filters: Karaoke template
+Export Encoding: Unicode (UTF-8)
+Audio File: 4.wav
+Video File: song tsing.m4v
+Video AR Mode: 4
 Video AR Value: 1.333333
-Video Zoom Percent: 0.500000
-Scroll Position: 43
-Active Line: 54
-Video Position: 289
+Video Zoom Percent: 1.000000
+Scroll Position: 19
+Active Line: 20
+Video Position: 2685
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Arial,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,4,4,2,20,20,20,1
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:06.40,Default,,0,0,0,,{\k120}{\k120}{\k120}{\k120}{\k240}{\k120}{\k120}{\k120}{\k120}{\k240}{\k120}{\k120}{\k120}
