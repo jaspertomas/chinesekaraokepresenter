@@ -684,7 +684,7 @@ suí	fāng	shè	jiāo	lì	jié	dù	rén
 							
 wéi	huáng	zhĕ	shī				
 ㄨㄟˊ	ㄏㄨㄤˊ	ㄓㄜˇ	ㄕ				
-為	皇	者	師	，			
+為	皇	者	師				
 							
 x
 .
@@ -692,15 +692,15 @@ x
 
 dì	zhĕ	shī		wáng	zhĕ	shī	
 ㄉ丨ˋ	ㄓㄜˇ	ㄕ		ㄨㄤˊ	ㄓㄜˇ	ㄕ	
-帝	者	師	，	王	者	師	。
+帝	者	師		王	者	師	。
 							
 jiă	míng	yì	háo				
 ㄐ丨ㄚˇ	ㄇ丨ㄥˊ	一ˋ	ㄏㄠˊ				
 假	名	易	號				
 							
-lì	tiān	zhī	dào	1			
+lì	tiān	zhī	dào				
 ㄌ丨ˋ	ㄊ丨ㄢ	ㄓ	ㄉㄠˋ				
-立	天	之	道	，			
+立	天	之	道				
 							
 x
 .
@@ -708,15 +708,15 @@ x
 
 dì	zhī	dào		rén	zhī	dào	
 ㄉ丨ˋ	ㄓ	ㄉㄠˋ		ㄖㄣˊ	ㄓ	ㄉㄠˋ	
-地	之	道	，	人	之	道	
+地	之	道		人	之	道	
 							
-yĭn	shèng	xiăn	huā	2			
+yĭn	shèng	xiăn	huā				
 一ㄣˇ	ㄕㄥˋ	ㄒ丨ㄢˇ	ㄏㄨㄚ				
 隱	聖	顯	化	。			
 							
 zŏng	qiān	èr	băi	zhī	guān	jūn	
 ㄗㄨㄥˇ	ㄑ丨ㄢ	ㄦˋ	ㄅㄞˇ	ㄓ	ㄍㄨㄢ	ㄐㄩㄣ	
-總	千	二	百	之	官	君	，
+總	千	二	百	之	官	君	
 							
 x
 .
@@ -728,9 +728,9 @@ bāo	wàn	yì	chóng	zhī	fàn	qì
 ~							
 huà	xíng	jīn	gŭ				
 ㄏㄨㄚˋ	ㄒ丨ㄥˊ	ㄐ丨ㄣ	ㄍㄨˇ				
-化	行	今	古	，			
+化	行	今	古				
 							
-zhù	dào	dé	fán	wŭ	qiān	yán	1
+zhù	dào	dé	fán	wŭ	qiān	yán	
 ㄓㄨˋ	ㄉㄠˋ	ㄉㄜˊ	ㄈㄢˊ	ㄨˇ	ㄑ丨ㄢ	一ㄢˊ	
 著	道	德	凡	五	千	言	。
 							
@@ -740,7 +740,7 @@ x
 
 zhŭ	wò	yīn	yáng				
 ㄓㄨˇ	ㄨㄛˋ	一ㄣ	一ㄤˊ				
-主	握	陰	陽	，			
+主	握	陰	陽				
 						~	
 mìng	léi	tíng	yòng	jiŭ	wŭ	shù	
 ㄇ丨ㄥˋ	ㄌㄟˊ	ㄊ丨ㄥˊ	ㄩㄥˋ	ㄐ丨ㄡˇ	ㄨˇ	ㄕㄨˋ	
@@ -1088,7 +1088,7 @@ xiāng	fèng	xiàn	shàng	chè	zhū	shèng	xiāng
 
 làng	yuàn	xiān	huā				
 ㄌㄤˋ	ㄩㄢˋ	ㄒ丨ㄢ	ㄏㄨㄚ				
-閬	苑	仙	花	，			
+閬	苑	仙	花				
 							
 fù	yù	yĭng	héng	xié			
 ㄈㄨˋ	ㄩˋ	一ㄥˇ	ㄏㄥˊ	ㄒ丨ㄝˊ			
@@ -1104,7 +1104,7 @@ x
 
 zhī	yè	jìng	fán	huá			
 ㄓ	一ㄝˋ	ㄐ丨ㄥˋ	ㄈㄢˊ	ㄏㄨㄚˊ			
-枝	葉	競	繁	華	，		
+枝	葉	競	繁	華			
 							
 huā	fèng	xiàn	kòng	yù	wáng	mŭ	jiā
 ㄏㄨㄚ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄎㄨㄥˋ	ㄩˋ	ㄨㄤˊ	ㄇㄨˇ	ㄐ丨ㄚ
@@ -1120,7 +1120,7 @@ huā	fèng	xiàn	kòng	yù	wáng	mŭ	jiā
 
 wŭ	fèng	yún	dēng				
 ㄨˇ	ㄈㄥˋ	ㄩㄣˊ	ㄉㄥ				
-五	鳳	雲	燈	，			
+五	鳳	雲	燈				
 							
 ruì	căi	cĭ	rì	shēng			
 ㄖㄨㄟˋ	ㄘㄞˇ	ㄘˇ	ㄖˋ	ㄕㄥ			
@@ -1136,7 +1136,7 @@ x
 
 zhū	tiān	xī	lăng	míng			
 ㄓㄨ	ㄊ丨ㄢ	ㄒ丨	ㄌㄤˇ	ㄇ丨ㄥˊ			
-諸	天	悉	朗	明	，		
+諸	天	悉	朗	明			
 							
 dēng	fèng	xiàn	mù	dé	yŭ	zhì	chāng
 ㄉㄥ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄇㄨˋ	ㄉㄜˊ	ㄩˇ	ㄓˋ	ㄔㄤ
@@ -1152,7 +1152,7 @@ dēng	fèng	xiàn	mù	dé	yŭ	zhì	chāng
 
 tiān	yī	shēng	shuĭ				
 ㄊ丨ㄢ	一	ㄕㄥ	ㄕㄨㄟˇ				
-天	一	生	水	，			
+天	一	生	水				
 							
 yī	dī	biàn	shí	fāng			
 一	ㄉ丨	ㄅ丨ㄢˋ	ㄕˊ	ㄈㄤ			
@@ -1160,7 +1160,7 @@ yī	dī	biàn	shí	fāng
 							
 dōng	jĭng	huáng	huā	chū	kăn	fāng	
 ㄉㄨㄥ	ㄐ丨ㄥˇ	ㄏㄨㄤˊ	ㄏㄨㄚ	ㄔㄨ	ㄎㄢˇ	ㄈㄤ	
-東	井	黃	華	出	坎	方	，
+東	井	黃	華	出	坎	方	
 							
 x
 .
@@ -1184,7 +1184,7 @@ shuĭ	fèng	xiàn	huā	yŭ	rùn	qún	fāng
 
 xiān	yuán	fú	guŏ				
 ㄒ丨ㄢ	ㄩㄢˊ	ㄈㄨˊ	ㄍㄨㄛˇ				
-仙	園	福	果	，			
+仙	園	福	果				
 							
 băo	shù	jié	chéng	huā			
 ㄅㄠˇ	ㄕㄨˋ	ㄐ丨ㄝˊ	ㄔㄥˊ	ㄏㄨㄚ			
@@ -1192,7 +1192,7 @@ băo	shù	jié	chéng	huā
 							
 zhāi	lái	fèng	xiàn	miào	kān	kuā	
 ㄓㄞ	ㄌㄞˊ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄇ丨ㄠˋ	ㄎㄢ	ㄎㄨㄚ	
-摘	來	奉	獻	妙	堪	誇	，
+摘	來	奉	獻	妙	堪	誇	
 							
 x
 .
@@ -1216,7 +1216,7 @@ guŏ	fèng	xiàn	cháo	yuán	xiān	zĭ	jiā
 
 wŭ	yí	xiān	pĭn				
 ㄨˇ	一ˊ	ㄒ丨ㄢ	ㄆ丨ㄣˇ				
-武	夷	仙	品	，			
+武	夷	仙	品				
 
 xīn	chūn	xiān	fā	huā			
 ㄒ丨ㄣ	ㄔㄨㄣ	ㄒ丨ㄢ	ㄈㄚ	ㄏㄨㄚ			
@@ -1232,7 +1232,7 @@ x
 
 yù	yè	huáng	jīn	yá			
 ㄩˋ	一ㄝˋ	ㄏㄨㄤˊ	ㄐ丨ㄣ	一ㄚˊ			
-玉	葉	黃	金	芽	，		
+玉	葉	黃	金	芽			
 							
 chá	fèng	xiàn	làng	yuàn	zhēn	xiān	jiā
 ㄔㄚˊ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄌㄤˋ	ㄩㄢˋ	ㄓㄣ	ㄒ丨ㄢ	ㄐ丨ㄚ
@@ -1248,7 +1248,7 @@ chá	fèng	xiàn	làng	yuàn	zhēn	xiān	jiā
 
 fèng	jiŭ	xīn	jiān				
 ㄈㄥˋ	ㄐ丨ㄡˇ	ㄒ丨ㄣ	ㄐ丨ㄢ				
-奉	酒	心	堅	，			
+奉	酒	心	堅				
 							
 wéi	yuàn	yì	wàn	nián			
 ㄨㄟˊ	ㄩㄢˋ	一ˋ	ㄨㄢˋ	ㄋ丨ㄢˊ			
@@ -1264,7 +1264,7 @@ x
 
 tài	bái	jiŭ	zhòng	xiān			
 ㄊㄞˋ	ㄅㄞˊ	ㄐ丨ㄡˇ	ㄓㄨㄥˋ	ㄒ丨ㄢ			
-太	白	酒	中	仙	，		
+太	白	酒	中	仙			
 							
 jiŭ	fèng	xiàn	péng	hú	bié	yŏu	tiān
 ㄐ丨ㄡˇ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄆㄥˊ	ㄏㄨˊ	ㄅ丨ㄝˊ	一ㄡˇ	ㄊ丨ㄢ
@@ -1280,7 +1280,7 @@ jiŭ	fèng	xiàn	péng	hú	bié	yŏu	tiān
 
 cháng	shēng	shòu	lǚ				
 ㄔㄤˊ	ㄕㄥ	ㄕㄡˋ	ㄌㄩˇ				
-長	生	壽	縷	，			
+長	生	壽	縷				
 							
 chūn	qiū	huán	jĭ	xŭ			
 ㄔㄨㄣ	ㄑ丨ㄡ	ㄏㄨㄢˊ	ㄐ丨ˇ	ㄒㄨˇ			
@@ -1296,7 +1296,7 @@ x
 
 xiān	zhī	cháng	suŏ	yŭ			
 ㄒ丨ㄢ	ㄓ	ㄔㄤˊ	ㄙㄨㄛˇ	ㄩˇ			
-仙	芝	長	所	與	，		
+仙	芝	長	所	與			
 							
 miàn	fèng	xiàn	ruì	xué	lín	xiān	jŭ
 ㄇ丨ㄢˋ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄖㄨㄟˋ	ㄒㄨㄜˊ	ㄌ丨ㄣˊ	ㄒ丨ㄢ	ㄐㄨˇ
@@ -1312,7 +1312,7 @@ miàn	fèng	xiàn	ruì	xué	lín	xiān	jŭ
 
 cái	băo	fēng	yíng				
 ㄘㄞˊ	ㄅㄠˇ	ㄈㄥ	一ㄥˊ				
-財	寶	豐	盈	，			
+財	寶	豐	盈				
 							
 sì	fāng	qìng	shēng	píng			
 ㄙˋ	ㄈㄤ	ㄑ丨ㄥˋ	ㄕㄥ	ㄆ丨ㄥˊ			
@@ -1328,7 +1328,7 @@ x
 
 jīn	jiāng	gōng	shèng	xián			
 ㄐ丨ㄣ	ㄐ丨ㄤ	ㄍㄨㄥ	ㄕㄥˋ	ㄒ丨ㄢˊ			
-今	將	供	聖	賢	，		
+今	將	供	聖	賢			
 							
 băo	fèng	xiàn	shì	jiān	jì	wàn	mín
 ㄅㄠˇ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄕˋ	ㄐ丨ㄢ	ㄐ丨ˋ	ㄨㄢˋ	ㄇ丨ㄣˊ
@@ -1344,7 +1344,7 @@ băo	fèng	xiàn	shì	jiān	jì	wàn	mín
 
 lóng	zhāng	fèng	zhuàn				
 ㄌㄨㄥˊ	ㄓㄤ	ㄈㄥˋ	ㄓㄨㄢˋ				
-龍	章	鳳	篆	，			
+龍	章	鳳	篆				
 							
 băo	mă	yŭ	jīn	qián			
 ㄅㄠˇ	ㄇㄚˇ	ㄩˇ	ㄐ丨ㄣ	ㄑ丨ㄢˊ			
@@ -1360,7 +1360,7 @@ x
 
 pĕng	xiàn	shèng	zūn	qián			
 ㄆㄥˇ	ㄒ丨ㄢˋ	ㄕㄥˋ	ㄗㄨㄣ	ㄑ丨ㄢˊ			
-捧	獻	聖	尊	前	，		
+捧	獻	聖	尊	前			
 							
 zhāng	fèng	xiàn	chéng	cĭ	lè	huí	pián
 ㄓㄤ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄔㄥˊ	ㄘˇ	ㄌㄜˋ	ㄏㄨㄟˊ	ㄆ丨ㄢˊ
@@ -1620,7 +1620,7 @@ x
 
 wú	bù	zhī	qí	míng			
 ㄨˊ	ㄅㄨˋ	ㄓ	ㄑ丨ˊ	ㄇ丨ㄥˊ			
-吾	不	知	其	名	，		
+吾	不	知	其	名			
 							
 jiàng	míng	yuē	dào	fū	dào	zhĕ	
 ㄐ丨ㄤˋ	ㄇ丨ㄥˊ	ㄩㄝ	ㄉㄠˋ	ㄈㄨ	ㄉㄠˋ	ㄓㄜˇ	
@@ -1652,15 +1652,15 @@ x
 
 qīng	zhĕ	zhuó	zhī	yuán			
 ㄑ丨ㄥ	ㄓㄜˇ	ㄓㄨㄛˊ	ㄓ	ㄩㄢˊ			
-清	者	濁	之	源	，		
+清	者	濁	之	源			
 							
 dòng	zhĕ	jìng	zhī	jī			
 ㄉㄨㄥˋ	ㄓㄜˇ	ㄐ丨ㄥˋ	ㄓ	ㄐ丨			
-動	者	靜	之	基	，		
+動	者	靜	之	基			
 							
 rén	néng	cháng	qīng	jìng			
 ㄖㄣˊ	ㄋㄥˊ	ㄔㄤˊ	ㄑ丨ㄥ	ㄐ丨ㄥˋ			
-人	能	常	清	靜	，		
+人	能	常	清	靜			
 							
 x
 .
@@ -1672,7 +1672,7 @@ tiān	dì	xī	jiē	guī
 							
 fū	ren	shén	hăo	qīng			
 ㄈㄨ	ㄖㄣ˙	ㄕㄣˊ	ㄏㄠˇ	ㄑ丨ㄥ			
-夫	人	神	好	清	，		
+夫	人	神	好	清			
 							
 ér	xīn	răo	zhī				
 ㄦˊ	ㄒ丨ㄣ	ㄖㄠˇ	ㄓ				
@@ -1688,7 +1688,7 @@ rén	xīn	hăo	jìng	ér	yù	qiān	zhī
 							
 cháng	néng	qiăn	qí	yù			
 ㄔㄤˊ	ㄋㄥˊ	ㄑ丨ㄢˇ	ㄑ丨ˊ	ㄩˋ			
-常	能	遣	其	慾	，		
+常	能	遣	其	慾			
 							
 ér	xīn	zì	jìng				
 ㄦˊ	ㄒ丨ㄣ	ㄗˋ	ㄐ丨ㄥˋ				
@@ -1704,7 +1704,7 @@ chéng	qí	xīn	ér	shén	zì	qīng
 							
 zì	rán	liù	yù	bù	shēng		
 ㄗˋ	ㄖㄢˊ	ㄌ丨ㄡˋ	ㄩˋ	ㄅㄨˋ	ㄕㄥ		
-自	然	六	慾	不	生	，	
+自	然	六	慾	不	生		
 							
 sān	dú	xiāo	miè				
 ㄙㄢ	ㄉㄨˊ	ㄒ丨ㄠ	ㄇ丨ㄝˋ				
@@ -1716,7 +1716,7 @@ x
 
 suŏ	yĭ	bù	néng	zhĕ			
 ㄙㄨㄛˇ	一ˇ	ㄅㄨˋ	ㄋㄥˊ	ㄓㄜˇ			
-所	以	不	能	者	，		
+所	以	不	能	者			
 							
 wéi	xīn	wèi	chéng				
 ㄨㄟˊ	ㄒ丨ㄣ	ㄨㄟˋ	ㄔㄥˊ				
@@ -2004,15 +2004,15 @@ x
 
 wéi	huáng	zhĕ	shī	dì	zhĕ	shī	
 ㄨㄟˊ	ㄏㄨㄤˊ	ㄓㄜˇ	ㄕ	ㄉ丨ˋ	ㄓㄜˇ	ㄕ	
-為	皇	者	師	帝	者	師	，
+為	皇	者	師	帝	者	師	
 							
 wáng	zhĕ	shī		jiă	míng	yì	háo
 ㄨㄤˊ	ㄓㄜˇ	ㄕ		ㄐ丨ㄚˇ	ㄇ丨ㄥˊ	一ˋ	ㄏㄠˊ
-王	者	師	，	假	名	易	號
+王	者	師		假	名	易	號
 							
 lì	tiān	zhī	dào		dì	zhī	dào
 ㄌ丨ˋ	ㄊ丨ㄢ	ㄓ	ㄉㄠˋ		ㄉ丨ˋ	ㄓ	ㄉㄠˋ
-立	天	之	道	，	地	之	道
+立	天	之	道		地	之	道
 							
 x
 .
@@ -2020,11 +2020,11 @@ x
 
 rén	zhī	dào		yĭn	shèng	xiăn	huā
 ㄖㄣˊ	ㄓ	ㄉㄠˋ		一ㄣˇ	ㄕㄥˋ	ㄒ丨ㄢˇ	ㄏㄨㄚ
-人	之	道	，	隱	聖	顯	化
+人	之	道		隱	聖	顯	化
 							
 zŏng	qiān	èr	băi	zhī	guān	jūn	
 ㄗㄨㄥˇ	ㄑ丨ㄢ	ㄦˋ	ㄅㄞˇ	ㄓ	ㄍㄨㄢ	ㄐㄩㄣ	
-總	千	二	百	之	官	君	，
+總	千	二	百	之	官	君	
 							
 bāo	wàn	yì	chóng	zhī	fàn	qì	
 ㄅㄠ	ㄨㄢˋ	一ˋ	ㄔㄨㄥˊ	ㄓ	ㄈㄢˋ	ㄑ丨ˋ	
@@ -2036,7 +2036,7 @@ x
 
 huā	xíng	jīn	gŭ				
 ㄏㄨㄚ	ㄒ丨ㄥˊ	ㄐ丨ㄣ	ㄍㄨˇ				
-化	行	今	古	，			
+化	行	今	古				
 !							
 zhù	dào	dé	fán	wŭ	qiān	yán	
 ㄓㄨˋ	ㄉㄠˋ	ㄉㄜˊ	ㄈㄢˊ	ㄨˇ	ㄑ丨ㄢ	一ㄢˊ	
@@ -2044,7 +2044,7 @@ zhù	dào	dé	fán	wŭ	qiān	yán
 							
 zhŭ	wò	yīn	yáng				
 ㄓㄨˇ	ㄨㄛˋ	一ㄣ	一ㄤˊ				
-主	握	陰	陽	，			
+主	握	陰	陽				
 							
 x
 .

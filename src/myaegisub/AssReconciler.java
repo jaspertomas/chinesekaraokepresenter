@@ -142,7 +142,7 @@ public class AssReconciler extends Application {
 
         //step 1
         //insert song to database
-//        SongParser.parse(songname+".txt");
+        SongParser.parse(songname+".txt");
         
         //step 2
         //this is for adjustment mode:

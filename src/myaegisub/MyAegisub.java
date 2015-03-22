@@ -6,6 +6,7 @@ package myaegisub;
 
 import controllers.PlayerController;
 import controllers.TimerController;
+import javafx.scene.input.MouseEvent;
 import java.io.File;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -15,6 +16,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.GridPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
@@ -62,58 +64,20 @@ public class MyAegisub extends Application {
         
 //--as
 
-browser.addEventFilter(KeyEvent.KEY_PRESSED, 
-                    new EventHandler<KeyEvent>() {
-                        public void handle(KeyEvent event) { 
-                            
-//        System.out.println("Filtering out event " + event.getEventType()); 
-        String s=event.getText();
-        for(int i=0;i<s.length();i++)
-        {
-            int j=(int)s.charAt(i);
-
-            //bring reset mode back to 0
-            //if key pressed is not "R"
-            if(j!=114)resetmode=0;
-
-            switch(j)
-            {
-                case 13://enter
-                    play();
-                    break;
-                case 32://space
-                    pause();
-                    break;
-                case 44://<
-                    slowDown();
-                    break;
-                case 46://>
-                    speedUp();
-                    break;
-                case 91://[
+        browser.addEventFilter(KeyEvent.KEY_PRESSED, eventHandler);
+        scene.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if(event.getButton() == MouseButton.SECONDARY)
+                {
                     gotoPrevious();
-                    break;
-                case 93://]
+                }
+                else
+                {
                     gotoNext();
-                    break;
-                case 114://R
-                    reset();
-                    break;
-                default:
-                    System.out.println(j);
-                    /*
-                    reset=
-                        114
-                        101
-                        115
-                        101
-                        116
-                    */
+                }
             }
-        }
-        event.consume();                            
-                        };
-                    });
+        });
 
 //        primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
@@ -250,7 +214,58 @@ browser.addEventFilter(KeyEvent.KEY_PRESSED,
         else 
             resetmode++;
     }
-}
+EventHandler eventHandler=
+                    new EventHandler<KeyEvent>() {
+                        public void handle(KeyEvent event) { 
+                            
+//        System.out.println("Filtering out event " + event.getEventType()); 
+        String s=event.getText();
+        for(int i=0;i<s.length();i++)
+        {
+            int j=(int)s.charAt(i);
+
+            //bring reset mode back to 0
+            //if key pressed is not "R"
+            if(j!=114)resetmode=0;
+
+            switch(j)
+            {
+                case 13://enter
+                    play();
+                    break;
+                case 32://space
+                    pause();
+                    break;
+                case 44://<
+                    slowDown();
+                    break;
+                case 46://>
+                    speedUp();
+                    break;
+                case 91://[
+                    gotoPrevious();
+                    break;
+                case 93://]
+                    gotoNext();
+                    break;
+                case 114://R
+                    reset();
+                    break;
+                default:
+                    System.out.println(j);
+                    /*
+                    reset=
+                        114
+                        101
+                        115
+                        101
+                        116
+                    */
+            }
+        }
+        event.consume();                            
+                        };
+                    };}
 //
 //    @Override
 //    public void start(Stage stage) {
