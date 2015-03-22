@@ -121,36 +121,42 @@ public class MyAegisub extends Application {
         
         if(index>=DbMan1.ids.size()-1)//last character in page
         {
+            nextPage();
+        }
+        else
+        {
+            timerController.setTime(DbMan1.times.get(index+1));
+            playerController.play(timerController.getTime());
+        }
+    }
+    Integer pagecounter=1;
+    private void previousPage()
+    {
+            if(DbMan1.previouspagewordtime==null)
+            {
+                //do nothing
+            }
+            else
+            {
+                pagecounter--;
+                label.setText("Page "+pagecounter.toString());
+                timerController.setTime(DbMan1.previouspagewordtime);
+                playerController.play(timerController.getTime());
+            }
+    }
+    private void nextPage()
+    {
             if(DbMan1.nextpagewordtime==null)
             {
                 //do nothing
             }
             else
             {
+                pagecounter++;
+                label.setText("Page "+pagecounter.toString());
                 timerController.setTime(DbMan1.nextpagewordtime);
-//                if(timerController.isPaused())
-                    playerController.play(timerController.getTime());
-            }
-        }
-        else
-        {
-            timerController.setTime(DbMan1.times.get(index+1));
-//            if(timerController.isPaused())
                 playerController.play(timerController.getTime());
-        }
-    }
-    Integer pagecounter=0;
-    private void previousPage()
-    {
-        label.setText("Page "+pagecounter.toString());
-        timerController.setTime(DbMan1.previouspagewordtime);
-        playerController.play(timerController.getTime());
-    }
-    private void nextPage()
-    {
-        label.setText("Page "+pagecounter.toString());
-        timerController.setTime(DbMan1.nextpagewordtime);
-        playerController.play(timerController.getTime());
+            }
     }
     
     private void gotoPrevious()
@@ -159,15 +165,7 @@ public class MyAegisub extends Application {
         
         if(index<=0)//first character in page
         {
-            if(DbMan1.previouspagewordtime==null)
-            {
-                //do nothing
-            }
-            else
-            {
-                timerController.setTime(DbMan1.previouspagewordtime);
-                playerController.play(timerController.getTime());
-            }
+            previousPage();
         }
         else
         {
@@ -220,6 +218,7 @@ public class MyAegisub extends Application {
     }
     private void reset()
     {
+        pagecounter=0;
         //press 'R' 3 times to activate reset
         if(resetmode==2)
         {

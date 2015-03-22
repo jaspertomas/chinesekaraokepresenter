@@ -161,6 +161,7 @@ public class AssReconciler extends Application {
         insertLines();
         insertPages();
         System.out.println("done");
+        System.exit(0);
     }
 
     /**

@@ -1950,10 +1950,6 @@ pŭ	biàn	dà	tiān	zūn
 
 
 
-
-
-
-
 .
 Reading of Intention
 .
@@ -1961,15 +1957,15 @@ Reading of Intention
 Guī	yī	wú	shàng	zhì	zhēn	sān	bǎo
 ㄍㄨㄟ	一	ㄨˊ	ㄕㄤˋ	ㄓˋ	ㄓㄣ	ㄙㄢ	ㄅㄠˇ
 皈	依	无	上	至	真	三	宝
-							
+
 Guī	yī	wú	shàng	zhì	zhēn	sān	bǎo
 ㄍㄨㄟ	一	ㄨˊ	ㄕㄤˋ	ㄓˋ	ㄓㄣ	ㄙㄢ	ㄅㄠˇ
 皈	依	无	上	至	真	三	宝
-							
+
 Guī	yī	wú	shàng	zhì	zhēn	sān	bǎo
 ㄍㄨㄟ	一	ㄨˊ	ㄕㄤˋ	ㄓˋ	ㄓㄣ	ㄙㄢ	ㄅㄠˇ
 皈	依	无	上	至	真	三	宝
-							
+
 x
 .
 .
@@ -2015,8 +2011,8 @@ Gòng	yǎng
 供	养				
 							
 (Prepared text by leader)
-
-
+.
+.
 
 x
 .
@@ -2316,7 +2312,7 @@ néng	wù	zhī	zhĕ	kĕ	chuán	shèng	dào
 							
 lăo	jūn	yuē					
 ㄌㄠˇ	ㄐㄩㄣ	ㄩㄝ					
-老	君	曰	：				
+老	君	曰					
 							
 shàng	shì	wú	zhēng	xià	shì	hăo	zhēng
 ㄕㄤˋ	ㄕˋ	ㄨˊ	ㄓㄥ	ㄒ丨ㄚˋ	ㄕˋ	ㄏㄠˇ	ㄓㄥ
@@ -2401,22 +2397,6 @@ tài	shàng	lăo	jūn
 shuō	cháng	qīng	jìng	miào	jīng		
 ㄕㄨㄛ	ㄔㄤˊ	ㄑ丨ㄥ	ㄐ丨ㄥˋ	ㄇ丨ㄠˋ	ㄐ丨ㄥ		
 說	常	清	靜	妙	經		
-
-x
-.
-.
-
-
-
-
-
-
-
-
-
-
-
-
 
 .
 完 經 讚 (Praise after the Sutra)
@@ -2607,16 +2587,48 @@ guī	mìng	hún	yuán	dào	dé
 皈	命	混	元	道	德		
 							
 dà	tiān	zūn					
-ㄉㄚˋ	ㄊ丨ㄢ	ㄗㄨㄣ	3x				
+ㄉㄚˋ	ㄊ丨ㄢ	ㄗㄨㄣ					
 大	天	尊	。				
+							
+x
+.
+.
+
+guī	mìng	hún	yuán	dào	dé		
+ㄍㄨㄟ	ㄇ丨ㄥˋ	ㄏㄨㄣˊ	ㄩㄢˊ	ㄉㄠˋ	ㄉㄜˊ		
+皈	命	混	元	道	德		
+							
+dà	tiān	zūn					
+ㄉㄚˋ	ㄊ丨ㄢ	ㄗㄨㄣ					
+大	天	尊	。				
+							
+guī	mìng	hún	yuán	dào	dé		
+ㄍㄨㄟ	ㄇ丨ㄥˋ	ㄏㄨㄣˊ	ㄩㄢˊ	ㄉㄠˋ	ㄉㄜˊ		
+皈	命	混	元	道	德		
+							
+x
+.
+.
+
+dà	tiān	zūn					
+ㄉㄚˋ	ㄊ丨ㄢ	ㄗㄨㄣ					
+大	天	尊	。				
+
+
+
+
+
+
+
+
 
 .
 回 壇 (Leaving the Altar)
 .
 
-huí	tán		èr				
-ㄏㄨㄟˊ	ㄊㄢˊ		ㄦˋ				
-回	壇	(	二	)	。		
+huí	tán
+ㄏㄨㄟˊ	ㄊㄢˊ
+回	壇
 							
 fú	rú	dōng	hăi	làng	tāo	tāo	
 ㄈㄨˊ	ㄖㄨˊ	ㄉㄨㄥ	ㄏㄞˇ	ㄌㄤˋ	ㄊㄠ	ㄊㄠ	
@@ -2637,8 +2649,3 @@ bĕi	hăi	lóng	wáng	lái	qìng	hè
 xī	chí	wáng	mŭ	huì	pán	táo	
 ㄒ丨	ㄔˊ	ㄨㄤˊ	ㄇㄨˇ	ㄏㄨㄟˋ	ㄆㄢˊ	ㄊㄠˊ	
 西	池	王	母	會	蟠	桃	。
-
-
-
-
-

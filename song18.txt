@@ -232,7 +232,7 @@ néng	wù	zhī	zhĕ	kĕ	chuán	shèng	dào
 							
 lăo	jūn	yuē					
 ㄌㄠˇ	ㄐㄩㄣ	ㄩㄝ					
-老	君	曰	：				
+老	君	曰					
 							
 shàng	shì	wú	zhēng	xià	shì	hăo	zhēng
 ㄕㄤˋ	ㄕˋ	ㄨˊ	ㄓㄥ	ㄒ丨ㄚˋ	ㄕˋ	ㄏㄠˇ	ㄓㄥ
@@ -321,4 +321,3 @@ shuō	cháng	qīng	jìng	miào	jīng
 x
 .
 .
-
