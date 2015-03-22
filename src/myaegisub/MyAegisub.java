@@ -128,23 +128,29 @@ public class MyAegisub extends Application {
             else
             {
                 timerController.setTime(DbMan1.nextpagewordtime);
-                if(timerController.isPaused())
+//                if(timerController.isPaused())
                     playerController.play(timerController.getTime());
             }
         }
         else
         {
             timerController.setTime(DbMan1.times.get(index+1));
-            if(timerController.isPaused())
+//            if(timerController.isPaused())
                 playerController.play(timerController.getTime());
         }
     }
     Integer pagecounter=0;
     private void previousPage()
     {
+        label.setText("Page "+pagecounter.toString());
+        timerController.setTime(DbMan1.previouspagewordtime);
+        playerController.play(timerController.getTime());
     }
     private void nextPage()
     {
+        label.setText("Page "+pagecounter.toString());
+        timerController.setTime(DbMan1.nextpagewordtime);
+        playerController.play(timerController.getTime());
     }
     
     private void gotoPrevious()

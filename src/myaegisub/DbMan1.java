@@ -38,7 +38,7 @@ public class DbMan1 {
     private static void initialize()
     {
         //connect to database
-        DbMan1 jdbc = new DbMan1();
+        jdbc = new DbMan1();
         if (jdbc.connect("database.db")) {
 //            System.out.println("Opened database successfully");
         }else{
