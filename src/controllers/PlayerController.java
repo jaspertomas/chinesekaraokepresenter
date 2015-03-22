@@ -27,15 +27,7 @@ public class PlayerController {
     private String gen(Integer time)
     {
         String output="";
-        
-        //connect to database
-        DbMan1 jdbc = new DbMan1();
-        if (jdbc.connect("database.db")) {
-//            System.out.println("Opened database successfully");
-        }else{
-            System.out.println("Error opening database");
-            return "";
-        }
+        DbMan1 jdbc=DbMan1.getInstance();
 
         jdbc.selectWordByTime(time);
         Integer wordid=DbMan1.wordid;
@@ -166,7 +158,6 @@ public class PlayerController {
 //
 //        
 //        
-        jdbc.close();
         return output;
     }
 

@@ -15,8 +15,8 @@ import utils.fileaccess.FileWriter;
  */
 public class SongSpacer {
     static String songfilename="";
-//    static String[] songfilenumbers={"15"};
-    static String[] songfilenumbers={"00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22b"};
+//    static String[] songfilenumbers={"12b","12d"};
+    static String[] songfilenumbers={"00","01","02","03","04","05","06","07","08","09","10","11","12a","12b","12c","12d","12e","12f","13","14","15","16","17","18","19","20","21","22b"};
     public static void main(String args[])    
     {
 //        for(String number:songfilenumbers)
@@ -46,6 +46,7 @@ public class SongSpacer {
         String output="";
         for(String number:songfilenumbers)
         {
+            System.out.println(number);
             songfilename="song"+number+".txt";
             String input=FileReader.read(songfilename);
             String segments[]=input.split("\n");
@@ -63,6 +64,6 @@ public class SongSpacer {
                 output+=s+"\n";
             }
         }
-        FileWriter.write("song002.txt", output);
+        FileWriter.write("song001.txt", output);
     }
 }

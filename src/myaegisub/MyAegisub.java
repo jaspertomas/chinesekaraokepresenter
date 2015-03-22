@@ -39,10 +39,12 @@ public class MyAegisub extends Application {
     @Override
     public void start(Stage primaryStage) {
 
+        DbMan1.getInstance();
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
                 timerController.stop();
+                DbMan1.getInstance().close();
 //                com.sun.javafx.application.PlatformImpl.tkExit();
                 Platform.exit();
             }
@@ -137,6 +139,14 @@ public class MyAegisub extends Application {
                 playerController.play(timerController.getTime());
         }
     }
+    Integer pagecounter=0;
+    private void previousPage()
+    {
+    }
+    private void nextPage()
+    {
+    }
+    
     private void gotoPrevious()
     {
         Integer index=DbMan1.ids.indexOf(DbMan1.wordid);
@@ -250,6 +260,12 @@ EventHandler eventHandler=
                     break;
                 case 114://R
                     reset();
+                    break;
+                case 45://-
+                    previousPage();
+                    break;
+                case 61://=
+                    nextPage();
                     break;
                 default:
                     System.out.println(j);

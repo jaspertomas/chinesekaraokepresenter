@@ -32,7 +32,7 @@ xiāng	fèng	xiàn	shàng	chè	zhū	shèng	xiāng
 
 làng	yuàn	xiān	huā				
 ㄌㄤˋ	ㄩㄢˋ	ㄒ丨ㄢ	ㄏㄨㄚ				
-閬	苑	仙	花	，			
+閬	苑	仙	花				
 							
 fù	yù	yĭng	héng	xié			
 ㄈㄨˋ	ㄩˋ	一ㄥˇ	ㄏㄥˊ	ㄒ丨ㄝˊ			
@@ -48,7 +48,7 @@ x
 
 zhī	yè	jìng	fán	huá			
 ㄓ	一ㄝˋ	ㄐ丨ㄥˋ	ㄈㄢˊ	ㄏㄨㄚˊ			
-枝	葉	競	繁	華	，		
+枝	葉	競	繁	華			
 							
 huā	fèng	xiàn	kòng	yù	wáng	mŭ	jiā
 ㄏㄨㄚ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄎㄨㄥˋ	ㄩˋ	ㄨㄤˊ	ㄇㄨˇ	ㄐ丨ㄚ
@@ -64,7 +64,7 @@ huā	fèng	xiàn	kòng	yù	wáng	mŭ	jiā
 
 wŭ	fèng	yún	dēng				
 ㄨˇ	ㄈㄥˋ	ㄩㄣˊ	ㄉㄥ				
-五	鳳	雲	燈	，			
+五	鳳	雲	燈				
 							
 ruì	căi	cĭ	rì	shēng			
 ㄖㄨㄟˋ	ㄘㄞˇ	ㄘˇ	ㄖˋ	ㄕㄥ			
@@ -80,7 +80,7 @@ x
 
 zhū	tiān	xī	lăng	míng			
 ㄓㄨ	ㄊ丨ㄢ	ㄒ丨	ㄌㄤˇ	ㄇ丨ㄥˊ			
-諸	天	悉	朗	明	，		
+諸	天	悉	朗	明			
 							
 dēng	fèng	xiàn	mù	dé	yŭ	zhì	chāng
 ㄉㄥ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄇㄨˋ	ㄉㄜˊ	ㄩˇ	ㄓˋ	ㄔㄤ
@@ -96,7 +96,7 @@ dēng	fèng	xiàn	mù	dé	yŭ	zhì	chāng
 
 tiān	yī	shēng	shuĭ				
 ㄊ丨ㄢ	一	ㄕㄥ	ㄕㄨㄟˇ				
-天	一	生	水	，			
+天	一	生	水				
 							
 yī	dī	biàn	shí	fāng			
 一	ㄉ丨	ㄅ丨ㄢˋ	ㄕˊ	ㄈㄤ			
@@ -104,7 +104,7 @@ yī	dī	biàn	shí	fāng
 							
 dōng	jĭng	huáng	huā	chū	kăn	fāng	
 ㄉㄨㄥ	ㄐ丨ㄥˇ	ㄏㄨㄤˊ	ㄏㄨㄚ	ㄔㄨ	ㄎㄢˇ	ㄈㄤ	
-東	井	黃	華	出	坎	方	，
+東	井	黃	華	出	坎	方	
 							
 x
 .
@@ -128,7 +128,7 @@ shuĭ	fèng	xiàn	huā	yŭ	rùn	qún	fāng
 
 xiān	yuán	fú	guŏ				
 ㄒ丨ㄢ	ㄩㄢˊ	ㄈㄨˊ	ㄍㄨㄛˇ				
-仙	園	福	果	，			
+仙	園	福	果				
 							
 băo	shù	jié	chéng	huā			
 ㄅㄠˇ	ㄕㄨˋ	ㄐ丨ㄝˊ	ㄔㄥˊ	ㄏㄨㄚ			
@@ -136,7 +136,7 @@ băo	shù	jié	chéng	huā
 							
 zhāi	lái	fèng	xiàn	miào	kān	kuā	
 ㄓㄞ	ㄌㄞˊ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄇ丨ㄠˋ	ㄎㄢ	ㄎㄨㄚ	
-摘	來	奉	獻	妙	堪	誇	，
+摘	來	奉	獻	妙	堪	誇	
 							
 x
 .
@@ -160,7 +160,7 @@ guŏ	fèng	xiàn	cháo	yuán	xiān	zĭ	jiā
 
 wŭ	yí	xiān	pĭn				
 ㄨˇ	一ˊ	ㄒ丨ㄢ	ㄆ丨ㄣˇ				
-武	夷	仙	品	，			
+武	夷	仙	品				
 
 xīn	chūn	xiān	fā	huā			
 ㄒ丨ㄣ	ㄔㄨㄣ	ㄒ丨ㄢ	ㄈㄚ	ㄏㄨㄚ			
@@ -176,7 +176,7 @@ x
 
 yù	yè	huáng	jīn	yá			
 ㄩˋ	一ㄝˋ	ㄏㄨㄤˊ	ㄐ丨ㄣ	一ㄚˊ			
-玉	葉	黃	金	芽	，		
+玉	葉	黃	金	芽			
 							
 chá	fèng	xiàn	làng	yuàn	zhēn	xiān	jiā
 ㄔㄚˊ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄌㄤˋ	ㄩㄢˋ	ㄓㄣ	ㄒ丨ㄢ	ㄐ丨ㄚ
@@ -192,7 +192,7 @@ chá	fèng	xiàn	làng	yuàn	zhēn	xiān	jiā
 
 fèng	jiŭ	xīn	jiān				
 ㄈㄥˋ	ㄐ丨ㄡˇ	ㄒ丨ㄣ	ㄐ丨ㄢ				
-奉	酒	心	堅	，			
+奉	酒	心	堅				
 							
 wéi	yuàn	yì	wàn	nián			
 ㄨㄟˊ	ㄩㄢˋ	一ˋ	ㄨㄢˋ	ㄋ丨ㄢˊ			
@@ -208,7 +208,7 @@ x
 
 tài	bái	jiŭ	zhòng	xiān			
 ㄊㄞˋ	ㄅㄞˊ	ㄐ丨ㄡˇ	ㄓㄨㄥˋ	ㄒ丨ㄢ			
-太	白	酒	中	仙	，		
+太	白	酒	中	仙			
 							
 jiŭ	fèng	xiàn	péng	hú	bié	yŏu	tiān
 ㄐ丨ㄡˇ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄆㄥˊ	ㄏㄨˊ	ㄅ丨ㄝˊ	一ㄡˇ	ㄊ丨ㄢ
@@ -224,7 +224,7 @@ jiŭ	fèng	xiàn	péng	hú	bié	yŏu	tiān
 
 cháng	shēng	shòu	lǚ				
 ㄔㄤˊ	ㄕㄥ	ㄕㄡˋ	ㄌㄩˇ				
-長	生	壽	縷	，			
+長	生	壽	縷				
 							
 chūn	qiū	huán	jĭ	xŭ			
 ㄔㄨㄣ	ㄑ丨ㄡ	ㄏㄨㄢˊ	ㄐ丨ˇ	ㄒㄨˇ			
@@ -240,7 +240,7 @@ x
 
 xiān	zhī	cháng	suŏ	yŭ			
 ㄒ丨ㄢ	ㄓ	ㄔㄤˊ	ㄙㄨㄛˇ	ㄩˇ			
-仙	芝	長	所	與	，		
+仙	芝	長	所	與			
 							
 miàn	fèng	xiàn	ruì	xué	lín	xiān	jŭ
 ㄇ丨ㄢˋ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄖㄨㄟˋ	ㄒㄨㄜˊ	ㄌ丨ㄣˊ	ㄒ丨ㄢ	ㄐㄨˇ
@@ -256,7 +256,7 @@ miàn	fèng	xiàn	ruì	xué	lín	xiān	jŭ
 
 cái	băo	fēng	yíng				
 ㄘㄞˊ	ㄅㄠˇ	ㄈㄥ	一ㄥˊ				
-財	寶	豐	盈	，			
+財	寶	豐	盈				
 							
 sì	fāng	qìng	shēng	píng			
 ㄙˋ	ㄈㄤ	ㄑ丨ㄥˋ	ㄕㄥ	ㄆ丨ㄥˊ			
@@ -272,7 +272,7 @@ x
 
 jīn	jiāng	gōng	shèng	xián			
 ㄐ丨ㄣ	ㄐ丨ㄤ	ㄍㄨㄥ	ㄕㄥˋ	ㄒ丨ㄢˊ			
-今	將	供	聖	賢	，		
+今	將	供	聖	賢			
 							
 băo	fèng	xiàn	shì	jiān	jì	wàn	mín
 ㄅㄠˇ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄕˋ	ㄐ丨ㄢ	ㄐ丨ˋ	ㄨㄢˋ	ㄇ丨ㄣˊ
@@ -288,7 +288,7 @@ băo	fèng	xiàn	shì	jiān	jì	wàn	mín
 
 lóng	zhāng	fèng	zhuàn				
 ㄌㄨㄥˊ	ㄓㄤ	ㄈㄥˋ	ㄓㄨㄢˋ				
-龍	章	鳳	篆	，			
+龍	章	鳳	篆				
 							
 băo	mă	yŭ	jīn	qián			
 ㄅㄠˇ	ㄇㄚˇ	ㄩˇ	ㄐ丨ㄣ	ㄑ丨ㄢˊ			
@@ -304,7 +304,7 @@ x
 
 pĕng	xiàn	shèng	zūn	qián			
 ㄆㄥˇ	ㄒ丨ㄢˋ	ㄕㄥˋ	ㄗㄨㄣ	ㄑ丨ㄢˊ			
-捧	獻	聖	尊	前	，		
+捧	獻	聖	尊	前			
 							
 zhāng	fèng	xiàn	chéng	cĭ	lè	huí	pián
 ㄓㄤ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄔㄥˊ	ㄘˇ	ㄌㄜˋ	ㄏㄨㄟˊ	ㄆ丨ㄢˊ

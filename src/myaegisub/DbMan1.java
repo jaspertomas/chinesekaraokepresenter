@@ -25,6 +25,26 @@ public class DbMan1 {
 
     private Connection c = null;
     private Statement stmt = null;
+    
+    private static DbMan1 jdbc=null;
+    public static DbMan1 getInstance()
+    {
+        if(jdbc==null)
+        {
+            initialize();
+        }
+        return jdbc;
+    }
+    private static void initialize()
+    {
+        //connect to database
+        DbMan1 jdbc = new DbMan1();
+        if (jdbc.connect("database.db")) {
+//            System.out.println("Opened database successfully");
+        }else{
+            System.out.println("Error opening database");
+        }
+    }
 
     public boolean close()
     {
