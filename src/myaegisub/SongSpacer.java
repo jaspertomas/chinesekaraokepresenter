@@ -13,7 +13,7 @@ import utils.fileaccess.FileWriter;
  * @author jaspertomas
  */
 public class SongSpacer {
-    static String songfilename="song001.txt";
+    static String songfilename="song000.txt";
     public static void main(String args[])    
     {
         String s=FileReader.read(songfilename);
