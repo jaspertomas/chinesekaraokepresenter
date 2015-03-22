@@ -5,6 +5,7 @@
  */
 package myaegisub;
 
+import java.util.ArrayList;
 import utils.fileaccess.FileReader;
 import utils.fileaccess.FileWriter;
 
@@ -13,15 +14,17 @@ import utils.fileaccess.FileWriter;
  * @author jaspertomas
  */
 public class SongSpacer {
-    static String songfilename="song16.txt";
+    static String songfilename="";
+//    static String[] songfilenumbers={"15"};
+    static String[] songfilenumbers={"00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22b"};
     public static void main(String args[])    
     {
-        String[] songfilenumbers={"03","04","05","06","07","08","09","10","11","12","16","17","18","19","20","21","22","22b"};
-        for(String number:songfilenumbers)
-        {
-            songfilename="song"+number+".txt";
-            convert();
-        }
+//        for(String number:songfilenumbers)
+//        {
+//            songfilename="song"+number+".txt";
+//            convert();
+//        }
+        merge();
     }    
     public static void convert()
     {
@@ -37,5 +40,29 @@ public class SongSpacer {
             output+=lines[i]+"\n";
         }
         FileWriter.write(songfilename, output);
+    }
+    public static void merge()
+    {
+        String output="";
+        for(String number:songfilenumbers)
+        {
+            songfilename="song"+number+".txt";
+            String input=FileReader.read(songfilename);
+            String segments[]=input.split("\n");
+            ArrayList<String> segmentslist=new ArrayList<String>();
+            for(String s:segments)
+            {
+                segmentslist.add(s);
+            }
+            while(segmentslist.size()%16!=0)
+            {
+                segmentslist.add("");
+            }
+            for(String s:segmentslist)
+            {
+                output+=s+"\n";
+            }
+        }
+        FileWriter.write("song002.txt", output);
     }
 }

@@ -1,136 +1,71 @@
-x
 .
+Reading of Intention
 .
 
 Guī	yī	wú	shàng	zhì	zhēn	sān	bǎo
 ㄍㄨㄟ	一	ㄨˊ	ㄕㄤˋ	ㄓˋ	ㄓㄣ	ㄙㄢ	ㄅㄠˇ
 皈	依	无	上	至	真	三	宝
-							(3x)
 							
-leader	:	Yù	huáng	tiān	zūn		
-ㄓㄨˇ	:	ㄩˋ	ㄏㄨㄤˊ	ㄊ丨ㄢ	ㄗㄨㄣ		
-主	:	玉	皇	天	尊		
+Guī	yī	wú	shàng	zhì	zhēn	sān	bǎo
+ㄍㄨㄟ	一	ㄨˊ	ㄕㄤˋ	ㄓˋ	ㄓㄣ	ㄙㄢ	ㄅㄠˇ
+皈	依	无	上	至	真	三	宝
 							
-all	:	Yù	huáng	tiān	zūn		
-ㄓㄨㄥˋㄏㄜˊ :		ㄩˋ	ㄏㄨㄤˊ	ㄊ丨ㄢ	ㄗㄨㄣ		
-众和	:	玉	皇	天	尊		
+Guī	yī	wú	shàng	zhì	zhēn	sān	bǎo
+ㄍㄨㄟ	一	ㄨˊ	ㄕㄤˋ	ㄓˋ	ㄓㄣ	ㄙㄢ	ㄅㄠˇ
+皈	依	无	上	至	真	三	宝
+							
 x
 .
 .
 
+Yù	huáng	tiān	zūn		
+ㄩˋ	ㄏㄨㄤˊ	ㄊ丨ㄢ	ㄗㄨㄣ		
+玉	皇	天	尊		
 							
-leader	:	Tài	shàng	lǎo	jūn		
-ㄓㄨˇ	:	ㄊㄞˋ	ㄕㄤˋ	ㄌㄠˇ	ㄐㄨㄣ		
-主	:	太	上	老	君		
+Yù	huáng	tiān	zūn		
+ㄩˋ	ㄏㄨㄤˊ	ㄊ丨ㄢ	ㄗㄨㄣ		
+玉	皇	天	尊		
 							
-all	:	Tài	shàng	lǎo	jūn		
-ㄓㄨㄥˋㄏㄜˊ :		ㄊㄞˋ	ㄕㄤˋ	ㄌㄠˇ	ㄐㄨㄣ		
-众和	:	太	上	老	君		
+Tài	shàng	lǎo	jūn		
+ㄊㄞˋ	ㄕㄤˋ	ㄌㄠˇ	ㄐㄨㄣ		
+太	上	老	君		
 							
-leader	:	Dào	chǎng	liè	shèng		
-ㄓㄨˇ	:	ㄉㄠˋ	ㄔㄤˇ	ㄌ丨ㄝˋ	ㄕㄥˋ		
-主	:	道	场	列	圣		
 x
 .
 .
 
+Tài	shàng	lǎo	jūn		
+ㄊㄞˋ	ㄕㄤˋ	ㄌㄠˇ	ㄐㄨㄣ		
+太	上	老	君		
 							
-all	:	Dào	chǎng	liè	shèng		
-ㄓㄨㄥˋㄏㄜˊ :		ㄉㄠˋ	ㄔㄤˇ	ㄌ丨ㄝˋ	ㄕㄥˋ		
-众和	:	道	场	列	圣		
+Dào	chǎng	liè	shèng		
+ㄉㄠˋ	ㄔㄤˇ	ㄌ丨ㄝˋ	ㄕㄥˋ		
+道	场	列	圣		
 							
-leader	:	Pǔ	tóng				
-ㄓㄨˇ	:	ㄆㄨˇ	ㄊㄨㄥˊ				
-主	:	普	同				
+Dào	chǎng	liè	shèng		
+ㄉㄠˋ	ㄔㄤˇ	ㄌ丨ㄝˋ	ㄕㄥˋ		
+道	场	列	圣		
 							
-all	:	Gòng	yǎng				
-ㄓㄨㄥˋㄏㄜˊ :		ㄍㄨㄥ	一ㄤˇ				
-众和	:	供	养				
 x
 .
 .
 
+Pǔ	tóng				
+ㄆㄨˇ	ㄊㄨㄥˊ				
+普	同				
 							
-leader	:						
+Gòng	yǎng				
+ㄍㄨㄥ	一ㄤˇ				
+供	养				
 							
-Xiáng	yān	jié	zhuàn	ruì	ǎi	níng	kōng
-ㄒ丨ㄤˊ	一ㄢ	ㄐ丨ㄝˊ	ㄓㄨㄢˋ	ㄖㄨㄟˋ	ㄞˇ	ㄋ丨ㄥˊ	ㄎㄨㄥ
-祥	烟	結	篆	瑞	霭	凝	空
-							
-zhān	shàng	shèng	yǐ	tóu	chéng		
-ㄓㄢ	ㄕㄤˋ	ㄕㄥˋ	一ˇ	ㄊㄡˊ	ㄔㄥˊ		
-瞻	上	圣	以	投	诚		
-							
-wàng	gāo	zhēn	ér	jìng	lǐ		
+(Prepared text by leader)
+
+
+
 x
 .
 .
 
-ㄨㄤˋ	ㄍㄠ	ㄓㄣ	ㄦˊ	ㄐ丨ㄥˋ	ㄌ丨ˇ		
-望	高	真	而	敬	礼		
-							
-xiàng	lái	qǐng	fú	yíng	xǐ		
-ㄒ丨ㄤˋ	ㄌㄞˊ	ㄑ丨ㄥˇ	ㄈㄨˊ	一ㄥˊ	ㄒ丨ˇ		
-向	來	请	福	迎	禧		
-							
-jīn	wéi	fēi	lǜ	bīn			
-ㄐ丨ㄣ	ㄨㄟˊ	ㄈㄟ	ㄌㄩˋ	ㄅ丨ㄣ			
-今	为	菲	律	宾			
-							
-dao	de	gong	xīn				
-x
-.
-.
-
-ㄉㄠˋ	ㄉㄜˊ	ㄍㄨㄥ	ㄒ丨ㄣ				
-道	徳	宮	欣				
-							
-féng	tài	shàng	lǎo	zūn			
-ㄈㄥˊ	ㄊㄞˋ	ㄕㄤˋ	ㄌㄠˇ	ㄗㄨㄣ			
-逢	太	上	老	尊			
-							
-shèng	dàn	qiān	qiū				
-ㄕㄥˋ	ㄉㄢˋ	ㄑ丨ㄢ	ㄑ丨ㄡ				
-圣	诞	千	秋				
-							
-shè	tán	qǐ	xiū	zhù	shèng	fǎ	diǎn
-x
-.
-.
-
-ㄕㄜˋ	ㄊㄢˊ	ㄑ丨ˇ	ㄒ丨ㄡ	ㄓㄨˋ	ㄕㄥˋ	ㄈㄚˇ	ㄉ丨ㄢˇ
-設	坛	启	修	祝	圣	法	典
-							
-yǐ	jīn	dēng	tán	xiàn	gōng	zhī	cì
-一ˇ	ㄐ丨ㄣ	ㄉㄥ	ㄊㄢˊ	ㄒ丨ㄢˋ	ㄍㄨㄥ	ㄓ	ㄘˋ
-以	今	登	坛	献	供	之	次
-							
-jù	yǒu	yì	wén				
-ㄐㄨˋ	一ㄡˇ	一ˋ	ㄨㄣˊ				
-具	有	意	文				
-							
-jǐn	dāng	xuān	dú				
-x
-.
-.
-
-ㄐ丨ㄣˇ	ㄉㄤ	ㄒㄨㄢ	ㄉㄨˊ				
-谨	当	宣	读				
-							
-fú	yuàn	shèng	cí	fǔ	chuí	dòng	jiàn
-ㄈㄨˊ	ㄩㄢˋ	ㄕㄥˋ	ㄘˊ	ㄈㄨˇ	ㄔㄨㄟˊ	ㄉㄨㄥˋ	ㄐ丨ㄢˋ
-伏	愿	圣	词	俯	垂	洞	鉴
-							
-leader 2      :		(	prepared text		)		
-ㄒ丨	:	(	ㄕㄨ	ㄨㄣˊ	)		
-西	:	(	疏	文	)		
-							
-all	:						
-x
-.
-.
-
-							
 jīn	chén	hé	gōng	dì	zǐ	děng	
 ㄐ丨ㄣ	ㄔㄣˊ	ㄍㄜˇ	ㄍㄨㄥ	ㄉ丨ˋ	ㄗˇ	ㄉㄥˇ	
 今	晨	合	宮	弟	子	等	
@@ -142,11 +77,11 @@ xiāo	zāi	jí	fú	shòu	mián	zhǎng
 suǒ	qí	rú	yuàn	xī	chéng	jiù	
 ㄙㄨㄛˇ	ㄑ丨ˊ	ㄖㄨˊ	ㄩㄢˋ	ㄒ丨	ㄔㄥˊ	ㄐ丨ㄡˋ	
 所	祈	如	愿	悉	成	就	
+							
 x
 .
 .
 
-							
 yī	qiè	shí	zhōng	xiáng	jí	xiáng	
 一	ㄑ丨ㄝˋ	ㄕˊ	ㄓㄨㄥˋ	ㄒ丨ㄤˊ	ㄐ丨ˊ	ㄒ丨ㄤˊ	
 一	切	时	中	佭	吉	祥	
@@ -158,11 +93,11 @@ guī	mìng	jiàng	jí	xiáng	rú	yuàn
 dà	tiān	zūn					
 ㄉㄚˋ	ㄊ丨ㄢ	ㄗㄨㄣ					
 大	天	尊					
+							
 x
 .
 .
 
-							
 guī	mìng	xiāo	zāi	zhàng	chuí	yuàn	
 ㄍㄨㄟ	ㄇ丨ㄥˋ	ㄒ丨ㄠ	ㄗㄞ	ㄓㄤˋ	ㄔㄨㄟˊ	ㄩㄢˋ	
 皈	命	消	灾	障	垂	愿	
@@ -174,11 +109,11 @@ dà	tiān	zūn
 guī	mìng	zēng	fú	shòu	mǎn	yuàn	
 ㄍㄨㄟ	ㄇ丨ㄥˋ	ㄗㄥ	ㄈㄨˊ	ㄕㄡˋ	ㄇㄢˇ	ㄩㄢˋ	
 皈	命	增	福	寿	满	愿	
+							
 x
 .
 .
 
-							
 dà	tiān	zūn					
 ㄉㄚˋ	ㄊ丨ㄢ	ㄗㄨㄣ					
 大	天	尊					

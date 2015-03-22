@@ -1,5 +1,5 @@
-x
 .
+十 獻 供 (Ten Offerings)<br>1. Incense Offering
 .
 
 qīng	jìng	míng	xiāng				
@@ -26,8 +26,8 @@ xiāng	fèng	xiàn	shàng	chè	zhū	shèng	xiāng
 ㄒ丨ㄤ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄕㄤˋ	ㄔㄜˋ	ㄓㄨ	ㄕㄥˋ	ㄒ丨ㄤ
 香	奉	獻	上	徹	諸	聖	鄉
 							
-2. Flower Offering
 .
+2. Flower Offering
 .
 
 làng	yuàn	xiān	huā				
@@ -58,8 +58,8 @@ huā	fèng	xiàn	kòng	yù	wáng	mŭ	jiā
 
 
 							
-3. Light Offering
 .
+3. Light Offering
 .
 
 wŭ	fèng	yún	dēng				
@@ -90,8 +90,8 @@ dēng	fèng	xiàn	mù	dé	yŭ	zhì	chāng
 
 
 							
-4. Water Offering
 .
+4. Water Offering
 .
 
 tiān	yī	shēng	shuĭ				
@@ -122,8 +122,8 @@ shuĭ	fèng	xiàn	huā	yŭ	rùn	qún	fāng
 
 
 							
-5. Fruit Offering
 .
+5. Fruit Offering
 .
 
 xiān	yuán	fú	guŏ				
@@ -154,8 +154,8 @@ guŏ	fèng	xiàn	cháo	yuán	xiān	zĭ	jiā
 
 
 							
-6. Tea Offering
 .
+6. Tea Offering
 .
 
 wŭ	yí	xiān	pĭn				
@@ -186,8 +186,8 @@ chá	fèng	xiàn	làng	yuàn	zhēn	xiān	jiā
 
 
 
-7. Wine Offering
 .
+7. Wine Offering
 .
 
 fèng	jiŭ	xīn	jiān				
@@ -218,8 +218,8 @@ jiŭ	fèng	xiàn	péng	hú	bié	yŏu	tiān
 
 
 							
-8. Misua Offering
 .
+8. Misua Offering
 .
 
 cháng	shēng	shòu	lǚ				
@@ -250,8 +250,8 @@ miàn	fèng	xiàn	ruì	xué	lín	xiān	jŭ
 
 
 										
-9. Treasure Offering
 .
+9. Treasure Offering
 .
 
 cái	băo	fēng	yíng				
@@ -282,8 +282,8 @@ băo	fèng	xiàn	shì	jiān	jì	wàn	mín
 
 
 							
-10. Gold Paper Offering
 .
+10. Gold Paper Offering
 .
 
 lóng	zhāng	fèng	zhuàn				
@@ -314,8 +314,8 @@ zhāng	fèng	xiàn	chéng	cĭ	lè	huí	pián
 
 
 							
-10. Ten Offerings Ending
 .
+Closing of Offerings
 .
 
 hū	ăn	sà	lĭ	wă			
@@ -367,5 +367,26 @@ x
 .
 
 pŭ	biàn	dà	tiān	zūn			
-ㄆㄨˇ	ㄅ丨ㄢˋ	ㄉㄚˋ	ㄊ丨ㄢ	ㄗㄨㄣ	(3x)		
+ㄆㄨˇ	ㄅ丨ㄢˋ	ㄉㄚˋ	ㄊ丨ㄢ	ㄗㄨㄣ	
 普	遍	大	天	尊			
+
+guī	mìng	pŭ	gōng	yăng			
+ㄍㄨㄟ	ㄇ丨ㄥˋ	ㄆㄨˇ	ㄍㄨㄥ	一ㄤˇ			
+皈	命	普	供	養			
+							
+pŭ	biàn	dà	tiān	zūn			
+ㄆㄨˇ	ㄅ丨ㄢˋ	ㄉㄚˋ	ㄊ丨ㄢ	ㄗㄨㄣ	
+普	遍	大	天	尊			
+
+x
+.
+.
+
+guī	mìng	pŭ	gōng	yăng			
+ㄍㄨㄟ	ㄇ丨ㄥˋ	ㄆㄨˇ	ㄍㄨㄥ	一ㄤˇ			
+皈	命	普	供	養			
+							
+pŭ	biàn	dà	tiān	zūn			
+ㄆㄨˇ	ㄅ丨ㄢˋ	ㄉㄚˋ	ㄊ丨ㄢ	ㄗㄨㄣ	
+普	遍	大	天	尊			
+

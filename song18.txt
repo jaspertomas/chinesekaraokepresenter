@@ -1,5 +1,5 @@
-x
 .
+說 常 清 靜 妙 經 <br>(Tai Shang Lao Jin Speaks the Purity and Stillness Sutra)
 .
 
 tài	shàng	lăo	jūn				
@@ -182,7 +182,6 @@ wú	wú	jì	wú	zhàn	rán	cháng	jì
 ㄨˊ	ㄨˊ	ㄐ丨ˋ	ㄨˊ	ㄓㄢˋ	ㄖㄢˊ	ㄔㄤˊ	ㄐ丨ˋ
 無	無	既	無	湛	然	常	寂
 							
-							
 jì	wú	suŏ	jì	yù	qĭ	néng	shēng
 ㄐ丨ˋ	ㄨˊ	ㄙㄨㄛˇ	ㄐ丨ˋ	ㄩˋ	ㄑ丨ˇ	ㄋㄥˊ	ㄕㄥ
 寂	無	所	寂	慾	豈	能	生
@@ -190,10 +189,10 @@ jì	wú	suŏ	jì	yù	qĭ	néng	shēng
 yù	jì	bù	shēng	jí	shì	qīng	jìng
 ㄩˋ	ㄐ丨ˋ	ㄅㄨˋ	ㄕㄥ	ㄐ丨ˊ	ㄕˋ	ㄑ丨ㄥ	ㄐ丨ㄥˋ
 慾	既	不	生	即	是	清	靜
+							
 x
 .
 .
-
 							
 zhēn	cháng	yīng	wù	zhēn	cháng	dé	xìng
 ㄓㄣ	ㄔㄤˊ	一ㄥ	ㄨˋ	ㄓㄣ	ㄔㄤˊ	ㄉㄜˊ	ㄒ丨ㄥˋ
@@ -206,10 +205,10 @@ cháng	yīng	cháng	jìng	cháng	qīng	jìng	yĭ
 rú	cĭ	qīng	jìng	jiān	rù	zhēn	dào
 ㄖㄨˊ	ㄘˇ	ㄑ丨ㄥ	ㄐ丨ㄥˋ	ㄐ丨ㄢ	ㄖㄨˋ	ㄓㄣ	ㄉㄠˋ
 如	此	清	靜	漸	入	真	道
+							
 x
 .
 .
-
 							
 jì	rù	zhēn	dào	míng	wéi	dé	dào
 ㄐ丨ˋ	ㄖㄨˋ	ㄓㄣ	ㄉㄠˋ	ㄇ丨ㄥˊ	ㄨㄟˊ	ㄉㄜˊ	ㄉㄠˋ
@@ -222,10 +221,10 @@ suī	míng	dé	dào	shí	wú	suŏ	dé
 wéi	huā	zhòng	shēng	míng	wéi	dé	dào
 ㄨㄟˊ	ㄏㄨㄚ	ㄓㄨㄥˋ	ㄕㄥ	ㄇ丨ㄥˊ	ㄨㄟˊ	ㄉㄜˊ	ㄉㄠˋ
 為	化	眾	生	名	為	得	道
+							
 x
 .
 .
-
 							
 néng	wù	zhī	zhĕ	kĕ	chuán	shèng	dào
 ㄋㄥˊ	ㄨˋ	ㄓ	ㄓㄜˇ	ㄎㄜˇ	ㄔㄨㄢˊ	ㄕㄥˋ	ㄉㄠˋ
@@ -238,15 +237,15 @@ lăo	jūn	yuē
 shàng	shì	wú	zhēng	xià	shì	hăo	zhēng
 ㄕㄤˋ	ㄕˋ	ㄨˊ	ㄓㄥ	ㄒ丨ㄚˋ	ㄕˋ	ㄏㄠˇ	ㄓㄥ
 上	士	無	爭	下	士	好	爭
+							
 x
 .
 .
-
 							
 shàng	dé	bù	dé	xià	dé	zhí	dé
 ㄕㄤˋ	ㄉㄜˊ	ㄅㄨˋ	ㄉㄜˊ	ㄒ丨ㄚˋ	ㄉㄜˊ	ㄓˊ	ㄉㄜˊ
 上	德	不	德	下	德	執	德
-	!						
+
 zhí	zhĕ	zhī	zhĕ	bù	míng	dào	dé
 ㄓˊ	ㄓㄜˇ	ㄓ	ㄓㄜˇ	ㄅㄨˋ	ㄇ丨ㄥˊ	ㄉㄠˋ	ㄉㄜˊ
 執	著	之	者	不	明	道	德
@@ -254,10 +253,10 @@ zhí	zhĕ	zhī	zhĕ	bù	míng	dào	dé
 zhòng	shēng	suŏ	yĭ	bù	dé	zhēn	dào
 ㄓㄨㄥˋ	ㄕㄥ	ㄙㄨㄛˇ	一ˇ	ㄅㄨˋ	ㄉㄜˊ	ㄓㄣ	ㄉㄠˋ
 眾	生	所	以	不	得	真	道
+
 x
 .
 .
-
 							
 zhĕ	wéi	yŏu	wàng	xīn			
 ㄓㄜˇ	ㄨㄟˊ	一ㄡˇ	ㄨㄤˋ	ㄒ丨ㄣ			
@@ -270,11 +269,11 @@ jì	yŏu	wàng	xīn	jí	jīng	qí	shén
 jì	jīng	qí	shén	jí	zhĕ	wàn	wù
 ㄐ丨ˋ	ㄐ丨ㄥ	ㄑ丨ˊ	ㄕㄣˊ	ㄐ丨ˊ	ㄓㄜˇ	ㄨㄢˋ	ㄨˋ
 既	驚	其	神	即	著	萬	物
+
 x
 .
 .
 
-	!						
 jì	zhĕ	wàn	wù	jí	shēng	tān	qiú
 ㄐ丨ˋ	ㄓㄜˇ	ㄨㄢˋ	ㄨˋ	ㄐ丨ˊ	ㄕㄥ	ㄊㄢ	ㄑ丨ㄡˊ
 既	著	萬	物	即	生	貪	求
@@ -286,11 +285,10 @@ jì	shēng	tān	qiú	jí	shì	fán	năo
 fán	năo	wàng	xiăng	yōu	kŭ	shēn	xīn
 ㄈㄢˊ	ㄋㄠˇ	ㄨㄤˋ	ㄒ丨ㄤˇ	一ㄡ	ㄎㄨˇ	ㄕㄣ	ㄒ丨ㄣ
 煩	惱	妄	想	憂	苦	身	心
+
 x
 .
 .
-
-							
 							
 biàn	zāo	zhuó	rŭ	liú	dàng	shēng	sĭ
 ㄅ丨ㄢˋ	ㄗㄠ	ㄓㄨㄛˊ	ㄖㄨˇ	ㄌ丨ㄡˊ	ㄉㄤˋ	ㄕㄥ	ㄙˇ
@@ -302,11 +300,11 @@ cháng	chēn	kŭ	hăi	yŏng	shī	zhēn	dào
 							
 zhēn	cháng	zhī	dào	wù	zhĕ	zì	dé
 ㄓㄣ	ㄔㄤˊ	ㄓ	ㄉㄠˋ	ㄨˋ	ㄓㄜˇ	ㄗˋ	ㄉㄜˊ
+真	常	之	道	悟	者	自	得
+
 x
 .
 .
-
-真	常	之	道	悟	者	自	得
 							
 dé	wù	dào	zhĕ	cháng	qīng	jìng	yĭ
 ㄉㄜˊ	ㄨˋ	ㄉㄠˋ	ㄓㄜˇ	ㄔㄤˊ	ㄑ丨ㄥ	ㄐ丨ㄥˋ	一ˇ
@@ -318,8 +316,9 @@ tài	shàng	lăo	jūn
 							
 shuō	cháng	qīng	jìng	miào	jīng		
 ㄕㄨㄛ	ㄔㄤˊ	ㄑ丨ㄥ	ㄐ丨ㄥˋ	ㄇ丨ㄠˋ	ㄐ丨ㄥ		
+說	常	清	靜	妙	經		
+
 x
 .
 .
 
-說	常	清	靜	妙	經		
