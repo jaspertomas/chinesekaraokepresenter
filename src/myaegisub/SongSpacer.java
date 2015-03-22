@@ -13,8 +13,18 @@ import utils.fileaccess.FileWriter;
  * @author jaspertomas
  */
 public class SongSpacer {
-    static String songfilename="song000.txt";
+    static String songfilename="song16.txt";
     public static void main(String args[])    
+    {
+//        Integer[] songfilenumbers={16,17,18,19,20,21,22,23};
+//        for(Integer number:songfilenumbers)
+//        {
+//            songfilename="song"+number.toString();
+//            convert();
+//        }
+        convert();
+    }    
+    public static void convert()
     {
         String s=FileReader.read(songfilename);
         String output="";
@@ -28,5 +38,5 @@ public class SongSpacer {
             output+=lines[i]+"\n";
         }
         FileWriter.write(songfilename, output);
-    }    
+    }
 }
