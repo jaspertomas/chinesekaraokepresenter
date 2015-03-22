@@ -25,16 +25,12 @@ jīn	lú	ruì	qì	cháng
 xiāng	fèng	xiàn	shàng	chè	zhū	shèng	xiāng
 ㄒ丨ㄤ	ㄈㄥˋ	ㄒ丨ㄢˋ	ㄕㄤˋ	ㄔㄜˋ	ㄓㄨ	ㄕㄥˋ	ㄒ丨ㄤ
 香	奉	獻	上	徹	諸	聖	鄉
-
-
-
-
 							
-x
+2. Flower Offering
 .
 .
 
-(Flower Offering) làng	yuàn	xiān	huā				
+làng	yuàn	xiān	huā				
 ㄌㄤˋ	ㄩㄢˋ	ㄒ丨ㄢ	ㄏㄨㄚ				
 閬	苑	仙	花	，			
 							
@@ -62,11 +58,11 @@ huā	fèng	xiàn	kòng	yù	wáng	mŭ	jiā
 
 
 							
-x
+3. Light Offering
 .
 .
 
-(Light Offering) wŭ	fèng	yún	dēng				
+wŭ	fèng	yún	dēng				
 ㄨˇ	ㄈㄥˋ	ㄩㄣˊ	ㄉㄥ				
 五	鳳	雲	燈	，			
 							
@@ -94,11 +90,11 @@ dēng	fèng	xiàn	mù	dé	yŭ	zhì	chāng
 
 
 							
-x
+4. Water Offering
 .
 .
 
-(Water Offering) tiān	yī	shēng	shuĭ				
+tiān	yī	shēng	shuĭ				
 ㄊ丨ㄢ	一	ㄕㄥ	ㄕㄨㄟˇ				
 天	一	生	水	，			
 							
@@ -126,11 +122,11 @@ shuĭ	fèng	xiàn	huā	yŭ	rùn	qún	fāng
 
 
 							
-x
+5. Fruit Offering
 .
 .
 
-(Fruit Offering) xiān	yuán	fú	guŏ				
+xiān	yuán	fú	guŏ				
 ㄒ丨ㄢ	ㄩㄢˊ	ㄈㄨˊ	ㄍㄨㄛˇ				
 仙	園	福	果	，			
 							
@@ -158,11 +154,11 @@ guŏ	fèng	xiàn	cháo	yuán	xiān	zĭ	jiā
 
 
 							
-x
+6. Tea Offering
 .
 .
 
-(Tea Offering) wŭ	yí	xiān	pĭn				
+wŭ	yí	xiān	pĭn				
 ㄨˇ	一ˊ	ㄒ丨ㄢ	ㄆ丨ㄣˇ				
 武	夷	仙	品	，			
 
@@ -190,11 +186,11 @@ chá	fèng	xiàn	làng	yuàn	zhēn	xiān	jiā
 
 
 
-x
+7. Wine Offering
 .
 .
 
-(Wine Offering) fèng	jiŭ	xīn	jiān				
+fèng	jiŭ	xīn	jiān				
 ㄈㄥˋ	ㄐ丨ㄡˇ	ㄒ丨ㄣ	ㄐ丨ㄢ				
 奉	酒	心	堅	，			
 							
@@ -222,11 +218,11 @@ jiŭ	fèng	xiàn	péng	hú	bié	yŏu	tiān
 
 
 							
-x
+8. Misua Offering
 .
 .
 
-(Misua Offering) cháng	shēng	shòu	lǚ				
+cháng	shēng	shòu	lǚ				
 ㄔㄤˊ	ㄕㄥ	ㄕㄡˋ	ㄌㄩˇ				
 長	生	壽	縷	，			
 							
@@ -254,11 +250,11 @@ miàn	fèng	xiàn	ruì	xué	lín	xiān	jŭ
 
 
 										
-x
+9. Treasure Offering
 .
 .
 
-(Treasure Offering) cái	băo	fēng	yíng				
+cái	băo	fēng	yíng				
 ㄘㄞˊ	ㄅㄠˇ	ㄈㄥ	一ㄥˊ				
 財	寶	豐	盈	，			
 							
@@ -286,11 +282,11 @@ băo	fèng	xiàn	shì	jiān	jì	wàn	mín
 
 
 							
-x
+10. Gold Paper Offering
 .
 .
 
-(Gold Paper Offering) lóng	zhāng	fèng	zhuàn				
+lóng	zhāng	fèng	zhuàn				
 ㄌㄨㄥˊ	ㄓㄤ	ㄈㄥˋ	ㄓㄨㄢˋ				
 龍	章	鳳	篆	，			
 							
@@ -318,11 +314,11 @@ zhāng	fèng	xiàn	chéng	cĭ	lè	huí	pián
 
 
 							
-x
+10. Ten Offerings Ending
 .
 .
 
-(Ten Offerings Ending) hū	ăn	sà	lĭ	wă			
+hū	ăn	sà	lĭ	wă			
 ㄏㄨ	ㄢˇ	ㄙㄚˋ	ㄌ丨ˇ	ㄨㄚˇ			
 呼	唵	薩	哩	瓨			
 							

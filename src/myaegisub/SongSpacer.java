@@ -16,13 +16,12 @@ public class SongSpacer {
     static String songfilename="song16.txt";
     public static void main(String args[])    
     {
-//        Integer[] songfilenumbers={16,17,18,19,20,21,22,23};
-//        for(Integer number:songfilenumbers)
-//        {
-//            songfilename="song"+number.toString();
-//            convert();
-//        }
-        convert();
+        String[] songfilenumbers={"03","04","05","06","07","08","09","10","11","12","16","17","18","19","20","21","22","22b"};
+        for(String number:songfilenumbers)
+        {
+            songfilename="song"+number+".txt";
+            convert();
+        }
     }    
     public static void convert()
     {
