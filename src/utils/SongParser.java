@@ -74,7 +74,12 @@ public class SongParser {
         jdbc.deleteWords();
         for(int i=0;i<pinyinlist.size();i++)
         {
+            try{
             jdbc.insert(filename.replace(".txt", ""),pinyinlist.get(i),kokinlist.get(i),characterlist.get(i),"",linelist.get(i));
+            }catch(java.lang.IndexOutOfBoundsException e)
+            {
+                System.out.println("error");
+            }
         }
         jdbc.close();
     }    
