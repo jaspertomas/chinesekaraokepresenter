@@ -5,6 +5,7 @@
  */
 package controllers;
 
+import java.io.File;
 import javafx.application.Platform;
 import javafx.scene.web.WebEngine;
 import myaegisub.AssReconciler;
@@ -62,10 +63,18 @@ public class PlayerController {
 //            System.out.println(wordsperline[i]);
 //        }
         
-        String fontopenred="<font size=5 color=red>";
-        String fontopenblack="<font size=5 >";
-        String fontopenbigred="<font size=7 color=red>";
-        String fontopenbigblack="<font size=7>";
+        String pinyinfontopenred="<font size=6 color=magenta>";
+        String pinyinfontopenblack="<font size=6 >";
+
+        String chinesefontopenred="<font size=10 color=magenta>";
+        String chinesefontopenblack="<font size=10 >";
+
+        String kokinfontopenred="<font size=5 color=magenta>";
+        String kokinfontopenblack="<font size=5 >";
+
+        String titlefontopen="<font size=6 >";
+        String spacerfontopen="<font size=6 >";
+        
         String fontopen;
         String fontclose="</font>";
         
@@ -79,20 +88,23 @@ public class PlayerController {
             {
                 //title row
                 //row 1
-                output+="<tr><td>&nbsp;</td></tr>";
+//                output+="<tr><td>&nbsp;</td></tr>";
                 //row 2
+                File imagefile=new File("kwanyin.png");
+                String backgroundstring="<html><body background=\""+imagefile.toURI()+"\"><font size=10>";
+//                output+=backgroundstring;
                 output+="<tr>";
                 for(int j=0;j<wordsperline[i];j++)
                 {
-                    output+="<td align=center colspan=8>"+fontopenblack+DbMan1.sounds.get(wordcounter2)+fontclose+"</td>";
+                    output+="<td align=center colspan=8>"+titlefontopen+DbMan1.sounds.get(wordcounter2)+fontclose+"</td>";
                     wordcounter1++;
                     wordcounter2++;
                     wordcounter3++;
                 }
                 //row 3
-                output+="<tr><td>&nbsp;</td></tr>";
+//                output+="<tr><td>&nbsp;</td></tr>";
                 //spacer
-                output+="<tr><td><font size=2>&nbsp;</font></td>";
+                output+="<tr><td><font size=1>&nbsp;</font></td>";
                 output+="</tr>";
             }
             else
@@ -101,34 +113,34 @@ public class PlayerController {
                 output+="<tr>";
                 for(int j=0;j<wordsperline[i];j++)
                 {
-                    if(DbMan1.lines.get(wordcounter1)<lineno)fontopen=fontopenred;
-                    else if(DbMan1.lines.get(wordcounter1)>lineno)fontopen=fontopenblack;
-                    else if(DbMan1.ids.get(wordcounter1)<=DbMan1.wordid)fontopen=fontopenred;
-                    else fontopen=fontopenblack;
+                    if(DbMan1.lines.get(wordcounter1)<lineno)fontopen=pinyinfontopenred;
+                    else if(DbMan1.lines.get(wordcounter1)>lineno)fontopen=pinyinfontopenblack;
+                    else if(DbMan1.ids.get(wordcounter1)<=DbMan1.wordid)fontopen=pinyinfontopenred;
+                    else fontopen=pinyinfontopenblack;
                     output+="<td align=center>"+fontopen+DbMan1.characters.get(wordcounter1)+fontclose+"</td>";
                     wordcounter1++;
                 }
                 output+="</tr><tr>";
                 for(int j=0;j<wordsperline[i];j++)
                 {
-                    if(DbMan1.lines.get(wordcounter2)<lineno)fontopen=fontopenred;
-                    else if(DbMan1.lines.get(wordcounter2)>lineno)fontopen=fontopenblack;
-                    else if(DbMan1.ids.get(wordcounter2)<=DbMan1.wordid)fontopen=fontopenred;
-                    else fontopen=fontopenblack;
+                    if(DbMan1.lines.get(wordcounter2)<lineno)fontopen=kokinfontopenred;
+                    else if(DbMan1.lines.get(wordcounter2)>lineno)fontopen=kokinfontopenblack;
+                    else if(DbMan1.ids.get(wordcounter2)<=DbMan1.wordid)fontopen=kokinfontopenred;
+                    else fontopen=kokinfontopenblack;
                     output+="<td align=center>"+fontopen+DbMan1.sounds.get(wordcounter2)+fontclose+"</td>";
                     wordcounter2++;
                 }
                 output+="</tr><tr>";
                 for(int j=0;j<wordsperline[i];j++)
                 {
-                    if(DbMan1.lines.get(wordcounter3)<lineno)fontopen=fontopenbigred;
-                    else if(DbMan1.lines.get(wordcounter3)>lineno)fontopen=fontopenbigblack;
-                    else if(DbMan1.ids.get(wordcounter3)<=DbMan1.wordid)fontopen=fontopenbigred;
-                    else fontopen=fontopenbigblack;
+                    if(DbMan1.lines.get(wordcounter3)<lineno)fontopen=chinesefontopenred;
+                    else if(DbMan1.lines.get(wordcounter3)>lineno)fontopen=chinesefontopenblack;
+                    else if(DbMan1.ids.get(wordcounter3)<=DbMan1.wordid)fontopen=chinesefontopenred;
+                    else fontopen=chinesefontopenblack;
                     output+="<td align=center>"+fontopen+DbMan1.englishes.get(wordcounter3)+fontclose+"</td>";
                     wordcounter3++;
                 }
-                output+="</tr><tr><td><font size=2>&nbsp;</font></td>";
+                output+="</tr><tr><td><font size=1>&nbsp;</font></td>";
                 output+="</tr>";
             }
 
