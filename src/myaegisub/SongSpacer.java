@@ -15,16 +15,16 @@ import utils.fileaccess.FileWriter;
  */
 public class SongSpacer {
     static String songfilename="";
-//    static String[] songfilenumbers={"12b","12d"};
-    static String[] songfilenumbers={"00","01","02","03","04","05","06","07","08","09","10","11","12a","12b","12c","12d","12e","12f","13","14","15","16","17","18","19","20","21","22b"};
+    static String[] songfilenumbers={"_morning","_afternoon","14a"};
+//    static String[] songfilenumbers={"00","01","02","03","04","05","06","07","08","09","10","11","12a","12b","12c","12d","12e","12f","13","14","15","16","17","18","19","20","21","22b"};
     public static void main(String args[])    
     {
-//        for(String number:songfilenumbers)
-//        {
-//            songfilename="song"+number+".txt";
-//            convert();
-//        }
-        merge();
+        for(String number:songfilenumbers)
+        {
+            songfilename="song"+number+".txt";
+            convert();
+        }
+//        merge();
     }    
     public static void convert()
     {
@@ -33,7 +33,7 @@ public class SongSpacer {
         String[] lines=s.split("\n");
         for(int i=0;i<lines.length;i++)
         {
-            if(i%12==0)
+            if(i%4==0)
             {
                 output+="x\n.\n.\n\n";
             }

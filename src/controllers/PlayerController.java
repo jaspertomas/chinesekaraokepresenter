@@ -97,10 +97,14 @@ public class PlayerController {
         {
             if(wordsperline[i]==1)
             {
+                if(DbMan1.sounds.get(wordcounter2).length()!=1)
+                {
                     title=DbMan1.sounds.get(wordcounter2);
-                    wordcounter1++;
-                    wordcounter2++;
-                    wordcounter3++;
+                }
+                //skip
+                wordcounter1++;
+                wordcounter2++;
+                wordcounter3++;
             }
             else
             {

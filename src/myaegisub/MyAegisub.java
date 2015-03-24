@@ -65,7 +65,7 @@ public class MyAegisub extends Application {
 
         grid.add(label, 0, 1);        
         
-        scene = new Scene(grid, 727, 468);
+        scene = new Scene(grid, 697, 488);
 // scene.getStylesheets().add(cssfile.toURI().toString());        
         
 //--as
@@ -249,11 +249,15 @@ EventHandler eventHandler=
 
             switch(j)
             {
-                case 13://enter
+                case 13://enterx    
                     play();
                     break;
                 case 32://space
                     pause();
+
+//            timerController.setTime(1970000);
+//            playerController.play(timerController.getTime());
+                    
         System.out.print("scene width: ");
         System.out.println(scene.getWidth());
         System.out.print("scene height: ");
