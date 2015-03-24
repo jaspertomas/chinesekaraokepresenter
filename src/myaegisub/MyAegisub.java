@@ -35,10 +35,14 @@ public class MyAegisub extends Application {
     Label label = new Label();
     
     Integer resetmode=0;
+
+    Scene scene;
+    Stage primaryStage;
     
     @Override
     public void start(Stage primaryStage) {
-
+        this.primaryStage=primaryStage;
+                
         DbMan1.getInstance();
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -61,7 +65,7 @@ public class MyAegisub extends Application {
 
         grid.add(label, 0, 1);        
         
-        Scene scene = new Scene(grid, 500, 500);
+        scene = new Scene(grid, 727, 430);
 // scene.getStylesheets().add(cssfile.toURI().toString());        
         
 //--as
@@ -250,6 +254,14 @@ EventHandler eventHandler=
                     break;
                 case 32://space
                     pause();
+        System.out.print("scene width: ");
+        System.out.println(scene.getWidth());
+        System.out.print("scene height: ");
+        System.out.println(scene.getHeight());
+        System.out.print("primaryStage width: ");
+        System.out.println(primaryStage.getWidth());
+        System.out.print("primaryStage height: ");
+        System.out.println(primaryStage.getHeight());
                     break;
                 case 44://<
                     slowDown();

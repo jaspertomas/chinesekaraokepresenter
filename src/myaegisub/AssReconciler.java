@@ -26,8 +26,8 @@ import utils.SongParser;
  * @author jaspertomas
  */
 public class AssReconciler extends Application {
-    public static final Integer linesperpage=4;
-    public static final Integer zeropageadjustment=3;
+//    public static final Integer linesperpage=1;
+//    public static final Integer zeropageadjustment=3;
 
 //    String songname="song000";
 //    String assfilename="ass00.ass";
@@ -330,12 +330,16 @@ public class AssReconciler extends Application {
         
 //        label.setText("Play");
         //display 
-        Integer page;
+        Integer page=0;
+        Integer pagelinedifference=0;
         for(Integer i=0;i<DbMan1.characters.size();i++)
         {
-            page=Double.valueOf(Math.floor((DbMan1.lines.get(i)+Double.valueOf(zeropageadjustment))/linesperpage)).intValue();
-//            System.out.println(page);
+            page=DbMan1.lines.get(i)-pagelinedifference;
             jdbc.updatePage(DbMan1.ids.get(i), page);
+            if(DbMan1.characters.get(i).contentEquals("."))//is title
+            {
+                pagelinedifference++;
+            }
         }
         jdbc.close();
     }
