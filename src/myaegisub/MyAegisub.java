@@ -65,7 +65,7 @@ public class MyAegisub extends Application {
 
         grid.add(label, 0, 1);        
         
-        scene = new Scene(grid, 727, 430);
+        scene = new Scene(grid, 727, 468);
 // scene.getStylesheets().add(cssfile.toURI().toString());        
         
 //--as

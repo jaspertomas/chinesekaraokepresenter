@@ -65,7 +65,7 @@ public class PlayerController {
         for(int i=0,j=0;i<DbMan1.lines.size();i++)
         {
             //line change
-            if(currentline!=DbMan1.lines.get(i))
+            if(!currentline.equals(DbMan1.lines.get(i)))
             {
                 j++;
                 linesperpage++;
@@ -73,11 +73,7 @@ public class PlayerController {
             }
             wordsperline[j-1]++;
         }
-//        for(int i=0;i<wordsperline.length;i++)
-//        {
-//            System.out.println(wordsperline);
-//        }
-        
+
         String pinyinfontopenred="<font size=6 color=magenta>";
         String pinyinfontopenblack="<font size=6 >";
 
