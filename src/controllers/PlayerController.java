@@ -5,10 +5,8 @@
  */
 package controllers;
 
-import java.io.File;
-import javafx.application.Platform;
 import javafx.scene.web.WebEngine;
-import myaegisub.AssReconciler;
+import myaegisub.Constants;
 import myaegisub.DbMan1;
 
 /**
@@ -16,7 +14,6 @@ import myaegisub.DbMan1;
  * @author jaspertomas
  */
 public class PlayerController {
-    
    WebEngine webEngine;
    String title="";
    
@@ -74,23 +71,23 @@ public class PlayerController {
             wordsperline[j-1]++;
         }
 
-        String pinyinfontopenred="<font size=6 color=magenta>";
-        String pinyinfontopenblack="<font size=6 >";
+        String pinyinfontopenred="<font size=6 color="+Constants.textcoloractive+">";
+        String pinyinfontopenblack="<font size=6 color="+Constants.textcolorpassive+">";
 
-        String chinesefontopenred="<font size=10 color=magenta>";
-        String chinesefontopenblack="<font size=10 >";
+        String chinesefontopenred="<font size=10 color="+Constants.textcoloractive+">";
+        String chinesefontopenblack="<font size=10 color="+Constants.textcolorpassive+">";
 
-        String kokinfontopenred="<font size=5 color=magenta>";
-        String kokinfontopenblack="<font size=5 >";
+        String kokinfontopenred="<font size=5 color="+Constants.textcoloractive+">";
+        String kokinfontopenblack="<font size=5 color="+Constants.textcolorpassive+">";
 
-        String titlefontopen="<font size=6 >";
+        String titlefontopen="<font size=6 color="+Constants.textcolorpassive+">";
         String spacerfontopen="<font size=1 >";
         
         String fontopen;
         String fontclose="</font>";
         
         //formulate html
-        output+="<table width=100%>";
+        output+="<html><body bgcolor="+Constants.bgcolor+"><table width=100%>";
         //for each line...
         Integer wordcounter1=0,wordcounter2=0,wordcounter3=0;
         for(int i=0;i<linesperpage;i++)

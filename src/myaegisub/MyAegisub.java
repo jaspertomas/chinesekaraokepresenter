@@ -65,13 +65,12 @@ public class MyAegisub extends Application {
 
         grid.add(label, 0, 1);        
         
-        scene = new Scene(grid, 697, 488);
+        scene = new Scene(grid, 619, 469);// on 800x640
+//        scene = new Scene(grid, 697, 488);
 // scene.getStylesheets().add(cssfile.toURI().toString());        
         
 //--as
-
-        browser.addEventFilter(KeyEvent.KEY_PRESSED, eventHandler);
-        scene.setOnMousePressed(new EventHandler<MouseEvent>() {
+        EventHandler mouseEventHandler=new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 if(event.getButton() == MouseButton.SECONDARY)
@@ -83,7 +82,9 @@ public class MyAegisub extends Application {
                     gotoNext();
                 }
             }
-        });
+        };
+        browser.addEventFilter(KeyEvent.KEY_PRESSED, eventHandler);
+        scene.setOnMousePressed(mouseEventHandler);
 
 //        primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
