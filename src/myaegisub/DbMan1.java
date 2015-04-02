@@ -482,6 +482,27 @@ public class DbMan1 {
       return null;
     }
   }  
+  public Integer[] selectPageByPageNo(Integer pageno)
+  {
+      Integer[] times={0,0};
+    try {
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      ResultSet rs = stmt.executeQuery( "SELECT * FROM pages where page="+pageno+"" );
+      while ( rs.next() ) {
+          times[0]=rs.getInt("timestart");
+          times[1]=rs.getInt("timeend");
+      }
+      rs.close();
+      stmt.close();
+
+      return times;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return null;
+    }
+  }  
   public Integer selectWordByTime(Integer time)
   {
     try {

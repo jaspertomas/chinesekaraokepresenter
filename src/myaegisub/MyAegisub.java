@@ -39,8 +39,19 @@ public class MyAegisub extends Application {
     Scene scene;
     Stage primaryStage;
     
+    Integer maxpages=398;
+    Boolean pageturnenabled=true;
+    
+    static MyAegisub instance=null;
+    public static MyAegisub getInstance()
+    {
+        return instance;
+    }
+    
     @Override
     public void start(Stage primaryStage) {
+        instance=this;
+        
         this.primaryStage=primaryStage;
                 
         DbMan1.getInstance();
@@ -120,7 +131,7 @@ public class MyAegisub extends Application {
         launch(args);
     }
     
-    private void gotoNext()
+    public void gotoNext()
     {
         Integer index=DbMan1.ids.indexOf(DbMan1.wordid);
         
@@ -132,6 +143,14 @@ public class MyAegisub extends Application {
         {
             timerController.setTime(DbMan1.times.get(index+1));
             playerController.play(timerController.getTime());
+            
+            //if now, is last character
+            index=DbMan1.ids.indexOf(DbMan1.wordid);
+            if(index>=DbMan1.ids.size()-1 && pageturnenabled)//last character in page
+            {
+                new Timer().start();
+//                System.out.println("timer started");
+            }            
         }
     }
     Integer pagecounter=1;
@@ -160,6 +179,38 @@ public class MyAegisub extends Application {
                 pagecounter++;
                 label.setText("Page "+pagecounter.toString());
                 timerController.setTime(DbMan1.nextpagewordtime);
+                playerController.play(timerController.getTime());
+            }
+    }
+    private void previous10Page()
+    {
+            if(pagecounter<11)
+            {
+                //do nothing
+            }
+            else
+            {
+                pagecounter-=10;
+                label.setText("Page "+pagecounter.toString());
+                Integer[] times=DbMan1.getInstance().selectPageByPageNo(pagecounter);
+                Integer starttime=times[0];
+                timerController.setTime(starttime);
+                playerController.play(timerController.getTime());
+            }
+    }
+    private void next10Page()
+    {
+            if(pagecounter+10>maxpages)
+            {
+                //do nothing
+            }
+            else
+            {
+                pagecounter+=10;
+                label.setText("Page "+pagecounter.toString());
+                Integer[] times=DbMan1.getInstance().selectPageByPageNo(pagecounter);
+                Integer starttime=times[0];
+                timerController.setTime(starttime);
                 playerController.play(timerController.getTime());
             }
     }
@@ -289,6 +340,18 @@ EventHandler eventHandler=
                 case 61://=
                     nextPage();
                     break;
+                case 57://(
+                    previous10Page();
+                    break;
+                case 48://)
+                    next10Page();
+                    break;
+                case 122://Z
+                    enableAutoPageTurn();
+                    break;
+                case 120://X
+                    disableAutoPageTurn();
+                    break;
                 default:
                     System.out.println(j);
                     /*
@@ -303,7 +366,16 @@ EventHandler eventHandler=
         }
         event.consume();                            
                         };
-                    };}
+                    };
+        public void enableAutoPageTurn()
+        {
+            pageturnenabled=true;
+        }
+        public void disableAutoPageTurn()
+        {
+            pageturnenabled=false;
+        }
+}
 //
 //    @Override
 //    public void start(Stage stage) {
