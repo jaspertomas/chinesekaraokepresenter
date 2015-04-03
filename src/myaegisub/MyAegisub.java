@@ -39,7 +39,7 @@ public class MyAegisub extends Application {
     Scene scene;
     Stage primaryStage;
     
-    Integer maxpages=398;
+    Integer maxpages;
     Boolean pageturnenabled=true;
     
     static MyAegisub instance=null;
@@ -56,7 +56,7 @@ public class MyAegisub extends Application {
                 
         DbMan1.getInstance();
         
-        DbMan1.getInstance().getMaxPages();
+        maxpages=DbMan1.getInstance().getMaxPages();
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
