@@ -372,10 +372,12 @@ EventHandler eventHandler=
         public void enableAutoPageTurn()
         {
             pageturnenabled=true;
+            label.setText("Auto Page Turn Enabled");
         }
         public void disableAutoPageTurn()
         {
             pageturnenabled=false;
+            label.setText("Auto Page Turn Disabled");
         }
 }
 //

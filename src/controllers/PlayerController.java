@@ -58,6 +58,12 @@ public class PlayerController {
         Integer[] wordsperline={0,0};
         Integer linesperpage=0;//lines on this page
         //initialize words per line to 0
+        
+        if(pageno==325)
+        {
+            System.out.println();
+        }
+        
         Integer currentline=0;
         for(int i=0,j=0;i<DbMan1.lines.size();i++)
         {
@@ -70,6 +76,8 @@ public class PlayerController {
             }
             wordsperline[j-1]++;
         }
+
+        String fontopenlarge="<font size=9 color="+Constants.textcolorpassive+">";
 
         String pinyinfontopenred="<font size=6 color="+Constants.textcoloractive+">";
         String pinyinfontopenblack="<font size=6 color="+Constants.textcolorpassive+">";
@@ -103,14 +111,15 @@ public class PlayerController {
                 wordcounter2++;
                 wordcounter3++;
             }
-            else if(DbMan1.characters.get(wordcounter1).contentEquals("("))
+            else if(DbMan1.characters.get(wordcounter1).contentEquals("-"))
             {
+                System.out.println("text detected");
                 //this is text, display it properly
                 //title row
-                output+="<tr>";
-                output+="<td align=center colspan=8>"+titlefontopen+title+fontclose+"</td>";
-                output+="<tr><td><font size=1>&nbsp;</font></td>";
-                output+="</tr>";
+//                output+="<tr>";
+//                output+="<td align=center colspan=8>"+titlefontopen+title+fontclose+"</td>";
+//                output+="<tr><td><font size=1>&nbsp;</font></td>";
+//                output+="</tr>";
                 
                 
                 //lyrics
@@ -126,13 +135,20 @@ public class PlayerController {
 //                    wordcounter1++;
 //                }
 //                output+="</tr><tr>";
-                for(int j=0;j<wordsperline[i]&&j<4;j++)
+//                for(int j=0;j<wordsperline[i]&&j<4;j++)
                 {
-                    if(DbMan1.lines.get(wordcounter2)<lineno)fontopen=kokinfontopenred;
-                    else if(DbMan1.lines.get(wordcounter2)>lineno)fontopen=kokinfontopenblack;
-                    else if(DbMan1.ids.get(wordcounter2)<=DbMan1.wordid)fontopen=kokinfontopenred;
-                    else fontopen=kokinfontopenblack;
-                    output+="<td align=center>"+fontopen+DbMan1.sounds.get(wordcounter2)+fontclose+"</td>";
+//                    if(DbMan1.lines.get(wordcounter2)<lineno)fontopen=kokinfontopenred;
+//                    else if(DbMan1.lines.get(wordcounter2)>lineno)fontopen=kokinfontopenblack;
+//                    else if(DbMan1.ids.get(wordcounter2)<=DbMan1.wordid)fontopen=kokinfontopenred;
+//                    else 
+                fontopen=kokinfontopenblack;
+                    wordcounter1++;
+                    wordcounter2++;
+                    wordcounter3++;
+                    output+="<td align=center>"+fontopenlarge+DbMan1.englishes.get(wordcounter2)+fontclose+"</td>";
+                    wordcounter1++;
+                    wordcounter2++;
+                    wordcounter3++;
                     wordcounter1++;
                     wordcounter2++;
                     wordcounter3++;

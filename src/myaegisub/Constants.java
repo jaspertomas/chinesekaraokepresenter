@@ -11,7 +11,9 @@ package myaegisub;
  */
 public class Constants {
     public static final String textcoloractive="red";
-    public static final String textcolorpassive="white";
-    public static final String bgcolor="black";
+    public static final String textcolorpassive="black";
+    public static final String bgcolor="white";
+//    public static final String textcolorpassive="white";
+//    public static final String bgcolor="black";
     
 }
