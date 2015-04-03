@@ -2602,9 +2602,33 @@ Gòng	yǎng
 .
 .
 
--	-	-
--	-	-
--	(Prepared text by leader)	-
+(		)
+(		)
+(	Prepared text by leader 1	)
+
+.
+.
+.
+
+(		)
+(		)
+(	Prepared text by leader 2	)
+
+.
+.
+.
+
+(		)
+(		)
+(	Prepared text by leader 3	)
+
+.
+.
+.
+
+(		)
+(		)
+(	Prepared text by leader 4	)
 
 .
 .
@@ -2978,14 +3002,6 @@ yù	jì	bù	shēng	jí	shì	qīng	jìng
 .
 .
 
-x
-.
-.
-							
-.
-.
-.
-
 zhēn	cháng	yīng	wù	zhēn	cháng	dé	xìng
 ㄓㄣ	ㄔㄤˊ	一ㄥ	ㄨˋ	ㄓㄣ	ㄔㄤˊ	ㄉㄜˊ	ㄒ丨ㄥˋ
 真	常	應	物	真	常	得	性
@@ -3005,14 +3021,6 @@ cháng	yīng	cháng	jìng	cháng	qīng	jìng	yĭ
 rú	cĭ	qīng	jìng	jiān	rù	zhēn	dào
 ㄖㄨˊ	ㄘˇ	ㄑ丨ㄥ	ㄐ丨ㄥˋ	ㄐ丨ㄢ	ㄖㄨˋ	ㄓㄣ	ㄉㄠˋ
 如	此	清	靜	漸	入	真	道
-							
-.
-.
-.
-
-x
-.
-.
 							
 .
 .
@@ -3042,14 +3050,6 @@ wéi	huā	zhòng	shēng	míng	wéi	dé	dào
 .
 .
 
-x
-.
-.
-							
-.
-.
-.
-
 néng	wù	zhī	zhĕ	kĕ	chuán	shèng	dào
 ㄋㄥˊ	ㄨˋ	ㄓ	ㄓㄜˇ	ㄎㄜˇ	ㄔㄨㄢˊ	ㄕㄥˋ	ㄉㄠˋ
 能	悟	之	者	可	傳	聖	道
@@ -3069,14 +3069,6 @@ lăo	jūn	yuē
 shàng	shì	wú	zhēng	xià	shì	hăo	zhēng
 ㄕㄤˋ	ㄕˋ	ㄨˊ	ㄓㄥ	ㄒ丨ㄚˋ	ㄕˋ	ㄏㄠˇ	ㄓㄥ
 上	士	無	爭	下	士	好	爭
-							
-.
-.
-.
-
-x
-.
-.
 							
 .
 .
@@ -3102,14 +3094,6 @@ zhòng	shēng	suŏ	yĭ	bù	dé	zhēn	dào
 ㄓㄨㄥˋ	ㄕㄥ	ㄙㄨㄛˇ	一ˇ	ㄅㄨˋ	ㄉㄜˊ	ㄓㄣ	ㄉㄠˋ
 眾	生	所	以	不	得	真	道
 
-.
-.
-.
-
-x
-.
-.
-							
 .
 .
 .
@@ -3162,14 +3146,6 @@ fán	năo	wàng	xiăng	yōu	kŭ	shēn	xīn
 .
 .
 
-x
-.
-.
-							
-.
-.
-.
-
 biàn	zāo	zhuó	rŭ	liú	dàng	shēng	sĭ
 ㄅ丨ㄢˋ	ㄗㄠ	ㄓㄨㄛˊ	ㄖㄨˇ	ㄌ丨ㄡˊ	ㄉㄤˋ	ㄕㄥ	ㄙˇ
 便	遭	濁	辱	流	蕩	生	死
@@ -3190,14 +3166,6 @@ zhēn	cháng	zhī	dào	wù	zhĕ	zì	dé
 ㄓㄣ	ㄔㄤˊ	ㄓ	ㄉㄠˋ	ㄨˋ	ㄓㄜˇ	ㄗˋ	ㄉㄜˊ
 真	常	之	道	悟	者	自	得
 
-.
-.
-.
-
-x
-.
-.
-							
 .
 .
 .

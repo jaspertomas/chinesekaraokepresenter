@@ -55,6 +55,8 @@ public class MyAegisub extends Application {
         this.primaryStage=primaryStage;
                 
         DbMan1.getInstance();
+        
+        DbMan1.getInstance().getMaxPages();
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
@@ -186,33 +188,33 @@ public class MyAegisub extends Application {
     {
             if(pagecounter<11)
             {
-                //do nothing
+                pagecounter=1;
             }
             else
             {
                 pagecounter-=10;
+            }
                 label.setText("Page "+pagecounter.toString());
                 Integer[] times=DbMan1.getInstance().selectPageByPageNo(pagecounter);
                 Integer starttime=times[0];
                 timerController.setTime(starttime);
                 playerController.play(timerController.getTime());
-            }
     }
     private void next10Page()
     {
             if(pagecounter+10>maxpages)
             {
-                //do nothing
+                pagecounter=maxpages;
             }
             else
             {
                 pagecounter+=10;
+            }
                 label.setText("Page "+pagecounter.toString());
                 Integer[] times=DbMan1.getInstance().selectPageByPageNo(pagecounter);
                 Integer starttime=times[0];
                 timerController.setTime(starttime);
                 playerController.play(timerController.getTime());
-            }
     }
     
     private void gotoPrevious()

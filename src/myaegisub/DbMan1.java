@@ -503,6 +503,26 @@ public class DbMan1 {
       return null;
     }
   }  
+  public Integer getMaxPages()
+  {
+      Integer maxpages=0;
+    try {
+      c.setAutoCommit(false);
+
+      stmt = c.createStatement();
+      ResultSet rs = stmt.executeQuery( "SELECT * FROM pages order by id desc limit 1"  );
+      while ( rs.next() ) {
+          maxpages=rs.getInt("page");
+      }
+      rs.close();
+      stmt.close();
+      
+      return maxpages;
+    } catch ( Exception e ) {
+      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+      return 0;
+    }
+  }  
   public Integer selectWordByTime(Integer time)
   {
     try {

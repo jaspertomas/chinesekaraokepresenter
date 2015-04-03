@@ -103,6 +103,52 @@ public class PlayerController {
                 wordcounter2++;
                 wordcounter3++;
             }
+            else if(DbMan1.characters.get(wordcounter1).contentEquals("("))
+            {
+                //this is text, display it properly
+                //title row
+                output+="<tr>";
+                output+="<td align=center colspan=8>"+titlefontopen+title+fontclose+"</td>";
+                output+="<tr><td><font size=1>&nbsp;</font></td>";
+                output+="</tr>";
+                
+                
+                //lyrics
+                //row 1
+                output+="<tr>";//open row
+//                for(int j=0;j<wordsperline[i]&&j<4;j++)
+//                {
+//                    if(DbMan1.lines.get(wordcounter1)<lineno)fontopen=pinyinfontopenred;
+//                    else if(DbMan1.lines.get(wordcounter1)>lineno)fontopen=pinyinfontopenblack;
+//                    else if(DbMan1.ids.get(wordcounter1)<=DbMan1.wordid)fontopen=pinyinfontopenred;
+//                    else fontopen=pinyinfontopenblack;
+//                    output+="<td align=center>"+fontopen+DbMan1.characters.get(wordcounter1)+fontclose+"</td>";
+//                    wordcounter1++;
+//                }
+//                output+="</tr><tr>";
+                for(int j=0;j<wordsperline[i]&&j<4;j++)
+                {
+                    if(DbMan1.lines.get(wordcounter2)<lineno)fontopen=kokinfontopenred;
+                    else if(DbMan1.lines.get(wordcounter2)>lineno)fontopen=kokinfontopenblack;
+                    else if(DbMan1.ids.get(wordcounter2)<=DbMan1.wordid)fontopen=kokinfontopenred;
+                    else fontopen=kokinfontopenblack;
+                    output+="<td align=center>"+fontopen+DbMan1.sounds.get(wordcounter2)+fontclose+"</td>";
+                    wordcounter1++;
+                    wordcounter2++;
+                    wordcounter3++;
+                }
+//                output+="</tr><tr>";
+//                for(int j=0;j<wordsperline[i]&&j<4;j++)
+//                {
+//                    if(DbMan1.lines.get(wordcounter3)<lineno)fontopen=chinesefontopenred;
+//                    else if(DbMan1.lines.get(wordcounter3)>lineno)fontopen=chinesefontopenblack;
+//                    else if(DbMan1.ids.get(wordcounter3)<=DbMan1.wordid)fontopen=chinesefontopenred;
+//                    else fontopen=chinesefontopenblack;
+//                    output+="<td align=center>"+fontopen+DbMan1.englishes.get(wordcounter3)+fontclose+"</td>";
+//                    wordcounter3++;
+//                }
+                output+="</tr>";//close row
+            }
             else
             {
                 //title row

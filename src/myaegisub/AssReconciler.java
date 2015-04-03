@@ -32,8 +32,8 @@ public class AssReconciler extends Application {
 //    String songname="song000";
 //    String assfilename="ass00.ass";
 
-//    String songname="song_morning";
-    String songname="song_afternoon";
+    String songname="song_morning";
+//    String songname="song_afternoon";
 //    String songname="song14a";
     String assfilename="001.ass";
     Integer[] forremoval={};
