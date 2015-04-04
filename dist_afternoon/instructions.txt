@@ -1,0 +1,18 @@
+Instructions:
+Move forward - Click on the space outside the text area, or press ]
+Move back - Right-click on the space outside the text area, or press [
+Move forward one page - press )
+Move back one page - press (
+
+Reset (go back to beginning) - press RRR (press R 3 times)
+ 
+Autoplay: each word is automatically highlighted every second. 
+Play: press Enter
+Pause: press Space
+Speed up: press >
+Slow down: press <
+
+
+Auto page turn: The page turns automatically 1/2 second after the last word in the page is reached.
+To disable auto page turn: press x
+To reenable auto page turn: press z
